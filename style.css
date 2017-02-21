@@ -43,10 +43,8 @@ body, html {
 }
 /*----animate site----*/
 .fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 2s;
-  animation-name: fade;
-  animation-duration: 2s
+  -webkit-animation: fade 2s;
+  animation: fade 2s;
 }
 @-webkit-keyframes fade {
   from { opacity: 0 }
@@ -58,27 +56,80 @@ body, html {
 }
 .move {
   position: absolute;
-  -webkit-animation-name: move;
-  -webkit-animation-duration: 2s;
-  -webkit-animation-delay: 2s;
-  -webkit-animation-fill-mode: both;
-  animation-name: move;
-  animation-duration: 2s;
-  animation-delay: 2s;
-  animation-fill-mode: both;
+  -webkit-animation: bounceInDown 1s 2s both;
+  animation: bounceInDown 1s 2s both;
 }
-@-webkit-keyframes move {
-  from { top: -100px }
-  to { top: 0px }
+@-webkit-keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
-@keyframes move {
-  from { top: -100px }
-  to { top: 0px }
+
+@keyframes bounceInDown {
+  from, 60%, 75%, 90%, to {
+    -webkit-animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+    animation-timing-function: cubic-bezier(0.215, 0.610, 0.355, 1.000);
+  }
+
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -3000px, 0);
+    transform: translate3d(0, -3000px, 0);
+  }
+
+  60% {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 25px, 0);
+    transform: translate3d(0, 25px, 0);
+  }
+
+  75% {
+    -webkit-transform: translate3d(0, -10px, 0);
+    transform: translate3d(0, -10px, 0);
+  }
+
+  90% {
+    -webkit-transform: translate3d(0, 5px, 0);
+    transform: translate3d(0, 5px, 0);
+  }
+
+  to {
+    -webkit-transform: none;
+    transform: none;
+  }
 }
 /*----header----*/
 div.header {
   position: absolute;
-  background-color: #272727;
+  background-color: #1A1A1A;
   width: 100%;
   height: 50px;
   padding: 0;
@@ -139,6 +190,7 @@ div.header li a:hover {
 /*----body----*/
 div.bg1 {
 	background-image: url(images/2012_0899.jpg);
+  background-color: #000000;
 	opacity: 1;
 	height: 100%;
 	background-attachment: fixed;
@@ -362,6 +414,7 @@ span.logo_pt2 {
 }
 div.bg2 {
 	background-image: url(images/small_2014_0115.jpg);
+  background-color: #FFFFFF;
   -webkit-filter: brightness(75%) opacity(25%);
   filter: brightness(75%) opacity(25%);
   height: 100%;
@@ -556,9 +609,33 @@ div.bg2 {
   }  
 }
 /*----touchscreen----*/
-@media only screen and (max-device-width: 1500px) {
+@media only screen and (max-device-width: 1600px) {
   div.bg1 {
     background-attachment: scroll;
+  }
+}
+@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+/*----body----*/  
+  div.body_container2 .info {
+    display: block;
+    width: 90%;
+    padding-left: 0px;
+    margin: 0 auto;
+    text-align: center;
+    font-size: 6px;
+  }
+  div.body_container2 .social_media {
+    display: block;
+    width: 90%;
+    margin: 0 auto 25px;
+    text-align: center;
+  }  
+/*----modal----*/
+  .modal {
+    padding-top: 5px;
+  }
+	.modal_content {
+    width: 65%;
   }
 }
 @media only screen and (max-device-width: 480px) and (orientation: portrait) {
@@ -567,11 +644,13 @@ div.bg2 {
     height: 40px;
   }
   div.header .logo_pt1 {
-    font-size: 8px;    
+    font-size: 12px;
+    top: 12px;
   }
   div.header ul {
-    font-size: 8px;
+    font-size: 12px;
     top: 17px;
+    letter-spacing: 1px;
   }
   div.header li {
     padding-left: 5px;
@@ -599,17 +678,19 @@ div.bg2 {
     width: 80%;
   }
   div.body_container2 .info {
-    display: block;
+    display: none;
+/*
     width: 90%;
     padding-left: 0px;
     margin: 0 auto;
     text-align: center;
     font-size: 6px;    
+*/
   }
   div.body_container2 .social_media {
     display: block;
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto 25px;
     text-align: center;
   }
 /*----modal----*/
@@ -620,28 +701,4 @@ div.bg2 {
 		width: 95%;
 		max-width: none;
 	}
-}
-@media only screen and (max-device-width: 700px) and (orientation: landscape) {
-/*----body----*/  
-  div.body_container2 .info {
-    display: block;
-    width: 90%;
-    padding-left: 0px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 6px;
-  }
-  div.body_container2 .social_media {
-    display: block;
-    width: 90%;
-    margin: 0 auto;
-    text-align: center;
-  }  
-/*----modal----*/
-  .modal {
-    padding-top: 5px;
-  }
-	.modal_content {
-    width: 65%;
-  }
 }
