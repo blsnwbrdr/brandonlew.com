@@ -136,6 +136,11 @@ div.header {
   margin: 0;
   z-index: 2;
 }
+div.header .logo_img {
+  position: absolute;
+  left: 2%;
+  width: 30px;
+}
 div.header .logo_pt1 {
   position: absolute;
   left: 5%;
@@ -614,7 +619,7 @@ div.bg2 {
     background-attachment: scroll;
   }
 }
-@media only screen and (max-device-width: 768px) and (orientation: landscape) {
+@media only screen and (max-device-width: 700px) and (orientation: landscape) {
 /*----body----*/  
   div.body_container2 .info {
     display: block;
