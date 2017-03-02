@@ -136,10 +136,16 @@ div.header {
   margin: 0;
   z-index: 2;
 }
-div.header .logo_1 {
+div.header .logos {
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
   position: absolute;
   left: 5%;
-  top: 10px;
+  top: -2px;
+}
+div.header .logo_1 {
   padding: 0;
   margin: 0;
   font-family: 'Marvel', sans-serif;
@@ -161,7 +167,10 @@ div.header span.logo_span {
   color: #D15900;
 }
 div.header .logo_2 {
-  display: none;
+  margin-right: 10px;
+}
+div.header .logo_img {
+  width: 50px;
 }
 div.header ul {
   position: absolute;
@@ -630,19 +639,10 @@ div.bg2 {
     width: 65%;
   }
 }
-@media (max-width: 550px) {
+@media (max-width: 650px) {
 /*----header----*/
   div.header .logo_1 {
     display: none;
-  }
-  div.header .logo_2 {
-    display: inline-block;
-    position: absolute;
-    left: 5%;
-    top: 10px;
-  }
-  div.header .logo_img {
-    width: 30px;
   }
   div.header li {
     padding-left: 20px;
@@ -652,15 +652,6 @@ div.bg2 {
 /*----header----*/
   div.header .logo_1 {
     display: none;
-  }
-  div.header .logo_2 {
-    display: inline-block;
-    position: absolute;
-    left: 10%;
-    top: 10px;
-  }
-  div.header .logo_img {
-    width: 30px;
   }
   div.header li {
     padding-left: 20px;
