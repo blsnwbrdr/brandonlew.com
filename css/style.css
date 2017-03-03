@@ -156,7 +156,7 @@ div.header .logos {
 }
 div.header .logo_1 {
   padding: 0;
-  margin: 0;
+  margin: 8px 0 0 0;
   font-family: 'Marvel', sans-serif;
   font-size: 20px;
   color: #FFFFFF;
