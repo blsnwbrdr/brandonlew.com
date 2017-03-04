@@ -226,9 +226,6 @@ div.bg1 {
 div.body_container1 {
   background-color: #FFFFFF;
 }
-#bg_white {
-/*  background-color: red;*/
-}
 .bg_black {
   background-color: #000000;
 }
@@ -543,25 +540,25 @@ div.body_container2 .social_media {
 
 /*=====THANK YOU PAGE=====*/
 
-div.logo_ty {
-  position: fixed;
-  z-index: 2;
-  left: 5%;
-  top: 10px;
+div.transparent {
+  background-color: transparent;
+}
+div.header .logo_ty {
   padding: 0;
-  margin: 0;
+  margin: 8px 0 0 0;
   font-family: 'Marvel', sans-serif;
   font-size: 20px;
+  color: #FFFFFF;
   letter-spacing: 2px;
-  color: #272727;
 }
-div.logo_ty a, div.logo_ty a:visited {
+div.header .logo_ty a, div.header .logo_ty a:visited {
   text-decoration: none;
   color: #272727;
 }
-div span.logo_span {
-  font-size: 1.2em;
+div.header .logo_ty a:hover {
   color: #D15900;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 div.bg2 {
 	background-image: url(../images/small_2014_0115.jpg);
