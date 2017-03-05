@@ -12,44 +12,45 @@
 	<link href="apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
-<body onLoad="myFunction()">
-
-<!-----LOADER----->
-
-  <div id="loader"></div>
-
-<!-----MAIN SITE----->
-
-  <div id="myDiv">
+<body id="page-top" data-spy="scroll">
  
 <!-----HEADER----->
 
-    <div class="header move">
-      <div class="logos">
-        <div class="logo_2">
-          <a href="http://www.brandonlew.com/index.html">
-            <img src="images/logo.png" class="logo_img">
-          </a>
-        </div>     
-        <div class="logo_1">
-          <a href="http://www.brandonlew.com/index.html">BrandonLew<span class="logo_span">PHOTOGRAPHY</span></a>
-        </div>   
-      </div> 
-      <ul>
-        <li><a href="#portfolio">Portfolio</a></li>     
-        <li><a href="#about">About</a></li>
-      </ul>
+  <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <img src="images/logo.png" class="logo_img">
+          BrandonLew<span class="logo_span">PHOTOGRAPHY</span>
+        </a>
+      </div>
+      <div class="collapse navbar-collapse navbar-right navbar-main-collapse">
+        <ul class="nav navbar-nav">
+          <li class="hidden">
+            <a href="#page-top"></a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
     </div>
+  </nav>
 
 <!-----BANNER----->
   
-    <div class="bg1 fade"></div>
+  <div class="bg1 fade"></div>
   
 <!-----PORTFOLIO----->
 
-    <div class="body_container1">
+  <div id="portfolio" class="body_container1">
     <div id="bg_white">
-      <a name="portfolio"></a>
       <div class="portfolio">
         <h1>Portfolio</h1>
         <div class="img_container">
@@ -145,34 +146,32 @@
         </div>        
       </div>
     </div>  
-    </div>
+  </div>
   
 <!-----ABOUT----->
   
-    <div class="body_container2">
-      <a name="about"></a>
-      <div class="about">
-        <h1>About</h1>
-        <p>A San Francisco based photographer, primarily specializing in urban and nature landscape photography from around the world. <br><br>All work can be found on <a href="https://www.etsy.com/shop/blewphotography/" target="_blank">Etsy.com</a></p>
-        <form action="submit_form.php" method="post" name="emailform">
-          <input type="text" name="name" placeholder="Name"><br>
-          <input type="email" name="email" placeholder="Email Address"><br>
-          <textarea rows="5" name="message" placeholder="Message"></textarea><br>
-          <button type="submit" name="submit">Submit</button>
-        </form>
-      </div>
-      <div class="info">
-        <p>
-          San Francisco, CA, USA&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&copy; 2017 Brandon Lew&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
-          <a href="mailto:brandon.t.lew@gmail.com">brandon.t.lew@gmail.com</a>
-        </p>
-      </div>
-      <div class="social_media">
-        <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><i class="fa fa-etsy" id="etsy"></i></a>
-        <a href="https://www.instagram.com/blsnwbrdr/" target="_blank"><i class="fa fa-instagram" id="instagram"></i></a>
-        <a href="https://www.facebook.com/brandonlewphotography/" target="_blank"><i class="fa fa-facebook-official" id="fb"></i></a>
-      </div>    
+  <div id="about" class="body_container2">
+    <div class="about">
+      <h1>About</h1>
+      <p>A San Francisco based photographer, primarily specializing in urban and nature landscape photography from around the world. <br><br>All work can be found on <a href="https://www.etsy.com/shop/blewphotography/" target="_blank">Etsy.com</a></p>
+      <form action="submit_form.php" method="post" name="emailform">
+        <input type="text" name="name" placeholder="Name"><br>
+        <input type="email" name="email" placeholder="Email Address"><br>
+        <textarea rows="5" name="message" placeholder="Message"></textarea><br>
+        <button type="submit" name="submit">Submit</button>
+      </form>
     </div>
+    <div class="info">
+      <p>
+        San Francisco, CA, USA&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&copy; 2017 Brandon Lew&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        <a href="mailto:brandon.t.lew@gmail.com">brandon.t.lew@gmail.com</a>
+      </p>
+    </div>
+    <div class="social_media">
+      <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><i class="fa fa-etsy" id="etsy"></i></a>
+      <a href="https://www.instagram.com/blsnwbrdr/" target="_blank"><i class="fa fa-instagram" id="instagram"></i></a>
+      <a href="https://www.facebook.com/brandonlewphotography/" target="_blank"><i class="fa fa-facebook-official" id="fb"></i></a>
+    </div>    
   </div>
   
 <!-----END MAIN SITE----->
@@ -190,7 +189,10 @@
 <!-----SCRIPT----->
 
   <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <script src="js/main.js"></script>
+  
   
 </body>
 </html>
