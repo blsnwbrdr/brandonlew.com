@@ -125,7 +125,7 @@ div.bg1 {
   background-color: #000000;
 	opacity: 1;
 	height: 100%;
-	background-attachment: fixed;
+	background-attachment: scroll;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -482,7 +482,7 @@ div.bg2 {
 /*=====TOUCHSCREEN=====*/
 
 /*
-@media only screen and (max-device-width: 1600px) {
+@media only screen and (max-device-width: 1400px) and (orientation: portrait) {
   div.bg1 {
     background-attachment: scroll;
   }
