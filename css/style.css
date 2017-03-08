@@ -21,85 +21,76 @@ body, html {
 
 /*=====HEADER=====*/
 
-.navbar-custom {
-  margin-bottom: 0;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-  background-color: #000000;
+.navbar-default {
+  background-color: #000000;  
+  border-color: rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .5s;
+  transition: all .5s;
 }
-.navbar-custom .navbar-brand {
+.navbar-default .navbar-header .navbar-brand {
   margin-top: -8px;
   font-family: "Marvel", sans-serif;
   font-size: 20px;
+  color: #FFFFFF;
   letter-spacing: 2px;  
 }
-.navbar-custom .logo_img {
+.navbar-default .navbar-header .logo_img {
   display: inline-block;
   width: 50px;
   margin-top: -10px;
 }
-.navbar-custom a {
-  color: #FFFFFF;
-}
-.navbar-custom a:hover {
+.navbar-default .navbar-header .navbar-brand:hover,
+.navbar-default .navbar-header .navbar-brand:focus {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;  
 }
-.navbar-custom span.logo_span {
+.navbar-default .navbar-header .navbar-brand span.logo_span {
   font-size: 1.2em;
   color: #D15900;
 }
-.navbar-custom .navbar-toggle {
+.navbar-default .navbar-header .navbar-toggle {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
   font-size: 12px;
+  border-color: rgba(255, 255, 255, 0.3);  
 }
-.navbar-custom .navbar-toggle:focus, .navbar-custom .navbar-toggle:active {
-  outline: none;
+.navbar-default .navbar-header .navbar-toggle:focus,
+.navbar-default .navbar-header .navbar-toggle:active {
+  background-color: transparent;
 }
-.navbar-custom .navbar-brand:focus {
-  outline: none;
-}
-.navbar-custom .nav li a {
+.navbar-default .nav>li>a,
+.navbar-default .nav>li>a:focus {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
+  color: #FFFFFF;
   letter-spacing: 5px;
   padding-left: 20px;
   padding-right: 20px;
 }
-.navbar-custom .nav li a:hover {
+.navbar-default .nav>li>a:hover {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;  
-  outline: none;
-  background-color: transparent;
 }
-.navbar-custom .nav li a:focus, .navbar-custom .nav li a:active {
-  outline: none;
-  background-color: transparent;
-}
-.navbar-custom .nav li.active {
-  outline: none;
-}
-.navbar-custom .nav li.active a {
-  background-color: rgba(255, 255, 255, 0.3);
-}
-.navbar-custom .nav li.active a:hover {
+.navbar-default .nav>li>a:focus:hover,
+.navbar-default .nav>li.active>a,
+.navbar-default .nav>li.active>a:focus,
+.navbar-default .nav>li.active>a:hover,
+.navbar-default .nav>li.active>a:focus:hover {
   color: #FFFFFF;
+  background-color: transparent;
 }
 @media (min-width: 768px) {
-  .navbar-custom {
-    padding: 20px 0;
-    border-bottom: none;
+  .navbar-default {
+    padding-top: 20px;
+    border-color: transparent;
     background: transparent;
-    -webkit-transition: all 0.5s ease-in-out;
-    transition: all 0.5s ease-in-out;
   }
-  .navbar-custom.top-nav-collapse {
-    padding: 0;
-    background: #000000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+  .navbar-default.affix {
+    padding-top: 0;
+    background-color: #000000;
+    border-color: rgba(255, 255, 255, 0.3);
   }
 }
 @media (min-width: 768px) and (max-width: 992px) {
@@ -108,11 +99,11 @@ body, html {
   }
 }
 @media (max-width: 400px) {
-  .navbar-custom .navbar-brand {
+  .navbar-default .navbar-header .navbar-brand {
     margin-top: 0;
     font-size: 14px;
   }
-  .navbar-custom .logo_img {
+  .navbar-default .navbar-header .logo_img {
     width: 30px;
     margin-top: -8px;
   }
@@ -203,6 +194,9 @@ div.body_container1 #bg_button:hover {
   animation: grow 0.5s ease-out;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+div.body_container1 #bg_button:focus {
+  outline: none;
 }
 
 /*=====ABOUT=====*/
@@ -358,10 +352,18 @@ div.body_container2 .social_media {
 
 /*=====THANK YOU PAGE=====*/
 
-div.transparent {
-  background-color: transparent;
+#thank_you {
+  position: absolute;
+  z-index: 999;
+  left: 5%;
+  top: 5px;
 }
-div.header .logo_ty {
+#thank_you .logo_img {
+  display: inline-block;
+  width: 50px;
+  margin-top: -12px;
+}
+#thank_you .logo {
   padding: 0;
   margin: 8px 0 0 0;
   font-family: 'Marvel', sans-serif;
@@ -369,14 +371,18 @@ div.header .logo_ty {
   color: #FFFFFF;
   letter-spacing: 2px;
 }
-div.header .logo_ty a, div.header .logo_ty a:visited {
+#thank_you .logo a, #thank_you .logo a:visited {
   text-decoration: none;
   color: #272727;
 }
-div.header .logo_ty a:hover {
+#thank_you .logo a:hover {
   color: #D15900;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+#thank_you .logo span {
+  font-size: 1.2em;
+  color: #D15900;
 }
 div.bg2 {
 	background-image: url(../images/small_2014_0115.jpg);
@@ -395,7 +401,6 @@ div.bg2 {
   width: 100%;
   font-family: 'Roboto', sans-serif;
   color: #D15900;  
-  font-size: 24px;
   font-weight: 300;
   text-align: center;
 }
@@ -479,27 +484,17 @@ div.bg2 {
 	cursor: pointer;
 }
 
-/*=====TOUCHSCREEN=====*/
-
-/*
-@media only screen and (max-device-width: 1400px) and (orientation: portrait) {
-  div.bg1 {
-    background-attachment: scroll;
-  }
-}
-*/
-
 /*=====MEDIA=====*/
 
-@media only screen and (max-device-width: 700px) and (orientation: landscape) {
+@media (min-width: 1025px) {
+  div.bg1 {
+    background-attachment: fixed;
+  }
+}
+@media (max-width: 700px){
 /*----body----*/  
   div.body_container2 .info {
-    display: block;
-    width: 90%;
-    padding-left: 0px;
-    margin: 0 auto;
-    text-align: center;
-    font-size: 6px;
+    display: none;
   }
   div.body_container2 .social_media {
     display: block;
@@ -515,7 +510,7 @@ div.bg2 {
     width: 65%;
   }
 }
-@media only screen and (max-device-width: 480px) and (orientation: portrait) {
+@media (max-width: 480px) {
 /*----body----*/
 	div.body_container1 .img_container {
     display: inline;
@@ -546,6 +541,11 @@ div.bg2 {
     width: 90%;
     margin: 0 auto 25px;
     text-align: center;
+  }
+/*----ty----*/
+  #thank_you {
+    left: 0;
+    padding: 0;
   }
 /*----modal----*/
   .modal {
