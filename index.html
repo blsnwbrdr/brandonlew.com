@@ -47,12 +47,15 @@
 <!-----PORTFOLIO----->
 
   <div id="portfolio" class="body_container1">
-    <div id="bg_white">
+    <div class="bg_white">
       <div class="portfolio">
         <h1>Portfolio</h1>
-        <div class="img_container">
+                <div class="text-center marg_top">
+          <button class="bg_button sr_button">bg color</button> 
+        </div> 
+        <div class="img_container marg_top">
           <div class="third">
-            <img src="images/2012_1036.jpg" onclick="onClick(this)" alt="Xian, China" class="image jello">
+            <img src="images/2012_1036.jpg" onclick="onClick(this)" alt="Xian, China" class="image">
           </div>
           <div class="third">
             <img src="images/2009_1792.jpg" onclick="onClick(this)" alt="Hagia Sophia, Istanbul, Turkey" class="image">
@@ -139,7 +142,7 @@
           </div>	
         </div>
         <div class="text-center marg_top">
-          <button id="bg_button">bg color</button> 
+          <button class="bg_button sr_button">bg color</button> 
         </div>        
       </div>
     </div>  
@@ -155,7 +158,7 @@
         <input type="text" name="name" placeholder="Name"><br>
         <input type="email" name="email" placeholder="Email Address"><br>
         <textarea rows="5" name="message" placeholder="Message"></textarea><br>
-        <button type="submit" name="submit">Submit</button>
+        <button class="sr_button" type="submit" name="submit">Submit</button>
       </form>
     </div>
     <div class="info">
@@ -165,9 +168,9 @@
       </p>
     </div>
     <div class="social_media">
-      <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><i class="fa fa-etsy" id="etsy"></i></a>
-      <a href="https://www.instagram.com/blsnwbrdr/" target="_blank"><i class="fa fa-instagram" id="instagram"></i></a>
-      <a href="https://www.facebook.com/brandonlewphotography/" target="_blank"><i class="fa fa-facebook-official" id="fb"></i></a>
+      <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><i class="fa fa-etsy sr_icon" id="etsy"></i></a>
+      <a href="https://www.instagram.com/blsnwbrdr/" target="_blank"><i class="fa fa-instagram sr_icon" id="instagram"></i></a>
+      <a href="https://www.facebook.com/brandonlewphotography/" target="_blank"><i class="fa fa-facebook-official sr_icon" id="fb"></i></a>
     </div>    
   </div>
   
@@ -188,8 +191,9 @@
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>  
   <script src="js/main.js"></script>
   
-  
+
 </body>
 </html>

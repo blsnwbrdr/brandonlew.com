@@ -133,7 +133,7 @@ div.body_container1 {
 div.body_container1 .portfolio {
   width: 85%;
   margin: 0 auto;
-  padding: 50px 0 40px 0;
+  padding: 50px 0 75px 0;
 }
 div.body_container1 .portfolio h1 {
   font-family: 'Josefin Sans', sans-serif;
@@ -176,7 +176,7 @@ div.body_container1 img:hover {
 div.body_container1 .marg_top {
   margin-top: 25px;
 }
-div.body_container1 #bg_button {
+div.body_container1 .bg_button {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -187,7 +187,7 @@ div.body_container1 #bg_button {
   border-radius: 3px;
   background-color: transparent;
 }
-div.body_container1 #bg_button:hover {
+div.body_container1 .bg_button:hover {
   background-color: #D15900;
   color: #FFFFFF;   
   -webkit-animation: grow 0.5s ease-out;
@@ -195,7 +195,7 @@ div.body_container1 #bg_button:hover {
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-div.body_container1 #bg_button:focus {
+div.body_container1 .bg_button:focus {
   outline: none;
 }
 
@@ -333,21 +333,17 @@ div.body_container2 .social_media {
   color: #6F6F6F;
   padding: 5px;
   font-size: 20px;
+  -webkit-transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out; 
 }
 #etsy:hover {
-  color: #F56400;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;  
+  color: #F56400;  
 }
 #instagram:hover {
   color: #D32E8D;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 #fb:hover {
   color: #3B5998;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;  
 }
 
 /*=====THANK YOU PAGE=====*/
