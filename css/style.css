@@ -84,8 +84,8 @@ body, html {
 @media (min-width: 768px) {
   .navbar-default {
     padding-top: 20px;
-    border-color: transparent;
     background: transparent;
+    border-color: transparent;
   }
   .navbar-default.affix {
     padding-top: 0;

@@ -12,14 +12,13 @@ $(document).ready(function() {
       var $anchor = $(this);
       $('html, body').stop().animate({
           scrollTop: ($($anchor.attr('href')).offset().top - 50)
-      }, 1500, 'easeInOutExpo');
+      }, 1250, 'easeInOutExpo');
       event.preventDefault();
   });
   
 // CLOSE THE RESPONSIVE MENU ON CLICK
-
   $('.navbar-collapse ul li a').click(function() {
-    $(this).closest('.collapse').collapse('toggle');
+      $('.navbar-toggle:visible').click();
   });
   
 // OFFSET MAIN NAV  
