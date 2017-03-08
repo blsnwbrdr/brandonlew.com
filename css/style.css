@@ -3,6 +3,12 @@ body, html {
   padding: 0;
 	margin: 0;
 }
+a:hover {
+  cursor: pointer;
+}
+.marg_top {
+  margin-top: 25px;
+}
 
 /*=====ANIMATE SITE=====*/
 
@@ -172,9 +178,6 @@ div.body_container1 img.image {
 div.body_container1 img:hover {
 	opacity: .5;
   cursor: pointer;
-}
-div.body_container1 .marg_top {
-  margin-top: 25px;
 }
 div.body_container1 .bg_button {
   font-family: 'Josefin Sans', sans-serif;
