@@ -25,7 +25,7 @@ $(document).ready(function() {
   
 // OFFSET MAIN NAV  
   
-  $('#mainNav').affix({
+  $('#navbar').affix({
     offset: {
         top: 100
     }

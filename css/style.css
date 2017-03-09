@@ -9,10 +9,17 @@ a:hover {
 .marg_top {
   margin-top: 25px;
 }
+.marg_bottom {
+  margin-bottom: 25px;
+}
+.animated {
+  -webkit-animation-delay: 1.5s;
+  animation-delay: 1.5s;
+}
 
 /*=====ANIMATE SITE=====*/
 
-.fade {
+.fade_in {
   -webkit-animation: fade 2s;
   animation: fade 2s;
 }
@@ -27,45 +34,46 @@ a:hover {
 
 /*=====HEADER=====*/
 
-.navbar-default {
+#navbar {
   background-color: #000000;  
   border-color: rgba(255, 255, 255, 0.3);
   -webkit-transition: all .5s;
   transition: all .5s;
 }
-.navbar-default .navbar-header .navbar-brand {
+#navbar .navbar-header .navbar-brand {
   margin-top: -8px;
-  font-family: "Marvel", sans-serif;
+  font-family: 'Gruppo', sans-serif;
   font-size: 20px;
   color: #FFFFFF;
   letter-spacing: 2px;  
 }
-.navbar-default .navbar-header .logo_img {
+#navbar .navbar-header .logo_img {
   display: inline-block;
   width: 50px;
   margin-top: -10px;
 }
-.navbar-default .navbar-header .navbar-brand:hover,
-.navbar-default .navbar-header .navbar-brand:focus {
+#navbar .navbar-header .navbar-brand:hover,
+#navbar .navbar-header .navbar-brand:focus {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;  
 }
-.navbar-default .navbar-header .navbar-brand span.logo_span {
+#navbar .navbar-header .navbar-brand span.logo_span {
   font-size: 1.2em;
   color: #D15900;
 }
-.navbar-default .navbar-header .navbar-toggle {
+#navbar .navbar-header .navbar-toggle {
   color: #FFFFFF;
   font-size: 12px;
   border-color: rgba(255, 255, 255, 0.3);  
 }
-.navbar-default .navbar-header .navbar-toggle:focus,
-.navbar-default .navbar-header .navbar-toggle:active {
+#navbar .navbar-header .navbar-toggle:focus,
+#navbar .navbar-header .navbar-toggle:active,
+#navbar .navbar-header .navbar-toggle:focus:hover {
   background-color: transparent;
 }
-.navbar-default .nav>li>a,
-.navbar-default .nav>li>a:focus {
+#navbar .nav>li>a,
+#navbar .nav>li>a:focus {
   font-family: 'Josefin Sans', sans-serif;
   font-weight: 300;
   font-size: 18px;
@@ -74,26 +82,26 @@ a:hover {
   padding-left: 20px;
   padding-right: 20px;
 }
-.navbar-default .nav>li>a:hover {
+#navbar .nav>li>a:hover {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
   transition: all 0.3s ease-out;  
 }
-.navbar-default .nav>li>a:focus:hover,
-.navbar-default .nav>li.active>a,
-.navbar-default .nav>li.active>a:focus,
-.navbar-default .nav>li.active>a:hover,
-.navbar-default .nav>li.active>a:focus:hover {
+#navbar .nav>li>a:focus:hover,
+#navbar .nav>li.active>a,
+#navbar .nav>li.active>a:focus,
+#navbar .nav>li.active>a:hover,
+#navbar .nav>li.active>a:focus:hover {
   color: #FFFFFF;
   background-color: transparent;
 }
 @media (min-width: 768px) {
-  .navbar-default {
+  #navbar {
     padding-top: 20px;
     background: transparent;
     border-color: transparent;
   }
-  .navbar-default.affix {
+  #navbar.affix {
     padding-top: 0;
     background-color: #000000;
     border-color: rgba(255, 255, 255, 0.3);
@@ -104,13 +112,23 @@ a:hover {
     width: 100%;
   }
 }
-@media (max-width: 400px) {
-  .navbar-default .navbar-header .navbar-brand {
+@media (max-width: 500px) {
+  #navbar .navbar-header .navbar-brand {
     margin-top: 0;
     font-size: 14px;
   }
-  .navbar-default .navbar-header .logo_img {
+  #navbar .navbar-header .logo_img {
     width: 30px;
+    margin-top: -8px;
+  }
+}
+@media (max-width: 400px) {
+  #navbar .navbar-header .navbar-brand {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  #navbar .navbar-header .logo_img {
+    width: 25px;
     margin-top: -8px;
   }
 }
@@ -332,7 +350,8 @@ div.body_container2 .social_media {
   font-weight: 300;
   font-size: 12px;
 }
-#etsy, #instagram, #fb {
+/*#etsy, #instagram, #fb {*/
+div.body_container2 .social_media i {
   color: #6F6F6F;
   padding: 5px;
   font-size: 20px;
@@ -498,9 +517,13 @@ div.bg2 {
   div.body_container2 .social_media {
     display: block;
     width: 90%;
-    margin: 0 auto 25px;
+    margin: 0 auto 75px;
     text-align: center;
-  }  
+  }
+  div.body_container2 .social_media i {
+    font-size: 28px;
+    padding: 15px;
+  }
 /*----modal----*/
   .modal {
     padding-top: 5px;
@@ -532,15 +555,17 @@ div.bg2 {
   form input, form textarea {
     width: 80%;
   }
+/*
   div.body_container2 .info {
     display: none;
   }
   div.body_container2 .social_media {
     display: block;
     width: 90%;
-    margin: 0 auto 25px;
+    margin: 0 auto 75px;
     text-align: center;
   }
+*/
 /*----ty----*/
   #thank_you {
     left: 0;

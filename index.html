@@ -4,30 +4,31 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">  
   <title>Brandon Lew Photography</title>
-  <link href="https://fonts.googleapis.com/css?family=Marvel|Roboto:300|Josefin+Sans:300" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gruppo|Roboto:300|Josefin+Sans:300" rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">  
   <link href="css/bootstrap.min.css" rel="stylesheet" type="text/css">
+  <link href="css/animate.css" rel="stylesheet" type="text/css">
   <link href="css/style.css" rel="stylesheet" type="text/css">
 	<link href="favicon.ico" rel="shortcut icon"> 
 	<link href="apple-touch-icon.png" rel="apple-touch-icon">
 </head>
 
 <body id="page-top">
- 
-<!-----NAVIGATION----->
 
-  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+<!--NAVIGATION-->
+ 
+  <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
     <div class="container">
       <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-main-collapse">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_collapse">
           <i class="fa fa-bars"></i>
         </button>
         <a class="navbar-brand page-scroll" href="#page-top">
-          <img src="images/logo.png" class="logo_img">
+          <img src="images/logo.png" class="logo_img animated zoomIn">
           BrandonLew<span class="logo_span">PHOTOGRAPHY</span>
         </a>
       </div>
-      <div class="collapse navbar-collapse navbar-main-collapse">
+      <div id="nav_collapse" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
           <li>
             <a class="page-scroll" href="#portfolio">Portfolio</a>
@@ -40,20 +41,20 @@
     </div>
   </nav>
 
-<!-----BANNER----->
+<!--BANNER-->
+ 
+  <div class="bg1 fade_in"></div>
   
-  <div class="bg1 fade"></div>
-  
-<!-----PORTFOLIO----->
+<!--PORTFOLIO-->
 
   <div id="portfolio" class="body_container1">
     <div class="bg_white">
       <div class="portfolio">
         <h1>Portfolio</h1>
-                <div class="text-center marg_top">
+        <div class="text-center marg_top marg_bottom">
           <button class="bg_button sr_button">bg color</button> 
         </div> 
-        <div class="img_container marg_top">
+        <div class="img_container">
           <div class="third">
             <img src="images/2012_1036.jpg" onclick="onClick(this)" alt="Xian, China" class="image">
           </div>
@@ -148,7 +149,7 @@
     </div>  
   </div>
   
-<!-----ABOUT----->
+<!--ABOUT-->
   
   <div id="about" class="body_container2">
     <div class="about">
@@ -174,9 +175,7 @@
     </div>    
   </div>
   
-<!-----END MAIN SITE----->
-
-<!-----MODAL----->
+<!--MODAL-->
 
   <div id="modal01" class="modal">
 	  <span class="close" onclick="document.getElementById('modal01').style.display='none'">&times;</span>
@@ -186,7 +185,7 @@
 	  </div>
   </div>
   
-<!-----SCRIPT----->
+<!--SCRIPT-->
 
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery.easing.min.js"></script>
