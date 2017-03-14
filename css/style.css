@@ -284,6 +284,11 @@ form input, form textarea {
   width: 90%;
   max-width: 400px;
 }
+form input:focus, 
+form textarea:focus,
+form button:focus {
+  outline: none;
+}
 form button {
   font-family: 'Roboto', sans-serif;
   font-weight: 300;
@@ -301,6 +306,17 @@ form button:hover {
   animation: grow 0.5s ease-out;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+}
+#success, 
+#error {
+	display: none;
+	padding-top: 20px;
+}
+#success {
+	color: #D15900;
+}
+#error {
+	color: #FF0000;
 }
 @-webkit-keyframes grow {
   from {

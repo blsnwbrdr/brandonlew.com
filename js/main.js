@@ -45,6 +45,40 @@ $(document).ready(function() {
     scale: 0.2,
   }, 300);
   
+// CONTACT FORM
+  
+ $("#contact_form").on('submit',function(e) {
+    var name = $("#name").val();
+    var email = $("#email").val();
+    var message = $("#message").val();
+    if (name == '') {
+      $("#name").css('border-color','rgba(255, 0, 0, 0.5)');
+    }
+    if (email == '') {
+      $("#email").css('border-color','rgba(255, 0, 0, 0.5)');
+    }
+    if (message == '') {
+      $("#message").css('border-color','rgba(255, 0, 0, 0.5)');
+    }
+    else {
+      $.ajax({
+        url:'contact_form.php',
+        data:$(this).serialize(),
+        type:'POST',
+        success:function(data){
+          $("#success").show().fadeIn(1000);
+          $('#contact_form').each(function(){
+            this.reset();
+          });
+        },
+        error:function(data){
+          $("#error").show().fadeIn(1000);
+        }
+      });
+    }
+    e.preventDefault();
+  });
+  
 });
 
 // MODAL
