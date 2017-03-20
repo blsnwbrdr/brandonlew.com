@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('.bg_white').toggleClass('bg_black');
   });
 
-// PAGE SCROLLING FEATURE
+// PAGE SCROLLING EASING FEATURE
   
   $('a.page-scroll').bind('click', function(event) {
       var $anchor = $(this);
