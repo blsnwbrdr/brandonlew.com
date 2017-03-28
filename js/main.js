@@ -90,5 +90,6 @@ function onClick(element) {
   document.getElementById("caption").innerHTML = element.alt;
   }
   span.onclick = function() { 
+  "use strict";  
   modal.style.display = "none";
-  }
+  };
