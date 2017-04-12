@@ -47,37 +47,35 @@ $(document).ready(function() {
   
 // CONTACT FORM
   
- $("#contact_form").on('submit',function(e) {
+  $("#contact_form").on('submit',function(e) {
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
-    if (name == '') {
-      $("#name").css('border-color','rgba(255, 0, 0, 0.5)');
-    }
-    if (email == '') {
-      $("#email").css('border-color','rgba(255, 0, 0, 0.5)');
-    }
-    if (message == '') {
-      $("#message").css('border-color','rgba(255, 0, 0, 0.5)');
-    }
-    else {
+    if(name.length === 0 || email.length === 0 || message.length === 0) {
+      $('input,textarea').css('border-color','rgba(255, 0, 0, 0.5)');
+      $("#error").show().fadeIn(1000);
+      e.preventDefault();
+      return;
+    } else {
       $.ajax({
         url:'contact_form.php',
-        data:$(this).serialize(),
+        data: $(this).serialize(),
         type:'POST',
-        success:function(data){
+        success: function(data){
           $("#success").show().fadeIn(1000);
-          $('#contact_form').each(function(){
-            this.reset();
+          $("#name").val("").css('border-color','#909090');
+          $("#email").val("").css('border-color','#909090');
+          $("#message").val("").css('border-color','#909090');
+          $("#error").fadeOut();
+          $("#contact_form").each(function(){
+            $(this).reset();
           });
+          data();
         },
-        error:function(data){
-          $("#error").show().fadeIn(1000);
-        }
       });
     }
     e.preventDefault();
-  });
+  });  
   
 });
 
