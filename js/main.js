@@ -27,7 +27,7 @@ $(document).ready(function() {
   
   $('#navbar').affix({
     offset: {
-        top: 100
+        top: 0
     }
   });
   
