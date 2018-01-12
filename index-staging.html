@@ -1,61 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
+  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Brandon Lew Photography</title>
-	<link href="https://fonts.googleapis.com/css?family=Nunito:200,400,600,800" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Gruppo|Roboto:300|Josefin+Sans:300" rel="stylesheet">
   <link href="css/bootstrap.min.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
   <link href="css/animate.min.css" rel="stylesheet">
   <!-- build:css css/style.min.css -->
-	<link href="css/etsy.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
   <!-- endbuild -->
-  <link href="favicon.ico" rel="shortcut icon">
+	<link href="favicon.ico" rel="shortcut icon">
 	<link href="apple-touch-icon.png" rel="apple-touch-icon">
 </head>
+
 <body id="page-top">
 
-  <div id="header">
-    <div id="layer" class="text-center">
-      <h1>Gallery</h1>
-      <div id="buttons">
-        <h5 id="northAmerica">North America</h5>
-        <h5 id="europe">Europe</h5>
-        <h5 id="africa">Africa</h5>
-        <h5 id="asia">Asia</h5>
-      </div>
-      <div>
-        <a class="page-scroll" href="#gallery">
-          <i id="arrow"></i>
+<!--NAVIGATION-->
+
+  <nav id="navbar" class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#nav_collapse">
+          <i class="fa fa-bars"></i>
+        </button>
+        <a class="navbar-brand page-scroll" href="#page-top">
+          <img src="images/logo.png" alt="logo" class="logo_img animated zoomIn">
+          BrandonLew<span class="logo_span">PHOTOGRAPHY</span>
         </a>
+      </div>
+      <div id="nav_collapse" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li>
+            <a class="page-scroll" href="#portfolio">Portfolio</a>
+          </li>
+          <li>
+            <a class="page-scroll" href="#about">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+<!--BANNER-->
+
+  <div class="bg1 fade_in"></div>
+
+<!--PORTFOLIO-->
+
+  <div id="portfolio" class="body_container1">
+    <div class="bg_white">
+      <div class="portfolio">
+        <h1>Portfolio</h1>
+        <div class="text-center marg_top marg_bottom">
+          <button class="bg_button sr_button">bg color</button>
+        </div>
+        <div class="img_container">
+          <div class="third photos">
+          </div>
+          <div class="third photos">
+          </div>
+          <div class="third photos">
+          </div>
+        </div>
+        <div class="img_container">
+          <div class="half photos">
+          </div>
+          <div class="half photos">
+          </div>
+        </div>
+        <div class="img_container">
+          <div class="third photos">
+          </div>
+          <div class="third photos">
+          </div>
+          <div class="third photos">
+          </div>
+        </div>
+        <div class="img_container">
+          <div class="quarter photos">
+          </div>
+          <div class="quarter photos">
+          </div>
+          <div class="quarter photos">
+          </div>
+          <div class="quarter photos">
+          </div>
+        </div>
+        <div class="text-center marg_top">
+          <button class="bg_button sr_button">bg color</button>
+        </div>
       </div>
     </div>
   </div>
-  
-  <!--GALLERY-->
-  <section id="gallery">
-    <div id="grid" class="grid">
-      <div class="grid-sizer"></div>
+
+<!--ABOUT-->
+
+  <div id="about" class="body_container2">
+    <div class="about">
+      <h1>About</h1>
+      <p>A San Francisco based photographer, primarily specializing in urban and nature landscape photography from around the world. <br><br>All work can be found on <a href="https://www.etsy.com/shop/blewphotography/" target="_blank">Etsy.com</a></p>
+      <form id="contact_form" method="post">
+        <input type="text" id="name" name="name" aria-label="name" placeholder="Name"><br>
+        <input type="email" id="email" name="email" aria-label="email" placeholder="Email Address"><br>
+        <textarea rows="5" id="message" name="message" aria-label="message" placeholder="Message"></textarea><br>
+        <button class="sr_button" type="submit" id="submit" name="submit">Submit</button>
+        <p id="success">Your Message has been sent!</p>
+        <p id="error">Something went wrong, go back and try again!</p>
+      </form>
     </div>
-  </section>
+    <div class="info">
+      <p>
+        San Francisco, CA, USA&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;&copy; 2017 Brandon Lew&nbsp;&nbsp;&nbsp; | &nbsp;&nbsp;&nbsp;
+        <a href="mailto:brandon.t.lew@gmail.com">brandon.t.lew@gmail.com</a>
+      </p>
+    </div>
+    <div class="social_media">
+      <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><i class="fa fa-etsy sr_icon" id="etsy"></i></a>
+      <a href="https://www.instagram.com/blsnwbrdr/" target="_blank"><i class="fa fa-instagram sr_icon" id="instagram"></i></a>
+      <a href="https://www.facebook.com/brandonlewphotography/" target="_blank"><i class="fa fa-facebook-official sr_icon" id="fb"></i></a>
+    </div>
+  </div>
 
   <!--MODALS-->
   <section id="modals"></section>
 
-  <!--TOP BOX-->
-  <a href="#page-top" class="top_box page-scroll">
-    <i class="fa fa-chevron-up"></i>
-  </a>
-
   <!--SCRIPTS-->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/imagesloaded.pkgd.min.js"></script>
-	<script src="js/isotope.pkgd.min.js"></script>
-	<script src="js/jquery.easing.min.js"></script>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery.easing.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/scrollreveal.min.js"></script>
   <!-- build:js js/scripts.min.js -->
-	<script src="js/scripts.js"></script>
+  <script src="js/scripts.js"></script>
   <!-- endbuild -->
+
 </body>
 </html>

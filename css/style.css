@@ -35,7 +35,7 @@ a:hover {
 /*=====HEADER=====*/
 
 #navbar {
-  background-color: #000000;  
+  background-color: #000000;
   border-color: rgba(255, 255, 255, 0.3);
   -webkit-transition: all .5s;
   transition: all .5s;
@@ -45,7 +45,7 @@ a:hover {
   font-family: 'Gruppo', sans-serif;
   font-size: 20px;
   color: #FFFFFF;
-  letter-spacing: 2px;  
+  letter-spacing: 2px;
 }
 #navbar .navbar-header .logo_img {
   display: inline-block;
@@ -56,7 +56,7 @@ a:hover {
 #navbar .navbar-header .navbar-brand:focus {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;  
+  transition: all 0.3s ease-out;
 }
 #navbar .navbar-header .navbar-brand span.logo_span {
   font-size: 1.2em;
@@ -65,7 +65,7 @@ a:hover {
 #navbar .navbar-header .navbar-toggle {
   color: #FFFFFF;
   font-size: 12px;
-  border-color: rgba(255, 255, 255, 0.3);  
+  border-color: rgba(255, 255, 255, 0.3);
 }
 #navbar .navbar-header .navbar-toggle:focus,
 #navbar .navbar-header .navbar-toggle:active,
@@ -85,7 +85,7 @@ a:hover {
 #navbar .nav>li>a:hover {
   color: #D15900;
   -webkit-transition: all 0.3s ease-out;
-  transition: all 0.3s ease-out;  
+  transition: all 0.3s ease-out;
 }
 #navbar .nav>li>a:focus:hover,
 #navbar .nav>li.active>a,
@@ -165,7 +165,7 @@ div.body_container1 .portfolio h1 {
   color: #868686;
   text-align: center;
   letter-spacing: 5px;
-  padding-bottom: 20px;  
+  padding-bottom: 20px;
 }
 div.body_container1 .img_container {
 	display: -webkit-flex;
@@ -176,17 +176,17 @@ div.body_container1 .img_container {
 div.body_container1 .half {
 	display: block;
 	width: 50%;
-	padding: 5px;	
+	padding: 5px;
 }
 div.body_container1 .third {
 	display: block;
 	width: 33.33333333%;
-	padding: 5px;		
+	padding: 5px;
 }
 div.body_container1 .quarter {
 	display: block;
 	width: 25%;
-	padding: 5px;	
+	padding: 5px;
 }
 div.body_container1 img.image {
 	display: block;
@@ -210,7 +210,7 @@ div.body_container1 .bg_button {
 }
 div.body_container1 .bg_button:hover {
   background-color: #D15900;
-  color: #FFFFFF;   
+  color: #FFFFFF;
   -webkit-animation: grow 0.5s ease-out;
   animation: grow 0.5s ease-out;
   -webkit-animation-fill-mode: both;
@@ -284,7 +284,7 @@ form input, form textarea {
   width: 90%;
   max-width: 400px;
 }
-form input:focus, 
+form input:focus,
 form textarea:focus,
 form button:focus {
   outline: none;
@@ -301,13 +301,13 @@ form button {
 }
 form button:hover {
   background-color: #D15900;
-  color: #FFFFFF;   
+  color: #FFFFFF;
   -webkit-animation: grow 0.5s ease-out;
   animation: grow 0.5s ease-out;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
 }
-#success, 
+#success,
 #error {
 	display: none;
 	padding-top: 20px;
@@ -327,19 +327,19 @@ form button:hover {
   to {
     padding: 5px 20px;
     background-color: #D15900;
-    color: #FFFFFF;    
+    color: #FFFFFF;
   }
 }
 @keyframes grow {
   from {
     padding: 5px 15px;
     background-color: #E9E9E9;
-    color: #000000;    
+    color: #000000;
   }
   to {
     padding: 5px 20px;
     background-color: #D15900;
-    color: #FFFFFF;      
+    color: #FFFFFF;
   }
 }
 div.body_container2 .info {
@@ -358,7 +358,7 @@ div.body_container2 .info a:hover {
   text-decoration: none;
   color: #D15900;
   -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;  
+  transition: all 0.3s ease-in-out;
 }
 div.body_container2 .social_media {
   display: inline-block;
@@ -372,10 +372,10 @@ div.body_container2 .social_media i {
   padding: 5px;
   font-size: 20px;
   -webkit-transition: color 0.3s ease-in-out;
-  transition: color 0.3s ease-in-out; 
+  transition: color 0.3s ease-in-out;
 }
 #etsy:hover {
-  color: #F56400;  
+  color: #F56400;
 }
 #instagram:hover {
   color: #D32E8D;
@@ -429,19 +429,19 @@ div.bg2 {
 	background-repeat: no-repeat;
 	background-size: cover;
 }
-.ty {  
+.ty {
   position: absolute;
   top: 20%;
   width: 100%;
   font-family: 'Roboto', sans-serif;
-  color: #D15900;  
+  color: #D15900;
   font-weight: 300;
   text-align: center;
 }
 
 /*=====MODAL=====*/
 
-.modal {
+/* .modal {
 	display: none;
 	position: fixed;
 	z-index: 9999;
@@ -467,7 +467,7 @@ div.bg2 {
   from {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 
+  }
   to {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -477,7 +477,7 @@ div.bg2 {
   from {
     -webkit-transform: scale(0);
     transform: scale(0);
-  } 
+  }
   to {
     -webkit-transform: scale(1);
     transform: scale(1);
@@ -502,8 +502,8 @@ div.bg2 {
   text-align: center;
   color: #CCCCCC;
 	font-size: 24px;
-}
-.close {
+} */
+/* .close {
 	position: absolute;
 	top: 15px;
 	right: 35px;
@@ -516,7 +516,7 @@ div.bg2 {
 	color: #BBBBBB;
 	text-decoration: none;
 	cursor: pointer;
-}
+} */
 
 /*=====MEDIA=====*/
 
@@ -526,7 +526,7 @@ div.bg2 {
   }
 }
 @media (max-width: 700px){
-/*----body----*/  
+/*----body----*/
   div.body_container2 .info {
     display: none;
   }
@@ -541,12 +541,12 @@ div.bg2 {
     padding: 15px;
   }
 /*----modal----*/
-  .modal {
+  /* .modal {
     padding-top: 5px;
   }
 	.modal_content {
     width: 65%;
-  }
+  } */
 }
 @media (max-width: 480px) {
 /*----body----*/
@@ -560,7 +560,7 @@ div.bg2 {
 	div.body_container1 .third {
 		width: 100%;
 		padding: 5px 0;
-	}	
+	}
 	div.body_container1 .quarter {
 		width: 100%;
 		padding: 5px 0;
@@ -578,11 +578,37 @@ div.bg2 {
     padding: 0;
   }
 /*----modal----*/
-  .modal {
+  /* .modal {
     padding-top: 75px;
   }
 	.modal_content {
 		width: 95%;
 		max-width: none;
-	}
+	} */
+}
+
+
+
+.modal-content {
+  border-radius: 0;
+}
+.modal-dialog .close {
+  position: absolute;
+  right: 0;
+  float: none;
+  margin: 0;
+  padding: 5px 10px;
+  font-size: 36px;
+  opacity: .75;
+  background-color: #FFFFFF;
+}
+.modal-dialog .close:hover {
+  color: #C0C0C0;
+}
+.modal-body {
+  padding: 0;
+}
+.modal-footer {
+  text-align: center;
+	font-family: 'Josefin Sans', sans-serif;
 }
