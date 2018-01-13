@@ -12,6 +12,9 @@ a:hover {
 .marg_bottom {
   margin-bottom: 25px;
 }
+
+/*=====ANIMATIONS=====*/
+
 .animated {
 	-webkit-animation-duration: 1s;
 	animation-duration: 1s;
@@ -20,9 +23,10 @@ a:hover {
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
-
-/*=====ANIMATIONS=====*/
-
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
 @-webkit-keyframes zoomIn {
   from {
     opacity: 0;
@@ -42,10 +46,6 @@ a:hover {
   50% {
     opacity: 1;
   }
-}
-.zoomIn {
-  -webkit-animation-name: zoomIn;
-  animation-name: zoomIn;
 }
 .fade_in {
   -webkit-animation: fade 2s;
@@ -164,11 +164,11 @@ a:hover {
 /*=====BANNER=====*/
 
 div.bg1 {
-	background-image: url(../images/2012_0899.jpg);
+	background-image: url(../images/2012_0998.jpg);
   background-color: #000000;
 	opacity: 1;
 	height: 100%;
-	background-attachment: scroll;
+	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -531,12 +531,10 @@ div.bg2 {
 
 /*=====MEDIA QUERIES=====*/
 
-@media (min-width: 1025px) {
-  div.bg1 {
-    background-attachment: fixed;
-  }
-}
 @media (max-width: 1024px) {
+	div.bg1 {
+		background-attachment: scroll;
+	}
 	div.body_container1 .portfolio p {
 		font-size: 16px;
 		padding: 0 12px;
