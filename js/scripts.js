@@ -77,35 +77,41 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-var shopName = "blewphotography";
-var apiKey = "xis6u17jgj9lpn3icytgtzxq";
-var photoArray = [];
+// ETSY API
+
+  var shopName = "blewphotography";
+  var apiKey = "xis6u17jgj9lpn3icytgtzxq";
+
 // GET IMAGES FUNCTION
 
   function getImages(section) {
-    // CLEAR GRID
+    // CLEAR PHOTOS
     $('.photos').html('');
     // GET DATA FROM ETSY
     $.ajax({
       url: "https://openapi.etsy.com/v2/shops/" + shopName + "/sections/" + section + "/listings/active.js?api_key=" + apiKey + "&includes=MainImage&fields=title,listing_id,url&limit=100",
       dataType: "jsonp",
       success: function(data) {
+        // RANDOMIZE
         data.results.sort(function() {
           return 0.5 - Math.random();
         });
-        // photoArray.push(data.results);
-        var photoArray = {"results": data.results}
-        console.log(photoArray.results.length)
-        $.each(photoArray.results, function(i) {
-          if(photoArray.results[i].listing_id === 259259197) {
-            photoArray.results.splice(i,1);
-          } else if(photoArray.results[i].listing_id === 210787557) {
-            photoArray.results.splice(i,1);
-          } else if(photoArray.results[i].listing_id === 185468274) {
-            photoArray.results.splice(i,1);
+        // REMOVE ODD SIZED LISTINGS
+        for(var x = data.results.length; x--;) {
+          if(data.results[x].listing_id === 259259197) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 210787557) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 185468274) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 185488602) {
+            data.results.splice(x,1);
           }
+        }
 
-          if (i < 12) {
+        // DISPLAY 12 LISTINGS
+        $.each(data.results, function(i) {
+          if(i < 12) {
             var photos = $('.photos');
             $.each(photos, function(x) {
               if(i === x ) {
@@ -118,20 +124,16 @@ var photoArray = [];
       }
     });
   }
-
-  getImages('15306280');
-
-  $('#northAmerica').click(function() {
-    getImages("15311764");
+  // CONTINENTS
+  var africa = '15311634';
+  var asia = '15306280';
+  var europe = '15306643';
+  var northAmerica = '15311764';
+  var southAmerica = '15322811';
+  var continents = [africa, asia, europe, northAmerica, southAmerica];
+  continents.sort(function() {
+    return 0.5 - Math.random();
   });
-  $('#europe').click(function() {
-    getImages("15306643");
-  });
-  $('#africa').click(function() {
-    getImages("15311634");
-  });
-  $('#asia').click(function() {
-    getImages("15306280");
-  });
+  getImages(continents[0]);
 
 }); // END JQUERY
