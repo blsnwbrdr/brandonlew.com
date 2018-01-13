@@ -211,6 +211,10 @@ div.body_container1 .portfolio p:hover {
 	color: #868686;
 	cursor: pointer;
 }
+div.body_container1 .portfolio p.active {
+	font-weight: 400;
+	color: #868686;
+}
 div.body_container1 .img_container {
 	display: -webkit-flex;
 	display: flex;

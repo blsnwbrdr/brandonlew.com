@@ -85,6 +85,22 @@ $(document).ready(function() {
 // GET IMAGES FUNCTION
 
   function getImages(section) {
+    if(section === '15311634') {
+      $('.continents').removeClass('active');
+      $('#africa').addClass('active');
+    } else if(section === '15306280') {
+      $('.continents').removeClass('active');
+      $('#asia').addClass('active');
+    } else if(section === '15306643') {
+      $('.continents').removeClass('active');
+      $('#europe').addClass('active');
+    } else if(section === '15311764') {
+      $('.continents').removeClass('active');
+      $('#northAmerica').addClass('active');
+    } else if(section === '15322811') {
+      $('.continents').removeClass('active');
+      $('#southAmerica').addClass('active');
+    }
     // CLEAR PHOTOS
     $('.photos').html('');
     // GET DATA FROM ETSY
