@@ -167,6 +167,22 @@ div.body_container1 .portfolio h1 {
   letter-spacing: 5px;
   padding-bottom: 20px;
 }
+div.body_container1 .continents_container {
+	text-align: center;
+}
+div.body_container1 .portfolio p {
+	display: inline-block;
+	font-family: 'Josefin Sans', sans-serif;
+	font-size: 18px;
+	font-weight: 300;
+	letter-spacing: 5px;
+	color: #D15900;
+	padding: 0 25px;
+}
+div.body_container1 .portfolio p:hover {
+	color: #868686;
+	cursor: pointer;
+}
 div.body_container1 .img_container {
 	display: -webkit-flex;
 	display: flex;
@@ -489,7 +505,19 @@ div.bg2 {
     background-attachment: fixed;
   }
 }
-@media (max-width: 700px){
+@media (max-width: 1024px) {
+	div.body_container1 .portfolio p {
+		font-size: 16px;
+		padding: 0 12px;
+	}
+}
+@media (max-width: 799px) {
+	div.body_container1 .portfolio p {
+		display: block;
+		padding: 0 15px;
+	}
+}
+@media (max-width: 700px) {
 /*----body----*/
   div.body_container2 .info {
     display: none;

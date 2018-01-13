@@ -113,17 +113,27 @@ $(document).ready(function() {
         $.each(data.results, function(i) {
           if(i < 12) {
             var photos = $('.photos');
-            $.each(photos, function(x) {
-              if(i === x ) {
-                $(photos[x]).append('<a href="#" data-toggle="modal" data-target="#' + data.results[i].listing_id + '"><img src="' + data.results[i].MainImage.url_570xN + '" alt="' + data.results[i].title + '"  class="image"></a>');
-              }
-            })
+            if(window.innerWidth > 1024) {
+              $.each(photos, function(x) {
+                if(i === x ) {
+                  $(photos[x]).append('<a href="#" data-toggle="modal" data-target="#' + data.results[i].listing_id + '"><img src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"  class="image"></a>');
+                }
+              });
+            } else {
+              $.each(photos, function(x) {
+                if(i === x ) {
+                  $(photos[x]).append('<a href="#" data-toggle="modal" data-target="#' + data.results[i].listing_id + '"><img src="' + data.results[i].MainImage.url_570xN + '" alt="' + data.results[i].title + '"  class="image"></a>');
+                }
+              });
+            }
+
             $('#modals').append('<div id="' + data.results[i].listing_id + '" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal">&times;</button><img class="img-responsive" src="' + data.results[i].MainImage.url_fullxfull + '"></div><div class="modal-footer"><h4 class="modal-title">' + data.results[i].title + '</h4><a href="' + data.results[i].url + '" target="_blank"><button type="button">purchase on etsy</button></a></div></div></div></div>');
           }
         });
       }
     });
   }
+
   // CONTINENTS
   var africa = '15311634';
   var asia = '15306280';
@@ -131,9 +141,27 @@ $(document).ready(function() {
   var northAmerica = '15311764';
   var southAmerica = '15322811';
   var continents = [africa, asia, europe, northAmerica, southAmerica];
+  // RANDOMIZE INITIAL DISPLAY
   continents.sort(function() {
     return 0.5 - Math.random();
   });
   getImages(continents[0]);
+
+  // BUTTONS
+  $('#africa').click(function() {
+    getImages(africa);
+  });
+  $('#asia').click(function() {
+    getImages(asia);
+  });
+  $('#europe').click(function() {
+    getImages(europe);
+  });
+  $('#northAmerica').click(function() {
+    getImages(northAmerica);
+  });
+  $('#southAmerica').click(function() {
+    getImages(southAmerica);
+  });
 
 }); // END JQUERY
