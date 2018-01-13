@@ -13,12 +13,40 @@ a:hover {
   margin-bottom: 25px;
 }
 .animated {
+	-webkit-animation-duration: 1s;
+	animation-duration: 1s;
+	-webkit-animation-fill-mode: both;
+	animation-fill-mode: both;
   -webkit-animation-delay: 1.5s;
   animation-delay: 1.5s;
 }
 
-/*=====ANIMATE SITE=====*/
+/*=====ANIMATIONS=====*/
 
+@-webkit-keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+@keyframes zoomIn {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(.3, .3, .3);
+    transform: scale3d(.3, .3, .3);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
 .fade_in {
   -webkit-animation: fade 2s;
   animation: fade 2s;
@@ -32,7 +60,7 @@ a:hover {
   to { opacity: 1 }
 }
 
-/*=====HEADER=====*/
+/*=====NAVIGATION=====*/
 
 #navbar {
   background-color: #000000;
@@ -501,7 +529,7 @@ div.bg2 {
 	transition: all 0.3s ease-out;
 }
 
-/*=====MEDIA=====*/
+/*=====MEDIA QUERIES=====*/
 
 @media (min-width: 1025px) {
   div.bg1 {
@@ -521,7 +549,6 @@ div.bg2 {
 	}
 }
 @media (max-width: 700px) {
-/*----body----*/
   div.body_container2 .info {
     display: none;
   }
@@ -537,7 +564,6 @@ div.bg2 {
   }
 }
 @media (max-width: 480px) {
-/*----body----*/
 	div.body_container1 .img_container {
     display: inline;
 	}
@@ -559,7 +585,6 @@ div.bg2 {
   form input, form textarea {
     width: 80%;
   }
-/*----ty----*/
   #thank_you {
     left: 0;
     padding: 0;

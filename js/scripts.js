@@ -113,6 +113,7 @@ $(document).ready(function() {
         $.each(data.results, function(i) {
           if(i < 12) {
             var photos = $('.photos');
+            // CHECK WINDOW SIZE AND USE EITHER FULL OR 570xN
             if(window.innerWidth > 1024) {
               $.each(photos, function(x) {
                 if(i === x ) {
@@ -127,7 +128,7 @@ $(document).ready(function() {
               });
             }
 
-            $('#modals').append('<div id="' + data.results[i].listing_id + '" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal">&times;</button><img class="img-responsive" src="' + data.results[i].MainImage.url_fullxfull + '"></div><div class="modal-footer"><h4 class="modal-title">' + data.results[i].title + '</h4><a href="' + data.results[i].url + '" target="_blank"><button type="button">purchase on etsy</button></a></div></div></div></div>');
+            $('#modals').append('<div id="' + data.results[i].listing_id + '" class="modal fade"><div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-body"><button class="close" type="button" data-dismiss="modal">&times;</button><img class="img-responsive" src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"></div><div class="modal-footer"><h4 class="modal-title">' + data.results[i].title + '</h4><a href="' + data.results[i].url + '" target="_blank"><button type="button">purchase on etsy</button></a></div></div></div></div>');
           }
         });
       }
