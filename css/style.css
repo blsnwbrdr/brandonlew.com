@@ -482,17 +482,20 @@ div.bg2 {
   text-align: center;
 }
 .modal-footer button {
-	border: none;
-  border-radius: 2px;
+	border: 1px solid #868686;
+  border-radius: 3px;
+	letter-spacing: 2px;
 	color: #D15900;
-  background-color: #EEE;
+  background-color: transparent;
   padding: 5px 20px;
   margin: 20px 0;
 	-webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
 }
 .modal-footer button:hover {
-	background-color: #E0E0E0;
+	background-color: #D15900;
+	color: white;
+	border: 1px solid #D15900;
 	cursor: pointer;
 	-webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
