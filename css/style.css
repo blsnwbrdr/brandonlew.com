@@ -206,10 +206,14 @@ div.body_container1 .portfolio p {
 	letter-spacing: 5px;
 	color: #D15900;
 	padding: 0 25px;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 div.body_container1 .portfolio p:hover {
 	color: #868686;
 	cursor: pointer;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 div.body_container1 .portfolio p.active {
 	font-weight: 400;
@@ -255,17 +259,18 @@ div.body_container1 .bg_button {
   border: 1px solid #868686;
   border-radius: 3px;
   background-color: transparent;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 div.body_container1 .bg_button:hover {
   background-color: #D15900;
   color: #FFFFFF;
-  -webkit-animation: grow 0.5s ease-out;
-  animation: grow 0.5s ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+	border: 1px solid #D15900;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 div.body_container1 .bg_button:focus {
-  outline: none;
+	outline: none;
 }
 
 /*=====ABOUT=====*/
@@ -346,14 +351,15 @@ form button {
   border: 1px solid #868686;
   border-radius: 3px;
   background-color: transparent;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 form button:hover {
   background-color: #D15900;
   color: #FFFFFF;
-  -webkit-animation: grow 0.5s ease-out;
-  animation: grow 0.5s ease-out;
-  -webkit-animation-fill-mode: both;
-  animation-fill-mode: both;
+	border: 1px solid #D15900;
+	-webkit-transition: all 0.3s ease-out;
+	transition: all 0.3s ease-out;
 }
 #success,
 #error {
@@ -531,6 +537,9 @@ div.bg2 {
 	cursor: pointer;
 	-webkit-transition: all 0.3s ease-out;
 	transition: all 0.3s ease-out;
+}
+.modal-footer button:focus {
+	outline: none;
 }
 
 /*=====MEDIA QUERIES=====*/
