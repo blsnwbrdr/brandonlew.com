@@ -67,9 +67,9 @@ $(document).ready(function() {
           $("#email").val("").css('border-color','#909090');
           $("#message").val("").css('border-color','#909090');
           $("#error").fadeOut();
-          $("#contact_form").each(function(){
-            $(this).reset();
-          });
+          // $("#contact_form").each(function(){
+          //   $(this).reset();
+          // });
           data();
         },
       });
