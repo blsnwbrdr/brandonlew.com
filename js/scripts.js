@@ -51,7 +51,8 @@ $(document).ready(function() {
     var name = $("#name").val();
     var email = $("#email").val();
     var message = $("#message").val();
-    if(name.length === 0 || email.length === 0 || message.length === 0) {
+    var emailPattern = /^[A-Za-z0-9.!#$%&'*+-/=?^_`{|}~]+@[A-Za-z0-9-]+\.[A-Za-z]{2,20}$/;
+    if(name.length === 0 || email.length === 0 || message.length === 0 || emailPattern.test(email) === false) {
       $('input,textarea').css('border-color','rgba(255, 0, 0, 0.5)');
       $("#error").show().fadeIn(1000);
       e.preventDefault();
