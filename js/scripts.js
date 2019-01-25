@@ -58,8 +58,13 @@ $(document).ready(function() {
       return;
     } else {
       $.ajax({
-        url:'contact_form.php',
-        data: $(this).serialize(),
+        url:'https://brandonscode.herokuapp.com/contact',
+        // url:'http://localhost:5000/contact',
+        data: {
+          name: name,
+          email: email,
+          message: message
+        },
         type:'POST',
         success: function(data){
           $("#success").show().fadeIn(1000);
@@ -67,10 +72,9 @@ $(document).ready(function() {
           $("#email").val("").css('border-color','#909090');
           $("#message").val("").css('border-color','#909090');
           $("#error").fadeOut();
-          // $("#contact_form").each(function(){
-          //   $(this).reset();
-          // });
-          data();
+          setTimeout(function(){
+            $("#success").fadeOut(1000);
+          },2000);
         },
       });
     }
