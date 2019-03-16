@@ -127,6 +127,8 @@ $(document).ready(function() {
             data.results.splice(x,1);
           } else if(data.results[x].listing_id === 185488602) {
             data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 691028887) {
+            data.results.splice(x,1);
           }
         }
 
