@@ -7,7 +7,7 @@ const cssMinifiy = require('gulp-cssmin');
 const rename = require('gulp-rename');
 
 // SOURCE DIRECTORY
-const sourceDir = 'sass/';
+const sourceDir = 'css/';
 
 // DESTINATION DIRECTORY
 const destDir = 'css';
@@ -22,18 +22,18 @@ gulp.task('compile', () => {
 });
 
 // MINIFY CSS TO DESTINATION DIRECTORY
-gulp.task('minify', () => {
-  return gulp.src([`${sourceDir}*.css`,`!${sourceDir}*.min.css`])
-    .pipe(cssMinifiy())
-    .pipe(rename({
-      dirname:'',
-      extname:'.min.css'
-    }))
-    .pipe(gulp.dest(destDir))
-});
+// gulp.task('minify', () => {
+//   return gulp.src([`${sourceDir}*.css`,`!${sourceDir}*.min.css`])
+//     .pipe(cssMinifiy())
+//     .pipe(rename({
+//       dirname:'',
+//       extname:'.min.css'
+//     }))
+//     .pipe(gulp.dest(destDir))
+// });
 
 gulp.task('sass:watch', () => {
-  gulp.watch(`${sourceDir}*.{sass,scss}`, gulp.series(['compile','minify']), () => {});
+  gulp.watch(`${sourceDir}*.{sass,scss}`, gulp.series(['compile']), () => {});
 });
 
 gulp.task('default', gulp.series(['sass:watch'], () => {}));

@@ -11,13 +11,16 @@ const rename = require('gulp-rename');
 // TASKS
 //----------
 
+const sourceDir = 'index-beta-staging';
+const destDir = 'index-beta'
+
 // PARSE HTML, MINIFY, AND COPY TO NEW LOCATION
 gulp.task('html', () => {
-  return gulp.src('index-staging.html')
+  return gulp.src(`${sourceDir}.html`)
     .pipe(useref())
     .pipe(gulpif(['js/*.js','js/**/*.js'], jsMinify()))
     .pipe(gulpif('css/*.css', cssMinify()))
-    .pipe(gulpif('index-staging.html', rename('index.html')))
+    .pipe(gulpif(`${sourceDir}.html`, rename(`${destDir}.html`)))
     .pipe(gulp.dest( (file) => {
       return file.base
     }));
