@@ -1,1 +1,2 @@
-.test { display: block; }
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300,400");
+p { font-family: 'Quicksand', sans-serif; font-weight: 400; }
