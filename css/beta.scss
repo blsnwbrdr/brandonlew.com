@@ -1,6 +1,54 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300,400');
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');
 
+// GLOBALS
+*{
+  box-sizing: border-box;
+}
+html,body{
+  height: 100%;
+}
+body{
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  font-family: 'Quicksand', sans-serif;
+  font-weight: '300';
+}
+h1,h2,h3,h4,h5,
+.h1,.h2,.h3,.h4,.h5{
+  font-family: 'Comfortaa', sans-serif;
+  font-weight: 300;
+}
 p{
   font-family: 'Quicksand', sans-serif;
-  font-weight: 400;
+  font-weight: 300;
+}
+
+// BANNER
+.banner{
+  position: relative;
+  height: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background: url(../images/2017_0597.jpg) no-repeat center/cover;
+  .bannerOpacity{
+    height: 100%;
+    width: 100%;
+    background-color: rgba(255,255,255,0.5);
+  }
+  .bannerHeader{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    padding: 0 20px;
+    text-align: center;
+  }
+}
+@media(min-width:768px){
+  h1{
+    font-size: 64px;
+  }
 }
