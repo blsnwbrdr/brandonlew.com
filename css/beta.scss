@@ -18,6 +18,8 @@ h1,h2,h3,h4,h5,
 .h1,.h2,.h3,.h4,.h5{
   font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
+  letter-spacing: 2px;
+  margin-top: 0;
 }
 p{
   font-family: 'Quicksand', sans-serif;
@@ -31,7 +33,7 @@ p{
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: url(../images/2017_0597.jpg) no-repeat center/cover;
+  background: #fff url(../images/2017_0597.jpg) no-repeat center/cover;
   .bannerOpacity{
     height: 100%;
     width: 100%;
@@ -39,9 +41,9 @@ p{
   }
   .bannerHeader{
     position: absolute;
-    top: 50%;
+    top: 40%;
     left: 50%;
-    transform: translate(-50%,-50%);
+    transform: translate(-50%,-40%);
     width: 100%;
     padding: 0 20px;
     text-align: center;
