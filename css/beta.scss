@@ -12,18 +12,93 @@ body{
   padding: 0;
   background-color: #fff;
   font-family: 'Quicksand', sans-serif;
-  font-weight: '300';
+  font-weight: 300;
+}
+h1,h2,h3,h4,h5,p{
+  margin: 0 0 10px;
 }
 h1,h2,h3,h4,h5,
 .h1,.h2,.h3,.h4,.h5{
   font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
-  margin-top: 0;
 }
-p{
-  font-family: 'Quicksand', sans-serif;
-  font-weight: 300;
+h1,.h1{
+  font-size: 2.25em;
+}
+h2,.h2{
+  font-size: 1.75em;
+}
+h3,.h3{
+  font-size: 1.5em;
+}
+@media(min-width:768px){
+  h1,.h1{
+    font-size: 4em;
+  }
+  h2,.h2{
+    font-size: 2.25em;
+  }
+  h3,.h3{
+    font-size: 1.75em;
+  }
+  h4,.h4,p{
+    font-size: 1.125em;
+  }
+  h5,.h5{
+    font-size: 1em;
+  }
+}
+
+// NAVIGATION
+.nav{
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 999;
+  .navIconInput{
+    display: none;
+  }
+  .navMenu{
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 5px;
+    background-color: #fff;
+  }
+  .navIconInput:checked ~ .navMenu{
+    max-height: 1000px;
+  }
+  .navIconLabel{
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 6px;
+    .bar{
+      display: inline-block;
+      height: 2px;
+      width: 100%;
+      background-color: black;
+    }
+    .bar1{
+
+    }
+    .bar2{
+
+    }
+    .bar3{
+
+    }
+  }
+  .navMenuList{
+    list-style-type: none;
+    margin: 0;
+    padding: 0px 50px 0px 10px;
+    li{
+      padding: 10px 0;
+    }
+  }
 }
 
 // BANNER
@@ -47,10 +122,5 @@ p{
     width: 100%;
     padding: 0 20px;
     text-align: center;
-  }
-}
-@media(min-width:768px){
-  h1{
-    font-size: 64px;
   }
 }

@@ -3,16 +3,42 @@
 
 html, body { height: 100%; }
 
-body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: '300'; }
+body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: 300; }
 
-h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 { font-family: 'Comfortaa', sans-serif; font-weight: 300; letter-spacing: 2px; margin-top: 0; }
+h1, h2, h3, h4, h5, p { margin: 0 0 10px; }
 
-p { font-family: 'Quicksand', sans-serif; font-weight: 300; }
+h1, h2, h3, h4, h5, .h1, .h2, .h3, .h4, .h5 { font-family: 'Comfortaa', sans-serif; font-weight: 300; letter-spacing: 2px; }
+
+h1, .h1 { font-size: 2.25em; }
+
+h2, .h2 { font-size: 1.75em; }
+
+h3, .h3 { font-size: 1.5em; }
+
+@media (min-width: 768px) { h1, .h1 { font-size: 4em; }
+  h2, .h2 { font-size: 2.25em; }
+  h3, .h3 { font-size: 1.75em; }
+  h4, .h4, p { font-size: 1.125em; }
+  h5, .h5 { font-size: 1em; } }
+
+.nav { position: fixed; top: 20px; left: 20px; z-index: 999; }
+
+.nav .navIconInput { display: none; }
+
+.nav .navMenu { max-height: 0; overflow: hidden; margin-top: 5px; background-color: #fff; }
+
+.nav .navIconInput:checked ~ .navMenu { max-height: 1000px; }
+
+.nav .navIconLabel { display: inline-block; height: 30px; width: 30px; cursor: pointer; font-size: 14px; line-height: 6px; }
+
+.nav .navIconLabel .bar { display: inline-block; height: 2px; width: 100%; background-color: black; }
+
+.nav .navMenuList { list-style-type: none; margin: 0; padding: 0px 50px 0px 10px; }
+
+.nav .navMenuList li { padding: 10px 0; }
 
 .banner { position: relative; height: 100%; min-height: 100%; margin: 0; padding: 0; background: #fff url(../images/2017_0597.jpg) no-repeat center/cover; }
 
 .banner .bannerOpacity { height: 100%; width: 100%; background-color: rgba(255, 255, 255, 0.5); }
 
 .banner .bannerHeader { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); width: 100%; padding: 0 20px; text-align: center; }
-
-@media (min-width: 768px) { h1 { font-size: 64px; } }
