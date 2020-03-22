@@ -127,7 +127,10 @@ h3,.h3{
   min-height: 100%;
   margin: 0;
   padding: 0;
-  background: #fff url(../images/2017_0597.jpg) no-repeat center/cover;
+  background-color: #fff;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   .bannerOpacity{
     height: 100%;
     width: 100%;

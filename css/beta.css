@@ -49,7 +49,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .nav .navIconInput:checked ~ .navMenu { max-height: 1000px; -webkit-animation: animateMenu 0.3s linear forwards; -moz-animation: animateMenu 0.3s linear forwards; -ms-animation: animateMenu 0.3s linear forwards; }
 
-.banner { position: relative; height: 100%; min-height: 100%; margin: 0; padding: 0; background: #fff url(../images/2017_0597.jpg) no-repeat center/cover; }
+.banner { position: relative; height: 100%; min-height: 100%; margin: 0; padding: 0; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: cover; }
 
 .banner .bannerOpacity { height: 100%; width: 100%; background-color: rgba(255, 255, 255, 0.5); }
 
