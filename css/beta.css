@@ -79,10 +79,10 @@ h3, .h3 { font-size: 1.5em; }
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     opacity: 1; }
-  50% { -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    opacity: 0; }
+  50% { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1; }
   100% { -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -92,10 +92,10 @@ h3, .h3 { font-size: 1.5em; }
     -moz-transform: scale(1);
     -ms-transform: scale(1);
     opacity: 1; }
-  50% { -webkit-transform: scale(0);
-    -moz-transform: scale(0);
-    -ms-transform: scale(0);
-    opacity: 0; }
+  50% { -webkit-transform: scale(1);
+    -moz-transform: scale(1);
+    -ms-transform: scale(1);
+    opacity: 1; }
   100% { -webkit-transform: scale(0);
     -moz-transform: scale(0);
     -ms-transform: scale(0);
@@ -145,10 +145,10 @@ h3, .h3 { font-size: 1.5em; }
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     opacity: 0; }
-  50% { -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    opacity: 1; }
+  50% { -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    opacity: 0; }
   100% { -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);
@@ -158,10 +158,10 @@ h3, .h3 { font-size: 1.5em; }
     -moz-transform: scale(0);
     -ms-transform: scale(0);
     opacity: 0; }
-  50% { -webkit-transform: scale(1);
-    -moz-transform: scale(1);
-    -ms-transform: scale(1);
-    opacity: 1; }
+  50% { -webkit-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    opacity: 0; }
   100% { -webkit-transform: scale(1);
     -moz-transform: scale(1);
     -ms-transform: scale(1);

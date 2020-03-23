@@ -176,8 +176,8 @@ h3,.h3{
     opacity:1;
   }
   50%{
-    @include crossBrowser(transform,scale(0));
-    opacity:0;
+    @include crossBrowser(transform,scale(1));
+    opacity:1;
   }
   100%{
     @include crossBrowser(transform,scale(0));
@@ -190,8 +190,8 @@ h3,.h3{
     opacity:1;
   }
   50%{
-    @include crossBrowser(transform,scale(0));
-    opacity:0;
+    @include crossBrowser(transform,scale(1));
+    opacity:1;
   }
   100%{
     @include crossBrowser(transform,scale(0));
@@ -249,8 +249,8 @@ h3,.h3{
     opacity:0;
   }
   50%{
-    @include crossBrowser(transform,scale(1));
-    opacity:1;
+    @include crossBrowser(transform,scale(0));
+    opacity:0;
   }
   100%{
     @include crossBrowser(transform,scale(1));
@@ -263,8 +263,8 @@ h3,.h3{
     opacity:0;
   }
   50%{
-    @include crossBrowser(transform,scale(1));
-    opacity:1;
+    @include crossBrowser(transform,scale(0));
+    opacity:0;
   }
   100%{
     @include crossBrowser(transform,scale(1));
