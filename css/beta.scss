@@ -220,7 +220,7 @@ h3,.h3{
     @include crossBrowser(transform,translate3d(0,-8px,0) rotate(-45deg));
   }
 }
-// NAV ANIMATION CLOSED
+// NAV ANIMATION CLOSE
 @-webkit-keyframes animateLine1Rev{
   0%{
     @include crossBrowser(transform,translate3d(0,8px,0) rotate(45deg));
@@ -293,6 +293,7 @@ h3,.h3{
     @include crossBrowser(transform,translate3d(0,0,0) rotate(0deg));
   }
 }
+// NAV MENU OPEN
 @-webkit-keyframes animateMenu{
   0%{
     margin-top: 25px;
@@ -313,6 +314,7 @@ h3,.h3{
     opacity: 1;
   }
 }
+// NAV MENU CLOSE
 @-webkit-keyframes animateMenuRev{
   0%{
     opacity: 1;
