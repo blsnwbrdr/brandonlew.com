@@ -1,5 +1,6 @@
 // PAGE ELEMENTS
 var banner = document.getElementById('banner');
+var navIcon = document.getElementById('navIcon');
 
 // RANDOMIZE BANNER IMAGE
 var _banner = {
@@ -14,7 +15,6 @@ var _banner = {
   }
 }
 _banner.randomize();
-
 
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
@@ -55,3 +55,15 @@ var _smoothScrolling = {
     },25); // scroll by height every 25 milliseconds
   }
 }
+
+// CLICK EVENT LISTENERS
+document.addEventListener('click',function(e){
+  if(e.target && e.target.classList.contains('navMenuLink')){
+    // prevent default anchor behavior
+    e.preventDefault();
+    // smooth scroll to href
+    _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
+    // uncheck nav icon
+    navIcon.checked = false;
+  }
+});

@@ -1,9 +1,15 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300");
+.about, .development, .photography { height: 600px; }
+
 * { box-sizing: border-box; }
 
 html, body { height: 100%; }
 
 body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: 300; }
+
+a { text-decoration: none; }
+
+a:hover { color: #009EC8; }
 
 h1, h2, h3, h4, h5, p { margin: 0 0 10px; }
 
@@ -25,7 +31,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .nav .navIconInput { display: none; }
 
-.nav .navMenu { max-height: 0; overflow: hidden; background-color: #fff; -webkit-animation: animateMenuRev 0.3s linear forwards; -moz-animation: animateMenuRev 0.3s linear forwards; -ms-animation: animateMenuRev 0.3s linear forwards; }
+.nav .navMenu { max-height: 0; overflow: hidden; background-color: #fff; -webkit-animation: animateMenuRev 0.3s linear forwards; -moz-animation: animateMenuRev 0.3s linear forwards; -ms-animation: animateMenuRev 0.3s linear forwards; -webkit-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); -moz-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); -ms-box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.1); }
 
 .nav .navIconLabel { display: inline-block; height: 30px; width: 30px; cursor: pointer; font-size: 14px; line-height: 6px; }
 
@@ -37,9 +43,11 @@ h3, .h3 { font-size: 1.5em; }
 
 .nav .navIconLabel .bar3 { -webkit-animation: animateLine3Rev 0.3s linear forwards; -moz-animation: animateLine3Rev 0.3s linear forwards; -ms-animation: animateLine3Rev 0.3s linear forwards; }
 
-.nav .navMenuList { list-style-type: none; margin: 0; padding: 0px 50px 0px 10px; }
+.nav .navMenuList { list-style-type: none; margin: 0; padding: 10px 50px 10px 20px; }
 
 .nav .navMenuList li { padding: 10px 0; }
+
+.nav .navMenuList .navMenuLink { color: black; }
 
 .nav .navIconInput:checked ~ .navIconLabel .bar1 { -webkit-animation: animateLine1 0.3s linear forwards; -moz-animation: animateLine1 0.3s linear forwards; -ms-animation: animateLine1 0.3s linear forwards; }
 

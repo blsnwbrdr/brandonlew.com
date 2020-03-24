@@ -1,11 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');
 
+// COLORS
+$color-aqua-1: #009EC8;
+$color-gray-1: #555;
+
 // MIXINS
 @mixin crossBrowser($property,$value){
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
   -ms-#{$property}: $value;
   $property: $value;
+}
+
+.about,
+.development,
+.photography{
+  height: 600px;
 }
 
 // GLOBALS
@@ -21,6 +31,12 @@ body{
   background-color: #fff;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
+}
+a{
+  text-decoration: none;
+  &:hover{
+    color: $color-aqua-1;
+  }
 }
 h1,h2,h3,h4,h5,p{
   margin: 0 0 10px;
@@ -70,9 +86,9 @@ h3,.h3{
   .navMenu{
     max-height: 0;
     overflow: hidden;
-    // margin-top: 40px;
     background-color: #fff;
     @include crossBrowser(animation,animateMenuRev 0.3s linear forwards);
+    @include crossBrowser(box-shadow,3px 3px 3px rgba(0,0,0,0.1));
   }
   .navIconLabel{
     display: inline-block;
@@ -100,9 +116,12 @@ h3,.h3{
   .navMenuList{
     list-style-type: none;
     margin: 0;
-    padding: 0px 50px 0px 10px;
+    padding: 10px 50px 10px 20px;
     li{
       padding: 10px 0;
+    }
+    .navMenuLink{
+      color: black;
     }
   }
   .navIconInput:checked ~ .navIconLabel .bar1{
