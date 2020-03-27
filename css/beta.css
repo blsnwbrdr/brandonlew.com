@@ -5,7 +5,7 @@
 
 html, body { height: 100%; }
 
-body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: 300; color: #555; }
+body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: 300; color: #777; }
 
 a { text-decoration: none; }
 
@@ -64,11 +64,27 @@ h3, .h3 { font-size: 1.5em; }
   .nav .navMenuList li { display: inline-block; padding: 0 10px; }
   .nav .navIconInput:checked ~ .navMenu { -webkit-animation: animateMenuDesktop 0.3s ease-out forwards; -moz-animation: animateMenuDesktop 0.3s ease-out forwards; -ms-animation: animateMenuDesktop 0.3s ease-out forwards; } }
 
-.banner { position: relative; height: 100%; min-height: 100%; margin: 0; padding: 0; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: cover; }
+.banner { position: relative; height: 100%; min-height: 100%; margin: 0; padding: 0; background-color: #fff; background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: scroll; }
 
 .banner .bannerOpacity { height: 100%; width: 100%; background-color: rgba(255, 255, 255, 0.5); }
 
 .banner .bannerHeader { position: absolute; top: 40%; left: 50%; transform: translate(-50%, -40%); width: 100%; padding: 0 20px; color: #000; text-align: center; }
+
+@media (hover: hover) { .banner { background-attachment: fixed; } }
+
+.section { margin: 0 20px; }
+
+.section .sectionContainer { max-width: 1200px; margin: 0 auto; }
+
+.section .sectionHeader { text-align: center; }
+
+.section .sectionHeader h2 { display: inline-block; }
+
+.section .sectionHeader h2:after { content: ""; display: block; width: 50%; height: 2px; background-color: #009EC8; position: relative; bottom: -10px; left: 50%; -webkit-transform: translate(-50%, 0); -moz-transform: translate(-50%, 0); -ms-transform: translate(-50%, 0); }
+
+.sectionPadding { padding: 50px 0 50px; }
+
+@media (min-width: 768px) { .sectionPadding { padding: 100px 0 50px; } }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);

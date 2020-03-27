@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');
 
 // COLORS
-$color-gray-1: #555;
+$color-gray-1: #777;
 $color-aqua-1: #009EC8;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
@@ -175,6 +175,7 @@ h3,.h3{
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-attachment: scroll;
   .bannerOpacity{
     height: 100%;
     width: 100%;
@@ -189,6 +190,46 @@ h3,.h3{
     padding: 0 20px;
     color: $color-dark-text;
     text-align: center;
+  }
+}
+@media(hover:hover){
+  .banner{
+    background-attachment: fixed;
+  }
+}
+
+// SECTIONS
+.section{
+  margin: 0 20px;
+  .sectionContainer{
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  .sectionHeader{
+    text-align: center;
+    h2{
+      display: inline-block;
+      &:after{
+        content: "";
+        display: block;
+        width: 50%;
+        height: 2px;
+        background-color: $color-aqua-1;
+        position: relative;
+        bottom: -10px;
+        left: 50%;
+        @include crossBrowser(transform,translate(-50%,0));
+      }
+    }
+
+  }
+}
+.sectionPadding{
+  padding: 50px 0 50px;
+}
+@media(min-width:768px){
+  .sectionPadding{
+    padding: 100px 0 50px;
   }
 }
 

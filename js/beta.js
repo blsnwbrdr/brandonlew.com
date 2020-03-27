@@ -58,6 +58,7 @@ var _smoothScrolling = {
 
 // CLICK EVENT LISTENERS
 document.addEventListener('click',function(e){
+  // navigation menu links
   if(e.target && e.target.classList.contains('navMenuLink')){
     // prevent default anchor behavior
     e.preventDefault();
