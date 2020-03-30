@@ -29,6 +29,8 @@ h3, .h3 { font-size: 1.5em; }
   h4, .h4, p { font-size: 1.125em; }
   h5, .h5 { font-size: 1em; } }
 
+.fa { display: inline; }
+
 .nav { position: fixed; top: 20px; left: 20px; z-index: 999; }
 
 .nav .navIconInput { display: none; }
@@ -90,7 +92,7 @@ h3, .h3 { font-size: 1.5em; }
   .section .sectionHeader { margin-bottom: 75px; }
   .section .w50 { width: 50%; }
   .section .sectionColumn { float: left; padding-left: 20px; padding-right: 20px; }
-  .sectionPadding { padding: 100px 0 50px; } }
+  .sectionPadding { padding: 100px 0 75px; } }
 
 .about .profileImage { width: 150px; display: block; margin: 0 auto; margin-bottom: 25px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); -moz-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); -ms-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); }
 
@@ -122,6 +124,10 @@ h3, .h3 { font-size: 1.5em; }
   .about .profileText { padding-bottom: 0; } }
 
 @media (min-width: 1024px) { .about .infoContainer { padding: 50px; } }
+
+.breakOne { padding: 100px 20px; text-align: center; color: #fff; background: #009EC8; background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8); background: repeating-linear-gradient(left, #4267A0, #009EC8); }
+
+.breakOne p { line-height: inherit; }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);

@@ -4,6 +4,7 @@
 $color-gray-1: #777;
 $color-gray-2: #eee;
 $color-aqua-1: #009EC8;
+$color-blue-1: #4267A0;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
 $color-shadow-1: rgba(0,0,0,0.1);
@@ -84,6 +85,9 @@ h3,.h3{
   h5,.h5{
     font-size: 1em;
   }
+}
+.fa{
+  display: inline;
 }
 
 // NAVIGATION
@@ -264,7 +268,7 @@ h3,.h3{
     }
   }
   .sectionPadding{
-    padding: 100px 0 50px;
+    padding: 100px 0 75px;
   }
 }
 // ABOUT
@@ -345,6 +349,19 @@ h3,.h3{
     .infoContainer{
       padding: 50px;
     }
+  }
+}
+
+// BREAK ONE
+.breakOne{
+  padding: 100px 20px;
+  text-align: center;
+  color: #fff;
+  background: $color-aqua-1;
+  background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+  background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+  p{
+    line-height: inherit;
   }
 }
 
