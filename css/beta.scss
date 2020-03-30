@@ -2,9 +2,12 @@
 
 // COLORS
 $color-gray-1: #777;
+$color-gray-2: #eee;
 $color-aqua-1: #009EC8;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
+$color-shadow-1: rgba(0,0,0,0.1);
+$color-overlay: rgba(255,255,255,0.5);
 
 // MIXINS
 @mixin crossBrowser($property,$value){
@@ -18,7 +21,7 @@ $color-default-text: $color-gray-1;
 .about,
 .development,
 .photography{
-  height: 600px;
+  min-height: 600px;
 }
 
 // GLOBALS
@@ -35,12 +38,17 @@ body{
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
   color: $color-gray-1;
+  letter-spacing: 1px;
 }
 a{
   text-decoration: none;
+  @include crossBrowser(transition,0.3s ease-out);
   &:hover{
-    color: $color-aqua-1;
+    @include crossBrowser(transition,0.3s ease-out);
   }
+}
+p,li{
+  line-height: 1.75em;
 }
 h1,h2,h3,h4,h5,p{
   margin: 0 0 10px;
@@ -92,7 +100,7 @@ h3,.h3{
     overflow: hidden;
     background-color: #fff;
     @include crossBrowser(animation,animateMenuRev 0.3s linear forwards);
-    @include crossBrowser(box-shadow,3px 3px 3px rgba(0,0,0,0.1));
+    @include crossBrowser(box-shadow,3px 3px 3px $color-shadow-1);
   }
   .navIconLabel{
     display: inline-block;
@@ -179,7 +187,7 @@ h3,.h3{
   .bannerOpacity{
     height: 100%;
     width: 100%;
-    background-color: rgba(255,255,255,0.5);
+    background-color: $color-overlay;
   }
   .bannerHeader{
     position: absolute;
@@ -207,6 +215,7 @@ h3,.h3{
   }
   .sectionHeader{
     text-align: center;
+    margin-bottom: 50px;
     h2{
       display: inline-block;
       &:after{
@@ -221,15 +230,121 @@ h3,.h3{
         @include crossBrowser(transform,translate(-50%,0));
       }
     }
-
+  }
+  .sectionContent{
+    // padding-top: 50px;
+  }
+  .sectionColumn{
+    // padding-top: 50px;
   }
 }
 .sectionPadding{
   padding: 50px 0 50px;
 }
 @media(min-width:768px){
+  .section{
+    .sectionContainer{
+      &:after{
+        content: " ";
+        display: block;
+        min-height: 0;
+        clear: both;
+      }
+    }
+    .sectionHeader{
+      margin-bottom: 75px;
+    }
+    .w50{
+      width: 50%;
+    }
+    .sectionColumn{
+      float: left;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+  }
   .sectionPadding{
     padding: 100px 0 50px;
+  }
+}
+// ABOUT
+.about{
+  .profile{
+
+  }
+  .profileImage{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    @include crossBrowser(border-radius,50%);
+    @include crossBrowser(filter,drop-shadow(3px 3px 3px $color-shadow-1));
+  }
+  .profileText{
+    padding-bottom: 40px;
+  }
+  .info{
+    color: $color-dark-text;
+  }
+  .infoContainer{
+    background-color: $color-gray-2;
+    padding: 20px;
+    @include crossBrowser(border-radius,4px);
+    &:after{
+      content: " ";
+      display: block;
+      min-height: 0;
+      clear: both;
+    }
+  }
+  .infoContent{
+    a{
+      color: $color-dark-text;
+      &:hover{
+        color: $color-aqua-1;
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+    li{
+      font-size: .85em;
+      letter-spacing: 0px;
+      padding: 5px 0;
+    }
+    .left{
+      width: 30%;
+      color: $color-aqua-1;
+    }
+    .right{
+      width: 70%;
+    }
+    .fa{
+      padding-right: 10px;
+    }
+  }
+  .infoContentColumn{
+    float: left;
+  }
+}
+@media(min-width:768px){
+  .about{
+    .infoContent{
+      li{
+        font-size: 1em;
+      }
+    }
+    .profileText{
+      padding-bottom: 0;
+    }
+  }
+}
+@media(min-width:1024px){
+  .about{
+    .infoContainer{
+      padding: 50px;
+    }
   }
 }
 
