@@ -143,8 +143,11 @@ h3, .h3 { font-size: 1.5em; }
 
 @media (min-width: 768px) { .portfolio { padding-bottom: 75px; }
   .portfolio .portfolioContent:after { content: " "; display: block; min-height: 0; clear: both; }
-  .portfolio .w50 { width: 50%; }
+  .portfolio .w25, .portfolio .w33, .portfolio .w50 { width: 50%; }
   .portfolio .portfolioColumn { float: left; } }
+
+@media (min-width: 1440px) { .portfolio .w25 { width: 25%; }
+  .portfolio .w33 { width: 33%; } }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);

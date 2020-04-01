@@ -416,12 +416,24 @@ h3,.h3{
         clear: both;
       }
     }
+    .w25,
+    .w33,
     .w50{
       width: 50%;
     }
     .portfolioColumn{
       float: left;
 
+    }
+  }
+}
+@media(min-width:1440px){
+  .portfolio{
+    .w25{
+      width: 25%;
+    }
+    .w33{
+      width: 33%;
     }
   }
 }
