@@ -8,6 +8,7 @@ $color-blue-1: #4267A0;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
 $color-shadow-1: rgba(0,0,0,0.1);
+$color-shadow-2: rgba(0,0,0,0.75);
 $color-overlay: rgba(255,255,255,0.5);
 
 // MIXINS
@@ -15,14 +16,7 @@ $color-overlay: rgba(255,255,255,0.5);
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
   -ms-#{$property}: $value;
-  $property: $value;
-}
-
-// TEMPORARY
-.about,
-.development,
-.photography{
-  min-height: 600px;
+  #{$property}: $value;
 }
 
 // GLOBALS
@@ -362,6 +356,62 @@ h3,.h3{
   background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
   p{
     line-height: inherit;
+  }
+}
+
+// PORTFOLIO
+.portfolio{
+  .portfolioContainer{
+
+  }
+  .portfolioContent{
+
+  }
+  .portfolioColumn{
+
+  }
+  .portfolioSlide{
+    position: relative;
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  .portfolioOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $color-shadow-2;
+    cursor: pointer;
+    &:hover{
+      opacity: 1;
+    }
+  }
+  .portfolioText1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include crossBrowser(transform,translate(-50%,-50%));
+    color: white;
+  }
+  .portfolioText2{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include crossBrowser(transform,translate(-50%,0%));
+    color: white;
+    font-size: .75em;
+  }
+  .portfolioModal{
+
+  }
+}
+@media(min-width:768px){
+  .portfolio{
+    
   }
 }
 

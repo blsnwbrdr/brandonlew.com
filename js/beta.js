@@ -11,7 +11,7 @@ var _banner = {
     // create random number based on number of images available
     var randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
-    banner.setAttribute('style','background-image:url(images/' + _banner.images[randomNum] + '.jpg);');
+    banner.setAttribute('style','background-image:url(images/banner_' + _banner.images[randomNum] + '.jpg);');
   }
 }
 _banner.randomize();
