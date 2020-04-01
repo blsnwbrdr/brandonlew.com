@@ -86,7 +86,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .sectionPadding { padding: 50px 0 50px; }
 
-@media (min-width: 768px) { .section .sectionContainer:after { content: " "; display: block; min-height: 0; clear: both; }
+@media (min-width: 768px) { .section .sectionContent:after { content: " "; display: block; min-height: 0; clear: both; }
   .section .sectionHeader { margin-bottom: 75px; }
   .section .w50 { width: 50%; }
   .section .sectionColumn { float: left; padding-left: 20px; padding-right: 20px; }
@@ -100,7 +100,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .about .infoContainer { background-color: #eee; padding: 20px; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; }
 
-.about .infoContainer:after { content: " "; display: block; min-height: 0; clear: both; }
+.about .infoContent:after { content: " "; display: block; min-height: 0; clear: both; }
 
 .about .infoContent a { color: #000; }
 
@@ -127,6 +127,8 @@ h3, .h3 { font-size: 1.5em; }
 
 .breakOne p { line-height: inherit; }
 
+.portfolio { padding-bottom: 50px; }
+
 .portfolio .portfolioSlide { position: relative; }
 
 .portfolio .portfolioSlide img { width: 100%; vertical-align: top; }
@@ -138,6 +140,11 @@ h3, .h3 { font-size: 1.5em; }
 .portfolio .portfolioText1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: white; }
 
 .portfolio .portfolioText2 { position: absolute; bottom: 0; left: 50%; -webkit-transform: translate(-50%, 0%); -moz-transform: translate(-50%, 0%); -ms-transform: translate(-50%, 0%); transform: translate(-50%, 0%); color: white; font-size: .75em; }
+
+@media (min-width: 768px) { .portfolio { padding-bottom: 75px; }
+  .portfolio .portfolioContent:after { content: " "; display: block; min-height: 0; clear: both; }
+  .portfolio .w50 { width: 50%; }
+  .portfolio .portfolioColumn { float: left; } }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);

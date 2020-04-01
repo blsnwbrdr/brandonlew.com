@@ -229,19 +229,13 @@ h3,.h3{
       }
     }
   }
-  .sectionContent{
-    // padding-top: 50px;
-  }
-  .sectionColumn{
-    // padding-top: 50px;
-  }
 }
 .sectionPadding{
   padding: 50px 0 50px;
 }
 @media(min-width:768px){
   .section{
-    .sectionContainer{
+    .sectionContent{
       &:after{
         content: " ";
         display: block;
@@ -288,14 +282,15 @@ h3,.h3{
     background-color: $color-gray-2;
     padding: 20px;
     @include crossBrowser(border-radius,4px);
+
+  }
+  .infoContent{
     &:after{
       content: " ";
       display: block;
       min-height: 0;
       clear: both;
     }
-  }
-  .infoContent{
     a{
       color: $color-dark-text;
       &:hover{
@@ -361,6 +356,7 @@ h3,.h3{
 
 // PORTFOLIO
 .portfolio{
+  padding-bottom: 50px;
   .portfolioContainer{
 
   }
@@ -411,7 +407,22 @@ h3,.h3{
 }
 @media(min-width:768px){
   .portfolio{
-    
+    padding-bottom: 75px;
+    .portfolioContent{
+      &:after{
+        content: " ";
+        display: block;
+        min-height: 0;
+        clear: both;
+      }
+    }
+    .w50{
+      width: 50%;
+    }
+    .portfolioColumn{
+      float: left;
+
+    }
   }
 }
 
