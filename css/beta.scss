@@ -8,8 +8,8 @@ $color-blue-1: #4267A0;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
 $color-shadow-1: rgba(0,0,0,0.1);
-$color-shadow-2: rgba(0,0,0,0.75);
-$color-overlay: rgba(255,255,255,0.5);
+$color-overlay-1: rgba(255,255,255,0.5);
+$color-overlay-2: rgba(0,0,0,0.75);
 
 // MIXINS
 @mixin crossBrowser($property,$value){
@@ -23,7 +23,7 @@ $color-overlay: rgba(255,255,255,0.5);
 *{
   box-sizing: border-box;
 }
-html,body{
+html,body,.main{
   height: 100%;
 }
 body{
@@ -89,7 +89,7 @@ h3,.h3{
   position: fixed;
   top: 20px;
   left: 20px;
-  z-index: 999;
+  z-index: 1;
   .navIconInput{
     display: none;
   }
@@ -185,7 +185,7 @@ h3,.h3{
   .bannerOpacity{
     height: 100%;
     width: 100%;
-    background-color: $color-overlay;
+    background-color: $color-overlay-1;
   }
   .bannerHeader{
     position: absolute;
@@ -259,11 +259,9 @@ h3,.h3{
     padding: 100px 0 75px;
   }
 }
+
 // ABOUT
 .about{
-  .profile{
-
-  }
   .profileImage{
     width: 150px;
     display: block;
@@ -357,17 +355,9 @@ h3,.h3{
 // PORTFOLIO
 .portfolio{
   padding-bottom: 50px;
-  .portfolioContainer{
-
-  }
-  .portfolioContent{
-
-  }
-  .portfolioColumn{
-
-  }
   .portfolioSlide{
     position: relative;
+    display: block;
     img{
       width: 100%;
       vertical-align: top;
@@ -380,7 +370,7 @@ h3,.h3{
     width: 100%;
     height: 100%;
     opacity: 0;
-    background-color: $color-shadow-2;
+    background-color: $color-overlay-2;
     cursor: pointer;
     &:hover{
       opacity: 1;
@@ -391,6 +381,7 @@ h3,.h3{
     top: 50%;
     left: 50%;
     @include crossBrowser(transform,translate(-50%,-50%));
+    margin-bottom: 10px;
     color: white;
   }
   .portfolioText2{
@@ -398,11 +389,35 @@ h3,.h3{
     bottom: 0;
     left: 50%;
     @include crossBrowser(transform,translate(-50%,0%));
+    margin-bottom: 10px;
     color: white;
     font-size: .75em;
   }
+  .portfolioModalOverlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: $color-overlay-2;
+  }
   .portfolioModal{
-
+    position: relative;
+    width: 90%;
+    max-width: 768px;
+    margin: 10px auto;
+    background-color: #fff;
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  .portfolioModalBody{
+    padding: 20px;
   }
 }
 @media(min-width:768px){
@@ -434,6 +449,33 @@ h3,.h3{
     }
     .w33{
       width: 33%;
+    }
+  }
+}
+
+// DEVELOPMENT
+.development{
+  &.portfolio{
+    .portfolioModalBody{
+      a{
+        color: $color-dark-text;
+        &:hover{
+          color: $color-aqua-1;
+        }
+      }
+      img{
+        width: 100px;
+      }
+      .h3{
+        color: $color-dark-text;
+      }
+      .fa{
+        font-size: 1.25em;
+        padding-right: 10px;
+      }
+      .text{
+        padding-top: 20px;
+      }
     }
   }
 }

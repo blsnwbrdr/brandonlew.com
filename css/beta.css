@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300");
 * { box-sizing: border-box; }
 
-html, body { height: 100%; }
+html, body, .main { height: 100%; }
 
 body { margin: 0; padding: 0; background-color: #fff; font-family: 'Quicksand', sans-serif; font-weight: 300; color: #777; letter-spacing: 1px; }
 
@@ -29,7 +29,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .fa { display: inline; }
 
-.nav { position: fixed; top: 20px; left: 20px; z-index: 999; }
+.nav { position: fixed; top: 20px; left: 20px; z-index: 1; }
 
 .nav .navIconInput { display: none; }
 
@@ -129,7 +129,7 @@ h3, .h3 { font-size: 1.5em; }
 
 .portfolio { padding-bottom: 50px; }
 
-.portfolio .portfolioSlide { position: relative; }
+.portfolio .portfolioSlide { position: relative; display: block; }
 
 .portfolio .portfolioSlide img { width: 100%; vertical-align: top; }
 
@@ -137,9 +137,17 @@ h3, .h3 { font-size: 1.5em; }
 
 .portfolio .portfolioOverlay:hover { opacity: 1; }
 
-.portfolio .portfolioText1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); color: white; }
+.portfolio .portfolioText1 { position: absolute; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); -moz-transform: translate(-50%, -50%); -ms-transform: translate(-50%, -50%); transform: translate(-50%, -50%); margin-bottom: 10px; color: white; }
 
-.portfolio .portfolioText2 { position: absolute; bottom: 0; left: 50%; -webkit-transform: translate(-50%, 0%); -moz-transform: translate(-50%, 0%); -ms-transform: translate(-50%, 0%); transform: translate(-50%, 0%); color: white; font-size: .75em; }
+.portfolio .portfolioText2 { position: absolute; bottom: 0; left: 50%; -webkit-transform: translate(-50%, 0%); -moz-transform: translate(-50%, 0%); -ms-transform: translate(-50%, 0%); transform: translate(-50%, 0%); margin-bottom: 10px; color: white; font-size: .75em; }
+
+.portfolio .portfolioModalOverlay { display: none; position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 2; overflow: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(0, 0, 0, 0.75); }
+
+.portfolio .portfolioModal { position: relative; width: 90%; max-width: 768px; margin: 10px auto; background-color: #fff; }
+
+.portfolio .portfolioModal img { width: 100%; vertical-align: top; }
+
+.portfolio .portfolioModalBody { padding: 20px; }
 
 @media (min-width: 768px) { .portfolio { padding-bottom: 75px; }
   .portfolio .portfolioContent:after { content: " "; display: block; min-height: 0; clear: both; }
@@ -148,6 +156,18 @@ h3, .h3 { font-size: 1.5em; }
 
 @media (min-width: 1440px) { .portfolio .w25 { width: 25%; }
   .portfolio .w33 { width: 33%; } }
+
+.development.portfolio .portfolioModalBody a { color: #000; }
+
+.development.portfolio .portfolioModalBody a:hover { color: #009EC8; }
+
+.development.portfolio .portfolioModalBody img { width: 100px; }
+
+.development.portfolio .portfolioModalBody .h3 { color: #000; }
+
+.development.portfolio .portfolioModalBody .fa { font-size: 1.25em; padding-right: 10px; }
+
+.development.portfolio .portfolioModalBody .text { padding-top: 20px; }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);
