@@ -1,6 +1,7 @@
 // PAGE ELEMENTS
-var banner = document.getElementById('banner');
+var nav = document.getElementById('nav');
 var navIcon = document.getElementById('navIcon');
+var banner = document.getElementById('banner');
 
 // RANDOMIZE BANNER IMAGE
 var _banner = {
@@ -56,15 +57,28 @@ var _smoothScrolling = {
   }
 }
 
+// NAVIGATION MENU LINKS
+var _navigation = {
+  scroll: function(e){
+    // navigation menu links
+    if(e.target && e.target.classList.contains('navMenuLink')){
+      // prevent default anchor behavior
+      e.preventDefault();
+      // smooth scroll to href
+      _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
+      // uncheck nav icon
+      navIcon.checked = false;
+    }
+  },
+  jsEnabled: function(e){
+    if(e.target && e.target.id === 'navIcon'){
+      nav.classList.add('jsEnabled');
+    }
+  }
+}
+
 // CLICK EVENT LISTENERS
 document.addEventListener('click',function(e){
-  // navigation menu links
-  if(e.target && e.target.classList.contains('navMenuLink')){
-    // prevent default anchor behavior
-    e.preventDefault();
-    // smooth scroll to href
-    _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
-    // uncheck nav icon
-    navIcon.checked = false;
-  }
+  _navigation.jsEnabled(e);
+  _navigation.scroll(e);
 });

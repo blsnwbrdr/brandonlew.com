@@ -23,7 +23,7 @@ $color-overlay-2: rgba(0,0,0,0.75);
 *{
   box-sizing: border-box;
 }
-html,body,.main{
+html,body{
   height: 100%;
 }
 body{
@@ -41,9 +41,6 @@ a{
   &:hover{
     @include crossBrowser(transition,0.3s ease-out);
   }
-}
-p,li{
-  line-height: 1.75em;
 }
 h1,h2,h3,h4,h5,p{
   margin: 0 0 10px;
@@ -63,6 +60,9 @@ h2,.h2{
 h3,.h3{
   font-size: 1.5em;
 }
+p,li{
+  line-height: 1.75em;
+}
 @media(min-width:768px){
   h1,.h1{
     font-size: 4em;
@@ -79,6 +79,9 @@ h3,.h3{
   h5,.h5{
     font-size: 1em;
   }
+}
+.main{
+  height: 100%;
 }
 .fa{
   display: inline;
@@ -113,15 +116,15 @@ h3,.h3{
       width: 100%;
       background-color: #000;
     }
-    .bar1{
-      @include crossBrowser(animation,animateLine1Rev 0.3s linear forwards);
-    }
-    .bar2{
-      @include crossBrowser(animation,animateLine2Rev 0.3s linear forwards);
-    }
-    .bar3{
-      @include crossBrowser(animation,animateLine3Rev 0.3s linear forwards);
-    }
+    // .bar1{
+    //   @include crossBrowser(animation,animateLine1Rev 0.3s linear forwards);
+    // }
+    // .bar2{
+    //   @include crossBrowser(animation,animateLine2Rev 0.3s linear forwards);
+    // }
+    // .bar3{
+    //   @include crossBrowser(animation,animateLine3Rev 0.3s linear forwards);
+    // }
   }
   .navMenuList{
     list-style-type: none;
@@ -149,6 +152,17 @@ h3,.h3{
   .navIconInput:checked ~ .navMenu{
     max-height: 1000px;
     @include crossBrowser(animation,animateMenuMobile 0.3s ease-out forwards);
+  }
+  &.jsEnabled{
+    .navIconLabel .bar1{
+      @include crossBrowser(animation,animateLine1Rev 0.3s linear forwards);
+    }
+    .navIconLabel .bar2{
+      @include crossBrowser(animation,animateLine2Rev 0.3s linear forwards);
+    }
+    .navIconLabel .bar3{
+      @include crossBrowser(animation,animateLine3Rev 0.3s linear forwards);
+    }
   }
 }
 @media(min-width:768px){
