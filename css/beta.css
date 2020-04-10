@@ -27,6 +27,8 @@ p, li { line-height: 1.75em; }
   h4, .h4, p { font-size: 1.125em; }
   h5, .h5 { font-size: 1em; } }
 
+.staticBody { overflow: hidden; }
+
 .main { height: 100%; }
 
 .fa { display: inline; }
