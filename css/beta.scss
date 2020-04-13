@@ -380,8 +380,10 @@ p,li{
     opacity: 0;
     background-color: $color-overlay-2;
     cursor: pointer;
+    @include crossBrowser(transition,0.3s ease-out);
     &:hover{
       opacity: 1;
+      @include crossBrowser(transition,0.3s ease-out);
     }
   }
   .portfolioText1{
@@ -419,9 +421,28 @@ p,li{
     max-width: 768px;
     margin: 10px auto;
     background-color: #fff;
+    @include crossBrowser(animation,animateModal 0.5s ease-out forwards);
     img{
       width: 100%;
       vertical-align: top;
+    }
+  }
+  .portfolioModalClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: $color-overlay-2;
+    cursor: pointer;
+    @include crossBrowser(transition,0.3s ease-out);
+    &:hover{
+      color: $color-gray-1;
+      @include crossBrowser(transition,0.3s ease-out);
     }
   }
   .portfolioModalBody{
@@ -690,5 +711,30 @@ p,li{
   }
   100%{
     opacity: 0;
+  }
+}
+// MODAL
+@-webkit-keyframes animateModal{
+  0%{
+    top: -50px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes animateModal{
+  0%{
+    top: -50px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 0px;
   }
 }

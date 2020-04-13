@@ -19,6 +19,7 @@ _banner.randomize();
 
 // NAVIGATION MENU LINKS
 var _navigation = {
+  // navigation scroll to functionality
   scroll: function(e){
     // navigation menu links
     if(e.target && e.target.classList.contains('navMenuLink')){
@@ -30,8 +31,11 @@ var _navigation = {
       navIcon.checked = false;
     }
   },
+  // add class if javascript enabled on browser for navigation animation
   jsEnabled: function(e){
+    // if navIcon is clicked
     if(e.target && e.target.id === 'navIcon'){
+      // add jsEnabled class if javascript is turn on
       nav.classList.add('jsEnabled');
     }
   }
@@ -39,11 +43,27 @@ var _navigation = {
 
 // MODALS
 var _modal = {
-  display: function(e){
-    if(e.target && e.target.classList.contains('modalLink')){
-      document.body.classList.add('staticBody');
-      var modal = document.getElementById(e.target.getAttribute('data-modal'));
-      modal.setAttribute('style','display:block;');
+  // display modal
+  display: function(targetModal){
+    // taret modal id
+    var modal = document.getElementById(targetModal);
+    // add staticBody class to body
+    document.body.classList.add('staticBody');
+    // display target modal
+    modal.setAttribute('style','display:block;');
+  },
+  // close open modals
+  close: function(e){
+    // if modal close button is clicked
+    if(e.target && e.target.classList.contains('portfolioModalClose')){
+      // target all modals
+      var portfolioModalOverlay = document.querySelectorAll('.portfolioModalOverlay');
+      // remove staticBody class from body
+      document.body.classList.remove('staticBody');
+      // display none all modals
+      for(var x = 0;x < portfolioModalOverlay.length;x++){
+        portfolioModalOverlay[x].setAttribute('style','display:none;');
+      }
     }
   }
 }
@@ -90,7 +110,10 @@ var _smoothScrolling = {
 
 // CLICK EVENT LISTENERS
 document.addEventListener('click',function(e){
+  // activate navigation js check for animation
   _navigation.jsEnabled(e);
+  // activate navigation anchor scrolling
   _navigation.scroll(e);
-  _modal.display(e);
+  // activate modal close function
+  _modal.close(e);
 });
