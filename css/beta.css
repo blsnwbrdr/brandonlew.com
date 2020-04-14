@@ -147,7 +147,15 @@ p, li { line-height: 1.75em; }
 
 .portfolio .portfolioModalOverlay { display: none; position: fixed; top: 0; left: 0; height: 100%; width: 100%; z-index: 2; overflow: scroll; -webkit-overflow-scrolling: touch; background-color: rgba(0, 0, 0, 0.75); }
 
-.portfolio .portfolioModal { position: relative; width: 90%; max-width: 768px; margin: 10px auto; background-color: #fff; -webkit-animation: animateModal 0.5s ease-out forwards; -moz-animation: animateModal 0.5s ease-out forwards; -ms-animation: animateModal 0.5s ease-out forwards; animation: animateModal 0.5s ease-out forwards; }
+.portfolio .portfolioModalOverlay.open { display: block; }
+
+.portfolio .portfolioModalOverlay.open .portfolioModal { -webkit-animation: animateModal 0.5s ease-in-out forwards; -moz-animation: animateModal 0.5s ease-in-out forwards; -ms-animation: animateModal 0.5s ease-in-out forwards; animation: animateModal 0.5s ease-in-out forwards; }
+
+.portfolio .portfolioModalOverlay.close { display: block; }
+
+.portfolio .portfolioModalOverlay.close .portfolioModal { -webkit-animation: animateModalRev 0.5s ease-in-out forwards; -moz-animation: animateModalRev 0.5s ease-in-out forwards; -ms-animation: animateModalRev 0.5s ease-in-out forwards; animation: animateModalRev 0.5s ease-in-out forwards; }
+
+.portfolio .portfolioModal { position: relative; width: 90%; max-width: 768px; margin: 10px auto; background-color: #fff; }
 
 .portfolio .portfolioModal img { width: 100%; vertical-align: top; }
 
@@ -380,3 +388,13 @@ p, li { line-height: 1.75em; }
     opacity: 0; }
   50% { opacity: 1; }
   100% { top: 0px; } }
+
+@-webkit-keyframes animateModalRev { 0% { top: 0px; }
+  50% { opacity: 1; }
+  100% { top: -50px;
+    opacity: 0; } }
+
+@keyframes animateModalRev { 0% { top: 0px; }
+  50% { opacity: 1; }
+  100% { top: -50px;
+    opacity: 0; } }

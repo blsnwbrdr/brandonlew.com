@@ -49,22 +49,23 @@ var _modal = {
     var modal = document.getElementById(targetModal);
     // add staticBody class to body
     document.body.classList.add('staticBody');
-    // display target modal
-    modal.setAttribute('style','display:block;');
+    // add open class to display target modal
+    modal.classList.add('open');
   },
   // close open modals
-  close: function(e){
-    // if modal close button is clicked
-    if(e.target && e.target.classList.contains('portfolioModalClose')){
-      // target all modals
-      var portfolioModalOverlay = document.querySelectorAll('.portfolioModalOverlay');
-      // remove staticBody class from body
-      document.body.classList.remove('staticBody');
-      // display none all modals
-      for(var x = 0;x < portfolioModalOverlay.length;x++){
-        portfolioModalOverlay[x].setAttribute('style','display:none;');
-      }
-    }
+  close: function(targetModal){
+    // taret modal id
+    var modal = document.getElementById(targetModal);
+    // remove staticBody class to body
+    document.body.classList.remove('staticBody');
+    // remove open class of target modal
+    modal.classList.remove('open');
+    // add close class to close target modal
+    modal.classList.add('close');
+    // delay removing close animation class
+    setTimeout(function(){
+      modal.classList.remove('close');
+    },500);
   }
 }
 
@@ -114,6 +115,4 @@ document.addEventListener('click',function(e){
   _navigation.jsEnabled(e);
   // activate navigation anchor scrolling
   _navigation.scroll(e);
-  // activate modal close function
-  _modal.close(e);
 });

@@ -414,6 +414,18 @@ p,li{
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     background-color: $color-overlay-2;
+    &.open{
+      display: block;
+      .portfolioModal{
+        @include crossBrowser(animation,animateModal 0.5s ease-in-out forwards);
+      }
+    }
+    &.close{
+      display: block;
+      .portfolioModal{
+        @include crossBrowser(animation,animateModalRev 0.5s ease-in-out forwards);
+      }
+    }
   }
   .portfolioModal{
     position: relative;
@@ -421,7 +433,6 @@ p,li{
     max-width: 768px;
     margin: 10px auto;
     background-color: #fff;
-    @include crossBrowser(animation,animateModal 0.5s ease-out forwards);
     img{
       width: 100%;
       vertical-align: top;
@@ -713,7 +724,7 @@ p,li{
     opacity: 0;
   }
 }
-// MODAL
+// MODAL OPEN
 @-webkit-keyframes animateModal{
   0%{
     top: -50px;
@@ -736,5 +747,30 @@ p,li{
   }
   100%{
     top: 0px;
+  }
+}
+// MODAL CLOSE
+@-webkit-keyframes animateModalRev{
+  0%{
+    top: 0px;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: -50px;
+    opacity: 0;
+  }
+}
+@keyframes animateModalRev{
+  0%{
+    top: 0px;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: -50px;
+    opacity: 0;
   }
 }
