@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');
+
+// PRESET VARIABLES AND MIXINS
+@import 'presets';
+
+// GLOBALS
+@import 'globals';
+
+// NAVIGATION
+@import 'navigation';
+
+// BANNER
+@import 'banner';
+
+// SECTIONS
+@import 'sections';
+
+// PAGE BREAKS
+@import 'breaks';
+
+// BREAK ONE
+.breakOne{
+  background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+  background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+}
+// BREAK TWO
+.breakTwo{
+  background: -webkit-repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+  background: repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+}
+
+// PORTFOLIO
+@import 'portfolio';
+
+// ABOUT
+.about{
+  .profileImage{
+    width: 150px;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 25px;
+    @include crossBrowser(border-radius,50%);
+    @include crossBrowser(filter,drop-shadow(3px 3px 3px $color-shadow-1));
+  }
+  .profileText{
+    padding-bottom: 40px;
+  }
+  .info{
+    color: $color-dark-text;
+  }
+  .infoContainer{
+    background-color: $color-gray-2;
+    padding: 20px;
+    @include crossBrowser(border-radius,4px);
+
+  }
+  .infoContent{
+    &:after{
+      content: " ";
+      display: block;
+      min-height: 0;
+      clear: both;
+    }
+    a{
+      color: $color-dark-text;
+      &:hover{
+        color: $color-aqua-1;
+      }
+    }
+    ul{
+      list-style: none;
+      padding: 0;
+    }
+    li{
+      font-size: .85em;
+      letter-spacing: 0px;
+      padding: 5px 0;
+    }
+    .left{
+      width: 30%;
+      color: $color-aqua-1;
+    }
+    .right{
+      width: 70%;
+    }
+    .fa{
+      padding-right: 10px;
+    }
+  }
+  .infoContentColumn{
+    float: left;
+  }
+}
+@media(min-width:768px){
+  .about{
+    .infoContent{
+      li{
+        font-size: 1em;
+      }
+    }
+    .profileText{
+      padding-bottom: 0;
+    }
+  }
+}
+@media(min-width:1024px){
+  .about{
+    .infoContainer{
+      padding: 50px;
+    }
+  }
+}
+
+// DEVELOPMENT
+.development{
+  .sectionContent{
+    text-align: center;
+  }
+  &.portfolio{
+    .portfolioModalBody{
+      a{
+        color: $color-dark-text;
+        &:hover{
+          color: $color-aqua-1;
+        }
+      }
+      img{
+        width: 100px;
+      }
+      .h3{
+        color: $color-dark-text;
+      }
+      .fa{
+        font-size: 1.25em;
+        padding-right: 10px;
+      }
+      .text{
+        padding-top: 20px;
+      }
+    }
+  }
+}
+
+// PHOTOGRAPHY
+.photography{
+  .sectionContent{
+    text-align: center;
+  }
+}

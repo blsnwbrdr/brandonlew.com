@@ -7,7 +7,7 @@ const cssMinifiy = require('gulp-cssmin');
 const rename = require('gulp-rename');
 
 // SOURCE DIRECTORY
-const sourceDir = 'css/';
+const sourceDir = 'sass/';
 
 // DESTINATION DIRECTORY
 const destDir = 'css';
@@ -16,9 +16,10 @@ const destDir = 'css';
 gulp.task('compile', () => {
   return gulp.src([`${sourceDir}*.{sass,scss}`])
     .pipe(sass({outputStyle:'compact'}).on('error', sass.logError))
-    .pipe(gulp.dest(function (file) {
-      return file.base;
-    }));
+    .pipe(gulp.dest(destDir))
+    // .pipe(gulp.dest(function (file) {
+    //   return file.base;
+    // }));
 });
 
 // MINIFY CSS TO DESTINATION DIRECTORY

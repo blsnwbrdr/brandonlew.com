@@ -1,0 +1,184 @@
+/* PORTFOLIO */
+.portfolio{
+  padding-bottom: 50px;
+  .portfolioSlide{
+    position: relative;
+    display: block;
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  .portfolioOverlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background-color: $color-overlay-2;
+    cursor: pointer;
+    @include crossBrowser(transition,0.3s ease-out);
+    &:hover{
+      opacity: 1;
+      @include crossBrowser(transition,0.3s ease-out);
+    }
+  }
+  .portfolioText1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include crossBrowser(transform,translate(-50%,-50%));
+    margin-bottom: 10px;
+    color: white;
+  }
+  .portfolioText2{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    @include crossBrowser(transform,translate(-50%,0%));
+    margin-bottom: 10px;
+    color: white;
+    font-size: .75em;
+  }
+  .portfolioModalOverlay{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    overflow: scroll;
+    -webkit-overflow-scrolling: touch;
+    background-color: $color-overlay-2;
+    &.open{
+      display: block;
+      .portfolioModal{
+        @include crossBrowser(animation,animateModal 0.5s ease-in-out forwards);
+      }
+    }
+    &.close{
+      display: block;
+      .portfolioModal{
+        @include crossBrowser(animation,animateModalRev 0.5s ease-in-out forwards);
+      }
+    }
+  }
+  .portfolioModal{
+    position: relative;
+    width: 90%;
+    max-width: 768px;
+    margin: 10px auto;
+    background-color: #fff;
+    img{
+      width: 100%;
+      vertical-align: top;
+    }
+  }
+  .portfolioModalClose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 30px;
+    height: 30px;
+    z-index: 3;
+    line-height: 30px;
+    color: #fff;
+    text-align: center;
+    background-color: $color-overlay-2;
+    cursor: pointer;
+    @include crossBrowser(transition,0.3s ease-out);
+    &:hover{
+      color: $color-gray-1;
+      @include crossBrowser(transition,0.3s ease-out);
+    }
+  }
+  .portfolioModalBody{
+    padding: 20px;
+  }
+}
+@media(min-width:768px){
+  .portfolio{
+    padding-bottom: 75px;
+    .portfolioContent{
+      &:after{
+        content: " ";
+        display: block;
+        min-height: 0;
+        clear: both;
+      }
+    }
+    .w25,
+    .w33,
+    .w50{
+      width: 50%;
+    }
+    .portfolioColumn{
+      float: left;
+
+    }
+  }
+}
+@media(min-width:1440px){
+  .portfolio{
+    .w25{
+      width: 25%;
+    }
+    .w33{
+      width: 33%;
+    }
+  }
+}
+
+/* MODAL ANIMATIONS */
+// MODAL OPEN
+@-webkit-keyframes animateModal{
+  0%{
+    top: -50px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 0px;
+  }
+}
+@keyframes animateModal{
+  0%{
+    top: -50px;
+    opacity: 0;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: 0px;
+  }
+}
+// MODAL CLOSE
+@-webkit-keyframes animateModalRev{
+  0%{
+    top: 0px;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: -50px;
+    opacity: 0;
+  }
+}
+@keyframes animateModalRev{
+  0%{
+    top: 0px;
+  }
+  50%{
+    opacity: 1;
+  }
+  100%{
+    top: -50px;
+    opacity: 0;
+  }
+}
