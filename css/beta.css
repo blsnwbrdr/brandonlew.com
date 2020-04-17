@@ -127,9 +127,13 @@ p, li { line-height: 1.75em; }
 
 @media (min-width: 1024px) { .about .infoContainer { padding: 50px; } }
 
-.breakOne { padding: 100px 20px; text-align: center; color: #fff; background: #009EC8; background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8); background: repeating-linear-gradient(left, #4267A0, #009EC8); }
+.break { padding: 100px 20px; text-align: center; color: #fff; background: #009EC8; }
 
-.breakOne p { line-height: inherit; }
+.break p { line-height: inherit; }
+
+.breakOne { background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8); background: repeating-linear-gradient(left, #4267A0, #009EC8); }
+
+.breakTwo { background: -webkit-repeating-linear-gradient(left, #009EC8, #4267A0); background: repeating-linear-gradient(left, #009EC8, #4267A0); }
 
 .portfolio { padding-bottom: 50px; }
 
