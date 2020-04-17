@@ -505,6 +505,9 @@ p,li{
 
 // DEVELOPMENT
 .development{
+  .sectionContent{
+    text-align: center;
+  }
   &.portfolio{
     .portfolioModalBody{
       a{
@@ -527,6 +530,13 @@ p,li{
         padding-top: 20px;
       }
     }
+  }
+}
+
+// PHOTOGRAPHY
+.photography{
+  .sectionContent{
+    text-align: center;
   }
 }
 

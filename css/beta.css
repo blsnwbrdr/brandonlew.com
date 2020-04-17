@@ -177,6 +177,8 @@ p, li { line-height: 1.75em; }
 @media (min-width: 1440px) { .portfolio .w25 { width: 25%; }
   .portfolio .w33 { width: 33%; } }
 
+.development .sectionContent { text-align: center; }
+
 .development.portfolio .portfolioModalBody a { color: #000; }
 
 .development.portfolio .portfolioModalBody a:hover { color: #009EC8; }
@@ -188,6 +190,8 @@ p, li { line-height: 1.75em; }
 .development.portfolio .portfolioModalBody .fa { font-size: 1.25em; padding-right: 10px; }
 
 .development.portfolio .portfolioModalBody .text { padding-top: 20px; }
+
+.photography .sectionContent { text-align: center; }
 
 @-webkit-keyframes animateLine1 { 0% { -webkit-transform: translate3d(0, 0, 0) rotate(0deg);
     -moz-transform: translate3d(0, 0, 0) rotate(0deg);
