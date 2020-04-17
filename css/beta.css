@@ -300,10 +300,6 @@ p, li { line-height: 1.75em; }
 
 .break p { line-height: inherit; }
 
-.breakOne { background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8); background: repeating-linear-gradient(left, #4267A0, #009EC8); }
-
-.breakTwo { background: -webkit-repeating-linear-gradient(left, #009EC8, #4267A0); background: repeating-linear-gradient(left, #009EC8, #4267A0); }
-
 /* PORTFOLIO */
 .portfolio { padding-bottom: 50px; }
 
@@ -367,6 +363,10 @@ p, li { line-height: 1.75em; }
   50% { opacity: 1; }
   100% { top: -50px;
     opacity: 0; } }
+
+.breakOne { background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8); background: repeating-linear-gradient(left, #4267A0, #009EC8); }
+
+.breakTwo { background: -webkit-repeating-linear-gradient(left, #009EC8, #4267A0); background: repeating-linear-gradient(left, #009EC8, #4267A0); }
 
 .about .profileImage { width: 150px; display: block; margin: 0 auto; margin-bottom: 25px; -webkit-border-radius: 50%; -moz-border-radius: 50%; -ms-border-radius: 50%; border-radius: 50%; -webkit-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); -moz-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); -ms-filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); filter: drop-shadow(3px 3px 3px rgba(0, 0, 0, 0.1)); }
 

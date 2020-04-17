@@ -18,6 +18,9 @@
 // PAGE BREAKS
 @import 'breaks';
 
+// PORTFOLIO
+@import 'portfolio';
+
 // BREAK ONE
 .breakOne{
   background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
@@ -28,9 +31,6 @@
   background: -webkit-repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
   background: repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
 }
-
-// PORTFOLIO
-@import 'portfolio';
 
 // ABOUT
 .about{
