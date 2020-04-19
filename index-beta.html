@@ -37,6 +37,8 @@
     </div>
   </nav>
 
+<div role="main" class="main">
+
   <!-- BANNER -->
   <div id="banner" class="banner">
     <div class="bannerOpacity">
@@ -92,7 +94,7 @@
   </div>
 
   <!-- BREAK ONE -->
-  <div id="breakOne" class="breakOne">
+  <div class="break breakOne">
     <p class="h1">need more <span class="fa fa-coffee" ></span> to write more&nbsp;<span class="fa fa-code"></span></p>
   </div>
 
@@ -107,61 +109,112 @@
       </div>
     </div>
   </div>
-  <div class="portfolio">
+  <div class="development portfolio">
     <div class="portfolioContainer">
       <div class="portfolioContent">
         <div class="portfolioColumn w50">
-          <div class="portfolioSlide">
+          <div class="portfolioSlide" onclick="_modal.display('modalTipJar');">
             <img src="images/project_tipjar.jpg" alt="tipjar app">
             <div class="portfolioOverlay">
               <p class="portfolioText1">tip jar app</p>
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
-          <div class="portfolioModal">
-
+          <div id="modalTipJar" class="portfolioModalOverlay">
+            <div class="portfolioModal">
+              <span class="portfolioModalClose" onclick="_modal.close('modalTipJar');">X</span>
+              <div class="porfolioModalHeader">
+                <img src="images/project_tipjar.jpg" alt="tipjar app">
+              </div>
+              <div class="portfolioModalBody">
+                <p class="h3">TIP JAR</p>
+                <a href="http://brandonsco.de/portfolio/tipjar/" target="_blank"><span class="fa fa-link"></span></a>
+                <a href="https://github.com/blsnwbrdr/tipjar-react-app" target="_blank"><span class="fa fa-github"></span></a>
+                <a class="appStoreLogo" href="https://itunes.apple.com/us/app/tip-jar-guide-to-gratuity/id1321633520?ls=1&amp;mt=8" aria-label="tip jar in the app store" target="_blank"><img src="images/appStore.svg" alt="apple app store icon" class=""></a>
+                <p class="text">A tipping app with data from countries around the globe. It guides world travelers on the tipping etiquette from different countries while traveling. The web app is built with React, while the iOS app was developed using React Native. Both access an API built with MongoDB, NodeJS, and Express, hosted on Heroku.</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="portfolioColumn w50">
-          <div class="portfolioSlide">
+          <div class="portfolioSlide" onclick="_modal.display('modalEtsy');">
             <img src="images/project_etsy.jpg" alt="etsy app">
             <div class="portfolioOverlay">
               <p class="portfolioText1">etsy app</p>
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
-          <div class="portfolioModal">
-
+          <div id="modalEtsy" class="portfolioModalOverlay">
+            <div class="portfolioModal">
+              <span class="portfolioModalClose" onclick="_modal.close('modalEtsy');">X</span>
+              <div class="porfolioModalHeader">
+                <img src="images/project_etsy.jpg" alt="etsy app">
+              </div>
+              <div class="portfolioModalBody">
+                <p class="h3">Etsy App</p>
+                <a href="http://brandonsco.de/portfolio/tipjar/" target="_blank"><span class="fa fa-link"></span></a>
+                <a href="https://github.com/blsnwbrdr/etsy" target="_blank"><span class="fa fa-github"></span></a>
+                <p class="text">This app utilizes the Etsy API and pulls data from the Etsy servers to populate the page. The gallery of images, text, and links to Etsy are all pulled from Etsy, making it easy to manage the content and great for businesses that want a customized site while minimizing the amount of work. The app uses Javascript, AJAX, and the Etsy API to create the content.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
       <div class="portfolioContent">
         <div class="portfolioColumn w50">
-          <div class="portfolioSlide">
+          <div class="portfolioSlide" onclick="_modal.display('modalTravelTracker');">
             <img src="images/project_traveltracker.jpg" alt="travel tracker app">
             <div class="portfolioOverlay">
               <p class="portfolioText1">travel tracker app</p>
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
-          <div class="portfolioModal">
-
+          <div id="modalTravelTracker" class="portfolioModalOverlay">
+            <div class="portfolioModal">
+              <span class="portfolioModalClose" onclick="_modal.close('modalTravelTracker');">X</span>
+              <div class="porfolioModalHeader">
+                <img src="images/project_traveltracker.jpg" alt="tipjar app">
+              </div>
+              <div class="portfolioModalBody">
+                <p class="h3">Travel Tracker App</p>
+                <a href="http://brandonsco.de/portfolio/tipjar/" target="_blank"><span class="fa fa-link"></span></a>
+                <a href="https://github.com/blsnwbrdr/traveltracker" target="_blank"><span class="fa fa-github"></span></a>
+                <a class="appStoreLogo" href="https://itunes.apple.com/us/app/travel-tracker-where-next/id1377010134?mt=8" aria-label="travel tracker in the app store" target="_blank"><img src="images/appStore.svg" alt="apple app store icon" class=""></a>
+                <p class="text">Count and map the countries you have travelled to using this app. It uses the Google Maps API to generate the map, place markers, and create marker clusters. The sharing feature is powered by PHP to create a new page, create new data, and publish an email.</p>
+              </div>
+            </div>
           </div>
         </div>
         <div class="portfolioColumn w50">
-          <div class="portfolioSlide">
+          <div class="portfolioSlide" onclick="_modal.display('modalQSC');">
             <img src="images/project_qsc.jpg" alt="quality service control">
             <div class="portfolioOverlay">
               <p class="portfolioText1">qualityservicecontrol.com</p>
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
-          <div class="portfolioModal">
-
+          <div id="modalQSC" class="portfolioModalOverlay">
+            <div class="portfolioModal">
+              <span class="portfolioModalClose" onclick="_modal.close('modalQSC');">X</span>
+              <div class="porfolioModalHeader">
+                <img src="images/project_qsc.jpg" alt="tipjar app">
+              </div>
+              <div class="portfolioModalBody">
+                <p class="h3">Quality Service Control</p>
+                <a href="http://qualityservicecontrol.com" target="_blank"><span class="fa fa-link"></span></a>
+                <a href="https://github.com/blsnwbrdr/qsc" target="_blank"><span class="fa fa-github"></span></a>
+                <p class="text">The project was a revamp of their old website; they wanted something modern and fresh. The website is very light and it features Javascript and jQuery scripts for functionality along with Bootstrap to keep it responsive.</p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+
+  <!-- BREAK TWO -->
+  <div class="break breakTwo">
+    <p class="h1">need to <span class="fa fa-plane" ></span> to <span class="fa fa-camera-retro"></span> more images</p>
   </div>
 
   <!-- PHOTOGRAPHY -->
@@ -171,10 +224,12 @@
         <h2>photography</h2>
       </div>
       <div class="sectionContent">
-
+        <p>An avid travel photographer venturing out to capture new sights, cultures, and experiences.</p>
       </div>
     </div>
   </div>
+
+</div>
 
   <!-- SCRIPTS -->
   <script src="js/beta.min.js"></script>
