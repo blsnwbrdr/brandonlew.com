@@ -415,13 +415,24 @@ p, li { line-height: 1.75em; }
 
 .photography .sectionContent { text-align: center; }
 
+.photography .continentsList { list-style-type: none; margin: 0; padding: 20px 0 0 0; font-family: 'Comfortaa', sans-serif; }
+
+.photography .continentsList .continents { padding: 0 15px; color: #009EC8; }
+
+.photography .continentsList .continents:hover { cursor: pointer; color: #777; }
+
+.photography .continentsList .active { color: #777; }
+
+.photography .continentsList .active:hover { cursor: default; }
+
 .photography.portfolio .portfolioOverlay { background-color: rgba(255, 255, 255, 0.5); }
 
 .photography.portfolio .portfolioModalBody { text-align: center; }
 
-.photography.portfolio .portfolioModalBody button { padding: 10px 20px; background-color: transparent; font-family: 'Comfortaa', sans-serif; font-size: 1em; color: #009EC8; border: 1px solid #777; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
+.photography.portfolio .portfolioModalBody button { padding: 10px 20px; margin-bottom: 10px; background-color: transparent; font-family: 'Comfortaa', sans-serif; font-size: 1em; color: #009EC8; border: 1px solid #777; -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 
 .photography.portfolio .portfolioModalBody button:hover { cursor: pointer; color: #fff; background-color: #009EC8; border: 1px solid #009EC8; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 
-@media (min-width: 768px) { .photography .photos { padding: 5px; }
+@media (min-width: 768px) { .photography .continentsList .continents { display: inline-block; }
+  .photography .photos { padding: 5px; }
   .photography .photos .portfolioSlide img { -webkit-border-radius: 4px; -moz-border-radius: 4px; -ms-border-radius: 4px; border-radius: 4px; } }
