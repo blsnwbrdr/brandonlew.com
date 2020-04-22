@@ -70,15 +70,62 @@ var _modal = {
 }
 
 // ETSY API
+var africa = '15311634';
+var asia = '15306280';
+var europe = '15306643';
+var northAmerica = '15311764';
+var southAmerica = '15322811';
+var continents = [africa, asia, europe, northAmerica, southAmerica];
 var _etsy = {
-  shopName: 'blewphotography',
-  apiKey: 'xis6u17jgj9lpn3icytgtzxq',
-  getImages: function(){
-    var photo = document.querySelectorAll('.photo');
-    console.log(photo.length);
+  getImages: function(section){
+    var shopName = "blewphotography";
+    var apiKey = "xis6u17jgj9lpn3icytgtzxq";
+    var url = 'https://openapi.etsy.com/v2/shops/' + shopName + '/sections/' + section + '/listings/active.js?api_key=' + apiKey + '&includes=MainImage&fields=title,listing_id,url&limit=100'
+    $.ajax({
+      url: url,
+      dataType: "jsonp",
+      success: function(data) {
+        // randomize
+        data.results.sort(function() {
+          return 0.5 - Math.random();
+        });
+        // remove odd size listings
+        for(var x = data.results.length; x--;) {
+          if(data.results[x].listing_id === 259259197) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 210787557) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 185468274) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 185488602) {
+            data.results.splice(x,1);
+          } else if(data.results[x].listing_id === 691028887) {
+            data.results.splice(x,1);
+          }
+        }
+        // display 12 listings
+        for(var i = 0;i < data.results.length;i++){
+          if(i < 12){
+            var photos = document.querySelectorAll('.photos');
+            for(var j = 0;j < photos.length;j++){
+              if(i === j){
+                photos[j].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + j + '&#39;);"> <img src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + j + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + j + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"></div><div class="portfolioModalBody"><p class="h3">' + data.results[i].title + '</p><a href="' + data.results[i].url + '" aria-label="' + data.results[i].title + '"  target="_blank"><button type="button">purchase on etsy</button></a></div></div></div>');
+              }
+            }
+          }
+        }
+      }
+    });
+  },
+  initiate: function(){
+    // randomize
+    continents.sort(function() {
+      return 0.5 - Math.random();
+    });
+    _etsy.getImages(continents[0]);
   }
 }
-_etsy.getImages();
+_etsy.initiate();
 
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
