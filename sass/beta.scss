@@ -146,4 +146,9 @@
   .sectionContent{
     text-align: center;
   }
+  &.portfolio{
+    .portfolioOverlay{
+      background-color: $color-overlay-1;
+    }
+  }
 }

@@ -69,6 +69,17 @@ var _modal = {
   }
 }
 
+// ETSY API
+var _etsy = {
+  shopName: 'blewphotography',
+  apiKey: 'xis6u17jgj9lpn3icytgtzxq',
+  getImages: function(){
+    var photo = document.querySelectorAll('.photo');
+    console.log(photo.length);
+  }
+}
+_etsy.getImages();
+
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
   // go to target element with offset and duration
