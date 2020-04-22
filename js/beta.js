@@ -2,6 +2,8 @@
 var nav = document.getElementById('nav');
 var navIcon = document.getElementById('navIcon');
 var banner = document.getElementById('banner');
+var continents = document.querySelectorAll('.continents');
+var photos = document.querySelectorAll('.photos');
 
 // RANDOMIZE BANNER IMAGE
 var _banner = {
@@ -70,17 +72,131 @@ var _modal = {
 }
 
 // ETSY API
-var africa = '15311634';
-var asia = '15306280';
-var europe = '15306643';
-var northAmerica = '15311764';
-var southAmerica = '15322811';
-var continents = [africa, asia, europe, northAmerica, southAmerica];
+// var africa = '15311634';
+// var asia = '15306280';
+// var europe = '15306643';
+// var northAmerica = '15311764';
+// var southAmerica = '15322811';
+// var continentsList = [africa, asia, europe, northAmerica, southAmerica];
+var newList = [
+  {
+    continent: 'africa',
+    key: '15311634'
+  },
+  {
+    continent: 'asia',
+    key: '15306280'
+  },
+  {
+    continent: 'europe',
+    key: '15306643'
+  },
+  {
+    continent: 'northAmerica',
+    key: '15311764'
+  },
+  {
+    continent: 'southAmerica',
+    key: '15322811'
+  },
+];
+
 var _etsy = {
+  initiate: function(){
+    // randomize
+    newList.sort(function() {
+      return 0.5 - Math.random();
+    });
+    _etsy.getImages(newList[0].key);
+  },
+  selectContinent: function(e){
+    // get images of selected continent if not already selected
+    if(e.target.classList.contains('active') === false){
+      for(var x = 0;x < newList.length;x++){
+        if(e.target.id === newList[x].continent){
+          _etsy.getImages(newList[x].key);
+        }
+      }
+    }
+  },
+  clearPhotos: function(){
+    // clear photos html
+    for(var x = 0;x < photos.length;x++){
+      photos[x].innerHTML = '';
+    }
+  },
+  setActiveContinent: function(section){
+    // remove active class from all continents elements and set active to selected element
+    switch(section){
+      case '15311634':
+        _etsy.removeActiveClass();
+        document.getElementById('africa').classList.add('active');
+        break;
+      case '15306280':
+        _etsy.removeActiveClass();
+        document.getElementById('asia').classList.add('active');
+        break;
+      case '15306643':
+        _etsy.removeActiveClass();
+        document.getElementById('europe').classList.add('active');
+        break;
+      case '15311764':
+        _etsy.removeActiveClass();
+        document.getElementById('northAmerica').classList.add('active');
+        break;
+      case '15322811':
+        _etsy.removeActiveClass();
+        document.getElementById('southAmerica').classList.add('active');
+        break;
+    }
+  },
+  removeActiveClass: function(){
+    // remove active class from all coninents elements
+    for(var x = 0;x < continents.length;x++){
+      continents[x].classList.remove('active');
+    }
+  },
+  removeOddSizeListings: function(data){
+    // remove odd size listings
+    for(var x = data.results.length; x--;) {
+      if(data.results[x].listing_id === 259259197) {
+        data.results.splice(x,1);
+      } else if(data.results[x].listing_id === 210787557) {
+        data.results.splice(x,1);
+      } else if(data.results[x].listing_id === 185468274) {
+        data.results.splice(x,1);
+      } else if(data.results[x].listing_id === 185488602) {
+        data.results.splice(x,1);
+      } else if(data.results[x].listing_id === 691028887) {
+        data.results.splice(x,1);
+      }
+    }
+    return data;
+  },
+  displayListings: function(data){
+    // display the first 12 listings
+    for(var x = 0;x < data.results.length;x++){
+      if(x < 12){
+        for(var y = 0;y < photos.length;y++){
+          if(x === y){
+            photos[y].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + y + '&#39;);"> <img src="' + data.results[x].MainImage.url_fullxfull + '" alt="' + data.results[x].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + y + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + y + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' + data.results[x].MainImage.url_fullxfull + '" alt="' + data.results[x].title + '"></div><div class="portfolioModalBody"><p class="h4">' + data.results[x].title + '</p><a href="' + data.results[x].url + '" aria-label="' + data.results[x].title + '"  target="_blank"><button type="button">purchase on etsy</button></a></div></div></div>');
+          }
+        }
+      }
+    }
+  },
   getImages: function(section){
     var shopName = "blewphotography";
     var apiKey = "xis6u17jgj9lpn3icytgtzxq";
-    var url = 'https://openapi.etsy.com/v2/shops/' + shopName + '/sections/' + section + '/listings/active.js?api_key=' + apiKey + '&includes=MainImage&fields=title,listing_id,url&limit=100'
+    var url = 'https://openapi.etsy.com/v2/shops/' + shopName + '/sections/' + section + '/listings/active.js?api_key=' + apiKey + '&includes=MainImage&fields=title,listing_id,url&limit=100';
+
+    // clear photos html
+    _etsy.clearPhotos();
+
+    // set active continent link
+    _etsy.setActiveContinent(section);
+
+    // fetch api json data
     $.ajax({
       url: url,
       dataType: "jsonp",
@@ -89,40 +205,14 @@ var _etsy = {
         data.results.sort(function() {
           return 0.5 - Math.random();
         });
+
         // remove odd size listings
-        for(var x = data.results.length; x--;) {
-          if(data.results[x].listing_id === 259259197) {
-            data.results.splice(x,1);
-          } else if(data.results[x].listing_id === 210787557) {
-            data.results.splice(x,1);
-          } else if(data.results[x].listing_id === 185468274) {
-            data.results.splice(x,1);
-          } else if(data.results[x].listing_id === 185488602) {
-            data.results.splice(x,1);
-          } else if(data.results[x].listing_id === 691028887) {
-            data.results.splice(x,1);
-          }
-        }
-        // display 12 listings
-        for(var i = 0;i < data.results.length;i++){
-          if(i < 12){
-            var photos = document.querySelectorAll('.photos');
-            for(var j = 0;j < photos.length;j++){
-              if(i === j){
-                photos[j].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + j + '&#39;);"> <img src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + j + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + j + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' + data.results[i].MainImage.url_fullxfull + '" alt="' + data.results[i].title + '"></div><div class="portfolioModalBody"><p class="h4">' + data.results[i].title + '</p><a href="' + data.results[i].url + '" aria-label="' + data.results[i].title + '"  target="_blank"><button type="button">purchase on etsy</button></a></div></div></div>');
-              }
-            }
-          }
-        }
+        _etsy.removeOddSizeListings(data);
+
+        // display listings
+        _etsy.displayListings(data);
       }
     });
-  },
-  initiate: function(){
-    // randomize
-    continents.sort(function() {
-      return 0.5 - Math.random();
-    });
-    _etsy.getImages(continents[0]);
   }
 }
 _etsy.initiate();
@@ -173,4 +263,6 @@ document.addEventListener('click',function(e){
   _navigation.jsEnabled(e);
   // activate navigation anchor scrolling
   _navigation.scroll(e);
+  // get images of selected continent
+  _etsy.selectContinent(e);
 });
