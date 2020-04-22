@@ -168,6 +168,14 @@
     }
   }
   &.portfolio{
+    .photos{
+      padding: 5px;
+    }
+    .portfolioSlide{
+      img{
+        @include crossBrowser(border-radius,4px);
+      }
+    }
     .portfolioOverlay{
       background-color: $color-overlay-1;
     }
@@ -200,14 +208,6 @@
       .continents{
         display: inline-block;
         margin-bottom: 0;
-      }
-    }
-    .photos{
-      padding: 5px;
-      .portfolioSlide{
-        img{
-          @include crossBrowser(border-radius,4px);
-        }
       }
     }
   }
