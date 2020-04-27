@@ -5,6 +5,19 @@ var banner = document.getElementById('banner');
 var continents = document.querySelectorAll('.continents');
 var photos = document.querySelectorAll('.photos');
 
+// SKIP CONTENT SCROLL
+var _skipContent = {
+  scroll: function(e){
+    // navigation menu links
+    if(e.target && e.target.classList.contains('skipLink')){
+      // prevent default anchor behavior
+      e.preventDefault();
+      // smooth scroll to href
+      _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
+    }
+  }
+}
+
 // RANDOMIZE BANNER IMAGE
 var _banner = {
   // images
@@ -261,6 +274,8 @@ var _smoothScrolling = {
 document.addEventListener('click',function(e){
   // activate navigation js check for animation
   _navigation.jsEnabled(e);
+  // activate skip content anchor scrolling
+  _skipContent.scroll(e);
   // activate navigation anchor scrolling
   _navigation.scroll(e);
   // get images of selected continent

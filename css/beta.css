@@ -34,6 +34,17 @@ p, li { line-height: 1.75em; }
 
 .fa { display: inline; }
 
+/* SKIP CONTENT */
+.skipContent { position: fixed; top: 0; left: 0; width: 100%; z-index: 9000; color: #fff; }
+
+.skipContent ul { list-style: none; }
+
+.skipContent li { position: absolute; width: 100%; }
+
+.skipContent a { text-decoration: none; position: fixed; left: -999px; }
+
+.skipContent a:focus { background: #000; color: #fff; left: 50px; padding: 3px 10px; }
+
 /* NAVIGATION */
 .nav { position: fixed; top: 20px; left: 20px; z-index: 1; }
 
