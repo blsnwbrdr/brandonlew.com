@@ -2,81 +2,99 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
-  <title>Brandon Lew Photography</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Brandon Lew</title>
   <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:300" rel="stylesheet">
-  <link href="http://brandonlew.com/css/bootstrap.min.css" rel="stylesheet">
-	<link href="favicon.ico" rel="shortcut icon"> 
+	<link href="favicon.ico" rel="shortcut icon">
 	<link href="apple-touch-icon.png" rel="apple-touch-icon">
 	<style>
-    html, body {
+    *{
+      box-sizing: border-box;
+    }
+    html,body{
       height: 100%;
+    }
+    body{
       margin: 0;
       padding: 0;
-      font: 300 14px 'Josefin Sans', sans-serif;
+      background-color: #fff;
+      font-family: 'Quicksand', sans-serif;
+      font-weight: 300;
       color: black;
+      letter-spacing: 1px;
     }
-    h1 {
+    a{
+      text-decoration: none;
+    }
+    h1,h2,h3,h4,h5,p{
+      margin: 0 0 10px;
+    }
+    h1{
       font-size: 6em;
       color: white;
-      -webkit-text-shadow: 3px 3px 3px rgba(81,81,81,0.75);
-      text-shadow: 3px 3px 3px rgba(81,81,81,0.75);  
+      -webkit-text-shadow: 3px 3px 3px rgba(0,0,0,0.75);
+      text-shadow: 3px 3px 3px rgba(0,0,0,0.75);
     }
-    p {
-      padding-bottom: 25px;
-    }
-    #error {
-      background: url(http://brandonlew.com/images/2014_0140.jpg) no-repeat scroll center;
+    .error{
+      position: relative;
+      background: url(http://brandonlew.com/images/banner_2012_0998.jpg) no-repeat scroll center;
       background-size: cover;
       height: 100%;
     }
-    #error .banner_layer {
+    .banner{
       height: 100%;
       width: 100%;
-      background-color: rgba(255,255,255,0.85)
+      background-color: rgba(255,255,255,0.85);
     }
-    #error .content {
-      padding: 5%;
+    .content{
+      position: absolute;
+      top: 40%;
+      left: 50%;
+      transform: translate(-50%,-40%);
+      width: 100%;
+      padding: 0 20px;
+      text-align: center;
+
     }
-    a {
+    .button{
+      display: inline-block;
+      margin-top: 40px;
       background-color: black;
       color: white;
-      padding: 5px 10px;
+      padding: 10px 20px;
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out;
     }
-    a:hover {
-      background-color: #363636;
+    .button:hover{
+      background-color: #009EC8;
       text-decoration: none;
       color: white;
+      -webkit-transition: 0.3s ease-out;
+      transition: 0.3s ease-out;
     }
     @media (min-width: 768px) {
-      body {
+      body{
         font-size: 16px;
       }
-      h1 {
+      h1{
         font-size: 12em;
       }
-      #error .content {
-        padding-top: 10%;
-      }
-      a {
-        padding: 10px 15px;
-      }
     }
-  </style> 
+  </style>
 </head>
 
 <body>
 
-  <div id="error">
-    <div class="banner_layer">
-      <div class="content text-center">
+  <div class="error">
+    <div class="banner">
+      <div class="content">
         <h1>404</h1>
-        <h3>PAGE NOT FOUND</h3>
+        <h2>PAGE NOT FOUND</h2>
         <p>Sorry, it appears the page you were looking for doesn't exist anymore or might have been moved.</p>
-        <a href="http://brandonlew.com">HOME</a>
+        <a href="http://brandonlew.com" class="button">HOME</a>
       </div>
     </div>
-    
+
   </div>
 
 </body>
