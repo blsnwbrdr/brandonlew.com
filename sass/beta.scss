@@ -24,6 +24,11 @@
 // PORTFOLIO
 @import 'portfolio';
 
+// FONT AWESOME
+@import 'fontawesome/fontawesome.scss';
+@import "fontawesome/brands.scss";
+@import "fontawesome/solid.scss";
+
 // BREAK ONE
 .breakOne{
   background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
@@ -86,7 +91,7 @@
     .right{
       width: 70%;
     }
-    .fa{
+    .fab{
       padding-right: 10px;
     }
   }
