@@ -3388,7 +3388,7 @@ readers do not read off random characters that represent icons */
 
 .development.portfolio .portfolioModalBody .h3 { color: #000; }
 
-.development.portfolio .portfolioModalBody .fa { font-size: 1.25em; padding-right: 10px; }
+.development.portfolio .portfolioModalBody .fab, .development.portfolio .portfolioModalBody .fas { font-size: 1.25em; padding-right: 10px; }
 
 .development.portfolio .portfolioModalBody .text { padding-top: 20px; }
 
