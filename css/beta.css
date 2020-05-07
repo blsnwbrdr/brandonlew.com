@@ -309,6 +309,8 @@ p, li { line-height: 1.75em; }
 
 .break p { line-height: inherit; }
 
+.break .fas { display: inline; }
+
 /* PORTFOLIO */
 .portfolio { padding-bottom: 50px; }
 
