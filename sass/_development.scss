@@ -1,0 +1,29 @@
+/* DEVELOPMENT */
+.development{
+  .sectionContent{
+    text-align: center;
+  }
+  &.portfolio{
+    .portfolioModalBody{
+      a{
+        color: $color-dark-text;
+        &:hover{
+          color: $color-aqua-1;
+        }
+      }
+      img{
+        width: 100px;
+      }
+      .h3{
+        color: $color-dark-text;
+      }
+      .fab,.fas{
+        font-size: 1.25em;
+        padding-right: 10px;
+      }
+      .text{
+        padding-top: 20px;
+      }
+    }
+  }
+}

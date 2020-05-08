@@ -1,0 +1,71 @@
+/* PHOTOGRAPHY */
+.photography{
+  .sectionContent{
+    text-align: center;
+  }
+  .continentsList{
+    list-style-type: none;
+    margin: 0;
+    padding: 20px 0 0 0;
+    font-family: 'Comfortaa', sans-serif;
+    .continents{
+      padding: 0 15px;
+      margin-bottom: 10px;
+      color: $color-aqua-1;
+      &:hover{
+        cursor: pointer;
+        color: $color-gray-1;
+      }
+    }
+    .active{
+      color: $color-gray-1;
+      &:hover{
+        cursor: default;
+      }
+    }
+  }
+  &.portfolio{
+    .photos{
+      padding: 5px;
+    }
+    .portfolioSlide{
+      img{
+        @include crossBrowser(border-radius,4px);
+      }
+    }
+    .portfolioOverlay{
+      background-color: $color-overlay-1;
+    }
+    .portfolioModalBody{
+      text-align: center;
+      button{
+        padding: 10px 20px;
+        margin-bottom: 10px;
+        background-color: transparent;
+        font-family: 'Comfortaa', sans-serif;
+        font-size: 1em;
+        color: $color-aqua-1;
+        border: 1px solid $color-gray-1;
+        @include crossBrowser(border-radius,4px);
+        @include crossBrowser(transition,0.3s ease-out);
+        &:hover{
+          cursor: pointer;
+          color: #fff;
+          background-color: $color-aqua-1;
+          border: 1px solid $color-aqua-1;
+          @include crossBrowser(transition,0.3s ease-out);
+        }
+      }
+    }
+  }
+}
+@media(min-width:768px){
+  .photography{
+    .continentsList{
+      .continents{
+        display: inline-block;
+        margin-bottom: 0;
+      }
+    }
+  }
+}

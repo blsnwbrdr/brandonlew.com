@@ -11,3 +11,14 @@
     display: inline;
   }
 }
+
+// BREAK ONE
+.breakOne{
+  background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+  background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+}
+// BREAK TWO
+.breakTwo{
+  background: -webkit-repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+  background: repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+}
