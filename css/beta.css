@@ -3419,3 +3419,13 @@ readers do not read off random characters that represent icons */
 .photography.portfolio .portfolioModalBody button:hover { cursor: pointer; color: #fff; background-color: #009EC8; border: 1px solid #009EC8; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 
 @media (min-width: 768px) { .photography .continentsList .continents { display: inline-block; margin-bottom: 0; } }
+
+.footer { background-color: rgba(0, 0, 0, 0.75); }
+
+.footer a { color: #eee; }
+
+.footer a:hover { color: #009EC8; }
+
+.footer .header { display: block; margin-bottom: 50px; }
+
+.footer .fab { font-size: 1.5em; padding: 0 10px; }
