@@ -85,12 +85,6 @@ var _modal = {
 }
 
 // ETSY API
-// var africa = '15311634';
-// var asia = '15306280';
-// var europe = '15306643';
-// var northAmerica = '15311764';
-// var southAmerica = '15322811';
-// var continentsList = [africa, asia, europe, northAmerica, southAmerica];
 var newList = [
   {
     continent: 'africa',
