@@ -11,8 +11,8 @@ const rename = require('gulp-rename');
 // TASKS
 //----------
 
-const sourceDir = 'index-beta-staging';
-const destDir = 'index-beta'
+const sourceDir = 'index-staging';
+const destDir = 'index'
 
 // PARSE HTML, MINIFY, AND COPY TO NEW LOCATION
 gulp.task('html', () => {
