@@ -17,21 +17,7 @@ gulp.task('compile', () => {
   return gulp.src([`${sourceDir}*.{sass,scss}`])
     .pipe(sass({outputStyle:'compact'}).on('error', sass.logError))
     .pipe(gulp.dest(destDir))
-    // .pipe(gulp.dest(function (file) {
-    //   return file.base;
-    // }));
 });
-
-// MINIFY CSS TO DESTINATION DIRECTORY
-// gulp.task('minify', () => {
-//   return gulp.src([`${sourceDir}*.css`,`!${sourceDir}*.min.css`])
-//     .pipe(cssMinifiy())
-//     .pipe(rename({
-//       dirname:'',
-//       extname:'.min.css'
-//     }))
-//     .pipe(gulp.dest(destDir))
-// });
 
 gulp.task('sass:watch', () => {
   gulp.watch(`${sourceDir}*.{sass,scss}`, gulp.series(['compile']), () => {});
