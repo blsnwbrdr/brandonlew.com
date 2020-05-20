@@ -21,13 +21,13 @@ var _skipContent = {
 // RANDOMIZE BANNER IMAGE
 var _banner = {
   // images
-  images: ['2012_0998','2017_0597'],
+  images: ['2005-1129','2009-1792','2012-1036','2012-1343','2014-0127','2015-0154','2016-0212','2017-0597','2018-1046','2019-0871','2019-1043','2019-2587','2019-2801','2019-3172','2020-0091'],
   // pick random image
   randomize: function(){
     // create random number based on number of images available
     var randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
-    banner.setAttribute('style','background-image:url(images/banner_' + _banner.images[randomNum] + '.jpg);');
+    banner.setAttribute('style','background-image:url(images/banner-' + _banner.images[randomNum] + '.jpeg);');
   }
 }
 _banner.randomize();
