@@ -85,7 +85,7 @@ var _modal = {
 }
 
 // ETSY API
-var newList = [
+var continentArray = [
   {
     continent: 'africa',
     key: '15311634'
@@ -111,17 +111,17 @@ var newList = [
 var _etsy = {
   initiate: function(){
     // randomize
-    newList.sort(function() {
+    continentArray.sort(function() {
       return 0.5 - Math.random();
     });
-    _etsy.getImages(newList[0].key);
+    _etsy.getImages(continentArray[0].key);
   },
   selectContinent: function(e){
     // get images of selected continent if not already selected
     if(e.target.classList.contains('active') === false){
-      for(var x = 0;x < newList.length;x++){
-        if(e.target.id === newList[x].continent){
-          _etsy.getImages(newList[x].key);
+      for(var x = 0;x < continentArray.length;x++){
+        if(e.target.id === continentArray[x].continent){
+          _etsy.getImages(continentArray[x].key);
         }
       }
     }
