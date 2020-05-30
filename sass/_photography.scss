@@ -12,13 +12,17 @@
       padding: 0 15px;
       margin-bottom: 10px;
       color: $color-aqua-1;
+      @include crossBrowser(transition,0.3s ease-out);
       &:hover{
         cursor: pointer;
         color: $color-gray-1;
+        text-decoration: underline;
+        @include crossBrowser(transition,0.3s ease-out);
       }
     }
     .active{
       color: $color-gray-1;
+      text-decoration: underline;
       &:hover{
         cursor: default;
       }

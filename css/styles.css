@@ -435,11 +435,11 @@ p, li { line-height: 1.75em; }
 
 .photography .continentsList { list-style-type: none; margin: 0; padding: 20px 0 0 0; font-family: 'Comfortaa', sans-serif; }
 
-.photography .continentsList .continents { padding: 0 15px; margin-bottom: 10px; color: #009EC8; }
+.photography .continentsList .continents { padding: 0 15px; margin-bottom: 10px; color: #009EC8; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 
-.photography .continentsList .continents:hover { cursor: pointer; color: #777; }
+.photography .continentsList .continents:hover { cursor: pointer; color: #777; text-decoration: underline; -webkit-transition: 0.3s ease-out; -moz-transition: 0.3s ease-out; -ms-transition: 0.3s ease-out; transition: 0.3s ease-out; }
 
-.photography .continentsList .active { color: #777; }
+.photography .continentsList .active { color: #777; text-decoration: underline; }
 
 .photography .continentsList .active:hover { cursor: default; }
 
