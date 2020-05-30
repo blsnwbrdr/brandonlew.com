@@ -119,7 +119,29 @@
   <div class="development portfolio">
     <div class="portfolioContainer">
       <div class="portfolioContent">
-        <div class="portfolioColumn w50">
+        <div class="portfolioColumn w33">
+          <div class="portfolioSlide" onclick="_modal.display('modalEsurance');">
+            <img src="images/projectEsurance.jpg" alt="esurance">
+            <div class="portfolioOverlay">
+              <p class="portfolioText1">esurance</p>
+              <p class="portfolioText2">learn more</p>
+            </div>
+          </div>
+          <div id="modalEsurance" class="portfolioModalOverlay">
+            <div class="portfolioModal">
+              <span class="portfolioModalClose" onclick="_modal.close('modalEsurance');">X</span>
+              <div class="porfolioModalHeader">
+                <img src="images/projectEsurance.jpg" alt="esurance">
+              </div>
+              <div class="portfolioModalBody">
+                <p class="h3">Esurance</p>
+                <a href="https://www.esurance.com" target="_blank"><span class="fas fa-link"></span></a>
+                <p class="text">The Esurance website. My work includes most of the Javascript UI, including the navigation header and a small React module on the <a href="https://www.esurance.com/legal/car/terms-and-conditions">terms and conditions</a> page. Other work includes most A/B testing experiments throughout the site. I am also responsible for integrating and maintainin several modern technologies and tools (SASS, Gulp, Git, NPM) into the team for increased efficiency.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="portfolioColumn w33">
           <div class="portfolioSlide" onclick="_modal.display('modalTipJar');">
             <img src="images/projectTipjar.jpg" alt="tipjar app">
             <div class="portfolioOverlay">
@@ -143,7 +165,7 @@
             </div>
           </div>
         </div>
-        <div class="portfolioColumn w50">
+        <div class="portfolioColumn w33">
           <div class="portfolioSlide" onclick="_modal.display('modalEtsy');">
             <img src="images/projectEtsy.jpg" alt="etsy app">
             <div class="portfolioOverlay">

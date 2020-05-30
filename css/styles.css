@@ -426,6 +426,10 @@ p, li { line-height: 1.75em; }
 
 .development.portfolio .portfolioModalBody .text { padding-top: 20px; }
 
+.development.portfolio .portfolioModalBody .text a { color: #009EC8; }
+
+.development.portfolio .portfolioModalBody .text a:hover { color: #000; text-decoration: underline; }
+
 /* PHOTOGRAPHY */
 .photography .sectionContent { text-align: center; }
 
