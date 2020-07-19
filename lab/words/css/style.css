@@ -1,0 +1,29 @@
+body{
+  font-family: Arial, sans-serif;
+}
+input{
+  display: block;
+  margin: 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  padding: 10px 15px;
+  font-size: 16px
+}
+span{
+  color: blue;
+  font-size: 22px;
+}
+#refresh,#submit{
+  margin: 10px;
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 2px;
+  background-color: #f0f0f0;
+}
+#userTitle{
+  font-size: 26px;
+}
+#userStory{
+  display: none;
+  font-size: 18px;
+}

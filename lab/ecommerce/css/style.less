@@ -1,0 +1,99 @@
+@font: normal 400 14px 'Gochi Hand', sans-serif;
+@white: #F0F0F0;
+@grey: #D2D2D2;
+
+* {
+  box-sizing: border-box;
+}
+body {
+  font: @font;
+  color: @white;
+}
+:focus,:visited,a,a:visited,a:focus {
+  color: @white;
+  outline: none;
+}
+a:hover {
+  color: @white;
+  text-decoration: none;
+}
+.main-carousel {
+  height: 100%;
+}
+.carousel-cell {
+  width: 100%;
+  margin-right: 10px;
+  background: #202020;
+  border-radius: 5px;
+}
+.carousel-cell .purchase {
+  margin: 30px 0 15px;
+}
+.carousel-cell button {
+  padding: 5px 15px;
+  border: none;
+  border-radius: 2px;
+  background-color: @white;
+  color: black;
+  counter-increment: carousel-cell;
+}
+.carousel-cell button:hover {
+  background-color: @grey;
+}
+.carousel-cell i {
+  float: right;
+  padding: 10px;
+  font-size: 16px;
+}
+.carousel-cell i:hover {
+  color: @grey;
+}
+.modal-dialog {
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  margin: 0;
+}
+.modal-dialog .close {
+  padding: 10px 10px 0;
+  font-size: 48px;
+  color: black;
+  background-color: @grey;
+  opacity: .5;
+}
+.modal-dialog .close:hover {
+  color: @white;
+}
+@media (min-width: 450px) {
+  .carousel-cell {
+    width: 32.5%;
+  }
+  .carousel-cell .purchase {
+    margin: 0;
+  }
+  .carousel-cell h3 {
+    font-size: 14px;
+  }
+  .carousel-cell button {
+    font-size: 10px;
+    padding: 5px 15px;
+  }
+}
+@media (min-width: 1024px) {
+  .carousel-cell {
+    width: 33%;
+  }
+  .carousel-cell .purchase {
+    margin: 30px 0 15px;
+  }
+  .carousel-cell h3 {
+    font-size: 24px;
+  }
+  .carousel-cell button {
+    font-size: 14px;
+    padding: 5px 15px;
+  }
+}
