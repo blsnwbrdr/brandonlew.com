@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Nunito:200,300,400,600,700|Franklin+Gothic+Raw" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body>
+  <button id="scoresbtn" type="button" data-toggle="modal" data-target="#highScores">High Scores</button>
+  <div id="quiz" class="col-sm-offset-3 col-sm-6">
+    <h1></h1>
+    <h4 id="question1"></h4>
+    <input id="input1">
+    <h4 id="question2"></h4>
+    <input id="input2">
+    <h4 id="question3"></h4>
+    <input id="input3">
+    <h4 id="question4"></h4>
+    <input id="input4">
+    <h4 id="question5"></h4>
+    <input id="input5">
+    <h4 id="question6"></h4>
+    <input id="input6">
+    <h4 id="question7"></h4>
+    <input id="input7">
+    <h4 id="question8"></h4>
+    <input id="input8">
+    <h4 id="question9"></h4>
+    <input id="input9">
+    <h4 id="question10"></h4>
+    <input id="input10">
+    <h4 id="name"></h4>
+    <input id="inputName">    
+    <button id="submit" type="button">Submit</button>
+    <h4 id="score"></h4>
+  </div>
+  
+<!--MODAL-->
+ 
+  <div id="highScores" class="modal fade">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h4 class="modal-title">High Scores</h4>
+        </div>
+        <div class="modal-body">
+          <h4 id="listScores"></h4>
+        </div>
+      </div>
+    </div>
+  </div>
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<title></title>
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+    div {
+      width: 100%;
+      padding: 5px;
+    }
+    .name {
+      background-color: #A5E19E;
+    }
+  </style>	
+</head>
+<body>
+  
+  <div id="allScores" class="col-sm-offset-4 col-sm-4 text-center"></div>
+
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+  <script>
+    $.ajax({
+      url: 'scores.json',
+      dataType: 'text',
+      success: function(scoresData) {
+        var scores = $.parseJSON(scoresData);
+        for(var x = 0; x < scores.length; x++) {
+          $('#allScores').append('<div class="name">' + scores[x].name + '</div><div>' + scores[x].score + '</div>');
+        }
+      }
+    })
+  </script>
+
+</body>
+</html>

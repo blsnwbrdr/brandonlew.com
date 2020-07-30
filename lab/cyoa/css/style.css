@@ -1,0 +1,89 @@
+html,body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  padding: 0;
+  font: normal 300 16px 'Nunito', sans-serif;
+  background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+  color: #0A0A0A;
+}
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: none;
+}
+.layer {
+  background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+  z-index: 1;
+  height: 100%;
+  -webkit-animation: move-twink-back 200s linear infinite;
+  animation: move-twink-back 200s linear infinite;
+}
+@-webkit-keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}    
+@keyframes move-twink-back {
+  from {background-position:0 0;}
+  to {background-position:-10000px 5000px;}
+}
+button {
+  display: block;
+  padding: 2px 20px;
+  margin: 20px auto;
+  border: 0;
+  border-radius: 2px;
+  letter-spacing: 1px;
+  color: #F2F2F2;
+  outline: none;
+  background: -webkit-linear-gradient(top, #7C0072,#43003E);
+  background: linear-gradient(top, #7C0072,#43003E);
+  -webkit-transition: box-shadow .3s ease-out;
+  transition: box-shadow .3s ease-out;
+}
+button:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0,90,33,0.75);
+  -webkit-transition: box-shadow .3s ease-out;
+  transition: box-shadow .3s ease-out;
+}
+#page {
+  background: #F2F2F2;
+  min-height: 100%;
+  padding-bottom: 50px;
+  box-shadow: 0 0 8px 8px rgba(255,255,255,0.10);
+}
+#header {
+  margin: 0 -15px;
+  padding: 25px 15px 35px;
+  font-family: 'Revalia', sans-serif;
+  color: #F2F2F2;
+  filter: hue-rotate(0deg);
+  background: linear-gradient(45deg,#5A0053,#005A21);
+  animation: hue 10s infinite linear;
+  -webkit-animation: hue 10s infinite linear;
+}
+@keyframes hue {
+  0% { filter: hue-rotate(0deg);}
+  100% { filter: hue-rotate(360deg);}
+}
+@-webkit-keyframes hue {
+  0% { filter: hue-rotate(0deg); }
+  100% { filter: hue-rotate(360deg); }
+}
+#image {
+  max-width: 200px;
+  margin: 50px auto 0;
+  -webkit-filter: drop-shadow(3px 3px 3px rgba(50, 50, 50, 0.25));
+  filter: drop-shadow(3px 3px 3px rgba(50, 50, 50, 0.25));
+}
+#story {
+  text-align: justify;
+  line-height: 1.75;
+  margin: 50px 0;
+}
+@media (min-width: 1024px) {
+  #image {
+    max-width: 400px;
+  }
+}

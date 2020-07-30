@@ -1,0 +1,409 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">  
+  <title></title>
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,700" rel="stylesheet">    
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body ng-app="">
+  
+  <div class="container-fluid">
+    <div class="row">
+      <div id="header" class="col-sm-12 text-center">
+        <h1>Make Your Own Adventure</h1>
+        <div class="col-sm-offset-3 col-sm-6">
+          <h3>Create a choose your own adventure story and share it with your family and friends! Try out the example below and see how it works.</h3>
+          <div id="example">
+            <a href="http://cyoa.brandonsco.de" target="_blank">
+              <img class="img-responsive" src="images/example.png" alt="example">
+            </a>
+          </div>
+          <h3>Teachers and Parents: <a href="myoa-lesson.pdf">Lesson Plan</a><br><br>
+          Now, make your own story...</h3>
+        </div>
+      </div>
+    </div>
+<!--PAGE 1-->
+    <div class="row">
+      <a href="#" data-toggle="modal" data-target="#modal_0">
+        <div class="col-xs-12 page one"><h2>Cover</h2></div>
+      </a>
+    </div>
+<!--PAGE 2-->
+    <div class="row">
+      <a href="#" data-toggle="modal" data-target="#modal_01">
+        <div class="col-xs-6 page two">
+          <i class="fa fa-arrow-down"></i><h2>Choice #1</h2>
+        </div>
+      </a>  
+      <a href="#" data-toggle="modal" data-target="#modal_02">
+        <div class="col-xs-6 page two">
+          <i class="fa fa-arrow-down"></i><h2>Choice #2</h2>
+        </div>
+      </a>  
+    </div>
+<!--PAGE 3-->
+    <div class="row">
+      <a href="#" data-toggle="modal" data-target="#modal_011">
+        <div class="col-xs-3 page three">
+          <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+        </div>
+      </a>  
+      <a href="#" data-toggle="modal" data-target="#modal_012">
+        <div class="col-xs-3 page three">
+          <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #2</h2>
+        </div>
+      </a>  
+      <a href="#" data-toggle="modal" data-target="#modal_021">
+        <div class="col-xs-3 page three">
+          <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+        </div>
+      </a>  
+      <a href="#" data-toggle="modal" data-target="#modal_022">
+        <div class="col-xs-3 page three">
+          <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #2</h2>
+        </div>
+      </a>
+    </div>
+<!--PAGE 4-->
+    <div class="row">
+      <div class="col-xs-3">
+        <div class="row">
+          <a href="#" data-toggle="modal" data-target="#modal_0111">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+            </div>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#modal_0112">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #2</h2>
+            </div>
+          </a>  
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="row">
+          <a href="#" data-toggle="modal" data-target="#modal_0121">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+            </div>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#modal_0122">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #2</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="row">
+          <a href="#" data-toggle="modal" data-target="#modal_0211">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+            </div>
+          </a>  
+          <a href="#" data-toggle="modal" data-target="#modal_0212">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #2</h2>
+            </div>
+          </a>  
+        </div>
+      </div>
+      <div class="col-xs-3">
+        <div class="row">
+          <a href="#" data-toggle="modal" data-target="#modal_0221">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span> #1</h2>
+            </div>
+          </a>
+          <a href="#" data-toggle="modal" data-target="#modal_0222">
+            <div class="col-xs-6 page four">
+              <i class="fa fa-arrow-down"></i><h2><span>Choice </span>#2</h2>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div id="newStory"></div>
+      <div id="button" class="col-xs-12">
+        <button id="submit" type="button">submit</button>    
+      </div>  
+    </div>
+  </div>
+
+  
+<!--MODAL-->
+ 
+<!--PAGE 1-->
+  <div>
+    <div id="modal_0" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 1</h2>
+          </div>
+          <div class="modal-body">
+            <h3>Make a title for your story</h3>         
+            <input id="title" placeholder="story title">
+            <h3>Input your story text</h3>     
+            <textarea id="page_0" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_01" placeholder="choice 1" ng-model="button_01">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_02" placeholder="choice 2" ng-model="button_02">
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--PAGE 2-->
+    <div id="modal_01" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 2-1</h2>
+            <h3>{{ button_01 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_01" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>          
+            <input id="button_011" placeholder="choice 1" ng-model="button_011">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_012" placeholder="choice 2" ng-model="button_012">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_02" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 2-2</h2>
+            <h3>{{ button_02 }}</h3>            
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_02" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_021" placeholder="choice 1" ng-model="button_021">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_022" placeholder="choice 2" ng-model="button_022">
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--PAGE 3-->
+    <div id="modal_011" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 3-1</h2>
+            <h3>{{ button_011 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_011" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_0111" placeholder="choice 1" ng-model="button_0111">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_0112" placeholder="choice 2" ng-model="button_0112">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_012" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 3-2</h2>
+            <h3>{{ button_012 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_012" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_0121" placeholder="choice 1" ng-model="button_0121">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_0122" placeholder="choice 2" ng-model="button_0122">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_021" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 3-3</h2>
+            <h3>{{ button_021 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_021" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_0211" placeholder="choice 1" ng-model="button_0211">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_0212" placeholder="choice 2" ng-model="button_0212">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_022" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 3-4</h2>
+            <h3>{{ button_022 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_022" rows="5" placeholder="story text"></textarea>
+            <h3>Create a button for choice #1</h3>
+            <input id="button_0221" placeholder="choice 1" ng-model="button_0221">
+            <h3>Create a button for choice #2</h3>
+            <input id="button_0222" placeholder="choice 2" ng-model="button_0222">
+          </div>
+        </div>
+      </div>
+    </div>
+  <!--PAGE 4-->
+    <div id="modal_0111" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-1</h2>
+            <h3>{{ button_0111 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0111" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0112" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-2</h2>
+            <h3>{{ button_0112 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0112" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0121" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-3</h2>
+            <h3>{{ button_0121 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0121" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0122" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-4</h2>
+            <h3>{{ button_0122 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0122" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0211" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-5</h2>
+            <h3>{{ button_0211 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0211" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0212" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-6</h2>
+            <h3>{{ button_0212 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0212" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0221" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-7</h2>
+            <h3>{{ button_0221 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0221" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="modal_0222" class="modal fade">
+      <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button class="close" type="button" data-dismiss="modal">&times;</button>
+            <h2 class="modal-title">Page 4-8</h2>
+            <h3>{{ button_0222 }}</h3>
+          </div>
+          <div class="modal-body">
+            <h3>Input your story text</h3>
+            <textarea id="page_0222" rows="5" placeholder="Write an ending"></textarea>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <script src="js/jquery.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>  
+  <script src="js/main.js"></script>
+</body>
+</html>

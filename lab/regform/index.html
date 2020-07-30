@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">		
+	<title></title>
+	<link href="https://fonts.googleapis.com/css?family=Audiowide|Nunito:300,400" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/animate.css" rel="stylesheet">
+	<link href="css/style.css" rel="stylesheet">
+</head>
+<body id="body">
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-sm-offset-3 col-sm-6">
+      <form id="register" class="text-center">
+        <h1>Registration</h1>
+        <p class="inputHeader">Username</p>
+        <input id="username" type="text">
+        <p class="inputInfo">at least 5 characters</p>
+        <div class="splitContainer">
+          <div class="split">
+            <p class="inputHeader">Password</p>
+            <input id="password" type="password">
+            <p class="inputInfo">at least 8 characters</p>
+          </div>
+          <div class="split">       
+            <p class="inputHeader">Confirm Password</p>
+            <input id="confirmPassword" type="password">
+          </div>
+        </div>
+        <div class="splitContainer">
+          <div class="split">
+            <p class="inputHeader">First Name</p>
+            <input id="firstName" type="text">
+          </div>
+          <div class="split">
+            <p class="inputHeader">Last Name</p>
+            <input id="lastName" type="text">
+          </div>
+        </div>
+        <p class="inputHeader">Phone Number</p>
+        <input id="phone" type="text" placeholder="i.e. 555-555-5555">
+        <p class="inputHeader">Email Address</p>
+        <input id="email" type="text" placeholder="i.e. name@domain.com">
+        <div class="divTerms">
+          <input id="inputTerms" type="checkbox">      
+          <p class="textTerms">I agree to the Terms of Service</p>
+        </div>
+        <button id="submit" type="button">Submit</button>
+        <div id="error"></div>
+      </form>
+      <div id="success"></div>
+    </div>
+  </div>
+</div>
+	<script src="js/jquery.min.js" type="text/javascript"></script>
+	<script src="js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+	<script src="js/main.js" type="text/javascript"></script>
+</body>
+</html>

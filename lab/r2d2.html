@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">    
+  <title>r2d2</title>
+  <link href="https://fonts.googleapis.com/css?family=Franklin+Gothic+Raw" rel="stylesheet">  
+  <link href="../css/bootstrap.min.css" rel="stylesheet">
+  <link href="../css/animate.css" rel="stylesheet">
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;      
+    }
+    .bg {
+      background: #000 url(http://www.script-tutorials.com/demos/360/images/stars.png) repeat top center;
+      z-index: 0;
+      height: 100%;
+    }
+    .layer {
+      background: transparent url(http://www.script-tutorials.com/demos/360/images/twinkling.png) repeat top center;
+      z-index: 1;
+      height: 100%;
+      -webkit-animation: move-twink-back 200s linear infinite;
+      animation: move-twink-back 200s linear infinite;
+    }
+    .content {
+      position: absolute;
+      top: 50%;      
+      width: 100%;
+      -webkit-transform: translate(0,-50%);
+      transform: translate(0,-50%);
+      z-index: 999;
+    }
+    .jedi_container {
+      width: 80%;
+      padding: 5%;
+      margin: 0 auto;
+      text-align: center;
+    }
+    #jedi_name {
+      font-family: 'Franklin Gothic Raw', serif;
+      font-size: 3em;
+      color: yellow;
+      letter-spacing: 1px;
+    }    
+    .r2d2_container {
+      text-align: center;
+    }
+    .r2d2 {
+      display: inline-block;
+      background: url(../images/r2d2_blue.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 250px;
+      height: 250px;
+      margin: 0;
+      padding: 0;
+      -webkit-transition: .5s ease-out;
+      transition: .5s ease-out; 
+    }
+    .r2d2_red {
+      background: url(../images/r2d2_red.png);
+      background-position: center;
+      background-size: contain;
+      background-repeat: no-repeat;      
+      -webkit-transition: .5s ease-out;
+      transition: .5s ease-out;      
+    }
+    button {
+      padding: 10px 20px;
+      margin: 20px;
+      border-radius: 3px;
+      border: none;
+      background-color: yellow;
+      color: black;
+    }
+    button:hover {
+      background-color: #CECE00;
+    }
+    button:active,
+    button:focus {
+      outline: none;
+    }
+    @-webkit-keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+    }    
+    @keyframes move-twink-back {
+      from {background-position:0 0;}
+      to {background-position:-10000px 5000px;}
+    }
+    @media (max-width: 767px) and (orientation: landscape) {
+      .jedi_container {
+        padding-top: 2%;
+      }
+      #jedi_name {
+        font-size: 2em;
+      }
+      .color_container {
+        display: inline-block;
+        vertical-align: top;
+      }
+      .r2d2 {
+        width: 100px;
+        height: 100px;
+      }
+    }
+    @media (max-width: 767px) and (orientation: portrait) {
+      .r2d2 {
+        width: 175px;
+        height: 175px;
+      }
+    }
+  </style>
+</head>
+<body>
+ 
+<div class="bg">
+  <div class="layer">
+    <div class="content">
+      <div class="jedi_container">
+        <p id="jedi_name">Sith or Jedi???</p>
+      </div>  
+      <div class="r2d2_container">
+        <div class="r2d2"></div>
+        <div class="color_container">
+          <button class="color" type="button">color</button>
+        </div>
+      </div>
+      <form id="submitForm" class="text-center">
+        <input id="name_input" type="text" placeholder="enter name">
+        <button type="submit">submit</button>
+      </form>
+    </div>
+  </div>
+</div>  
+  <script src="../js/jquery.min.js"></script>
+  <script>
+    $(document).ready(function(){
+      // R2D2 TOGGLE
+      $('.color').click(function(){
+        $('.r2d2').toggleClass('r2d2_red');
+      });
+      // ARRAY OF JEDI AND SITH RANKS
+      var ranks = ["Jedi Master ", "Jedi Knight ", "Jedi Padawan ", "Jedi Initiate ", "Dark Lord ", "Sith Lord ", "Sith Master ", "Sith Marauder ", "Sith Apprentice "]
+      // SUBMIT FORM VIA ENTER OR SUBMIT BUTTON
+      $('#submitForm').on('submit',function(e){
+        // WRITE THE INPUT NAME AND A RANDOM JEDI OR SITH RANK
+        $('#jedi_name').text( ranks[Math.floor(Math.random()*ranks.length)] + $('#name_input').val());
+        e.preventDefault();
+      });
+    });
+  </script>  
+</body>
+</html>
