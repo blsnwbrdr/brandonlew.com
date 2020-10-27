@@ -26,6 +26,7 @@
 
   <!-- NAVIGATION -->
   <nav id="nav" class="nav">
+    <!-- NAV ICON -->
     <input id="navIcon" class="navIconInput" type="checkbox" name="navIcon">
     <label for="navIcon" class="navIconLabel" aria-label="navigation icon">
       <span style="display:none;">navigation icon</span>
@@ -33,6 +34,7 @@
       <span class="bar bar2"></span>
       <span class="bar bar3"></span>
     </label>
+    <!-- NAV MENU -->
     <div class="navMenu">
       <ul class="navMenuList">
         <li><a href="#about" class="navMenuLink">about</a></li>
@@ -42,6 +44,7 @@
     </div>
   </nav>
 
+<!-- MAIN CONTENT -->
 <div role="main" class="main">
 
   <!-- BANNER -->
@@ -61,10 +64,12 @@
         <h2>about</h2>
       </div>
       <div class="sectionContent">
+        <!-- PROFILE -->
         <div class="profile sectionColumn w50">
           <img class="profileImage" src="images/profile.jpg" alt="profile">
           <p class="profileText">Web developer and photographer based in the San Francisco, Bay Area. An experienced front end engineer working with Angular, HTML5, CSS3, a11y, A/B testing, and cross-browser/device compatibility. Also, an avid travel photographer venturing to new destinations to capture new sights, cultures, and experiences.</p>
         </div>
+        <!-- INFO -->
         <div class="info sectionColumn w50">
           <div class="infoContainer">
             <div class="infoContent">
@@ -116,8 +121,11 @@
   </div>
   <div class="development portfolio">
     <div class="portfolioContainer">
+      <!-- PORTFOLIO ROW 1 -->
       <div class="portfolioContent">
+        <!-- TIP JAR -->
         <div class="portfolioColumn w50">
+          <!-- TIP JAR SLIDE -->
           <div class="portfolioSlide" onclick="_modal.display('modalTipJar');">
             <img src="images/projectTipjar.jpg" alt="tipjar app">
             <div class="portfolioOverlay">
@@ -125,6 +133,7 @@
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
+          <!-- TIP JAR MODAL -->
           <div id="modalTipJar" class="portfolioModalOverlay">
             <div class="portfolioModal">
               <span class="portfolioModalClose" onclick="_modal.close('modalTipJar');">X</span>
@@ -141,7 +150,9 @@
             </div>
           </div>
         </div>
+        <!-- ALLSTATE -->
         <div class="portfolioColumn w50">
+          <!-- ALLSTATE SLIDE -->
           <div class="portfolioSlide" onclick="_modal.display('modalAllstate');">
             <img src="images/projectAllstate.jpg" alt="quality service control">
             <div class="portfolioOverlay">
@@ -149,6 +160,7 @@
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
+          <!-- ALLSTATE MODAL -->
           <div id="modalAllstate" class="portfolioModalOverlay">
             <div class="portfolioModal">
               <span class="portfolioModalClose" onclick="_modal.close('modalAllstate');">X</span>
@@ -164,8 +176,11 @@
           </div>
         </div>
       </div>
+      <!-- PORTFOLIO ROW 2 -->
       <div class="portfolioContent">
+        <!-- TRAVEL TRACKER -->
         <div class="portfolioColumn w33">
+          <!-- TRAVEL TRACKER SLIDE -->
           <div class="portfolioSlide" onclick="_modal.display('modalTravelTracker');">
             <img src="images/projectTraveltracker.jpg" alt="travel tracker app">
             <div class="portfolioOverlay">
@@ -173,6 +188,7 @@
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
+          <!-- TRAVEL TRACKER MODAL -->
           <div id="modalTravelTracker" class="portfolioModalOverlay">
             <div class="portfolioModal">
               <span class="portfolioModalClose" onclick="_modal.close('modalTravelTracker');">X</span>
@@ -188,7 +204,9 @@
             </div>
           </div>
         </div>
+        <!-- ESURANCE -->
         <div class="portfolioColumn w33">
+          <!-- ESURANCE SLIDE -->
           <div class="portfolioSlide" onclick="_modal.display('modalEsurance');">
             <img src="images/projectEsurance.jpg" alt="esurance">
             <div class="portfolioOverlay">
@@ -196,6 +214,7 @@
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
+          <!-- ESURANCE MODAL -->
           <div id="modalEsurance" class="portfolioModalOverlay">
             <div class="portfolioModal">
               <span class="portfolioModalClose" onclick="_modal.close('modalEsurance');">X</span>
@@ -209,8 +228,10 @@
               </div>
             </div>
           </div>
-        </div>        
+        </div>
+        <!-- ETSY -->
         <div class="portfolioColumn w33">
+          <!-- ETSY SLIDE -->
           <div class="portfolioSlide" onclick="_modal.display('modalEtsy');">
             <img src="images/projectEtsy.jpg" alt="etsy app">
             <div class="portfolioOverlay">
@@ -218,6 +239,7 @@
               <p class="portfolioText2">learn more</p>
             </div>
           </div>
+          <!-- ETSY MODAL -->
           <div id="modalEtsy" class="portfolioModalOverlay">
             <div class="portfolioModal">
               <span class="portfolioModalClose" onclick="_modal.close('modalEtsy');">X</span>
@@ -250,6 +272,7 @@
       </div>
       <div class="sectionContent">
         <p>A sample gallery of my travel images.</p>
+        <!-- TABLE OF CONTENTS -->
         <ul class="continentsList">
           <li id="africa" class="continents">Africa</li>
           <li id="asia" class="continents">Asia</li>
@@ -262,20 +285,24 @@
   </div>
   <div class="photography portfolio">
     <div class="portfolioContainer">
+      <!-- PORTFOLIO ROW 1 -->
       <div class="portfolioContent">
         <div class="portfolioColumn w33 photos"></div>
         <div class="portfolioColumn w33 photos"></div>
         <div class="portfolioColumn w33 photos"></div>
       </div>
+      <!-- PORTFOLIO ROW 2 -->
       <div class="portfolioContent">
         <div class="portfolioColumn w50 photos"></div>
         <div class="portfolioColumn w50 photos"></div>
       </div>
+      <!-- PORTFOLIO ROW 3 -->
       <div class="portfolioContent">
         <div class="portfolioColumn w33 photos"></div>
         <div class="portfolioColumn w33 photos"></div>
         <div class="portfolioColumn w33 photos"></div>
       </div>
+      <!-- PORTFOLIO ROW 4 -->
       <div class="portfolioContent">
         <div class="portfolioColumn w25 photos"></div>
         <div class="portfolioColumn w25 photos"></div>
