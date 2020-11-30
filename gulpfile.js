@@ -7,12 +7,13 @@ const jsMinify = require('gulp-uglify');
 const cssMinify = require('gulp-cssmin');
 const rename = require('gulp-rename');
 
+// FILE LOCATIONS
+const sourceDir = 'index-staging';
+const destDir = 'index'
+
 //----------
 // TASKS
 //----------
-
-const sourceDir = 'index-staging';
-const destDir = 'index'
 
 // PARSE HTML, MINIFY, AND COPY TO NEW LOCATION
 gulp.task('html', () => {
