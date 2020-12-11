@@ -3,8 +3,6 @@ const gulp = require('gulp');
 
 // MODULES
 const sass = require('gulp-sass');
-const cssMinifiy = require('gulp-cssmin');
-const rename = require('gulp-rename');
 
 // SOURCE DIRECTORY
 const sourceDir = 'sass/';
