@@ -1,7 +1,7 @@
 {
   "name": "brandonlew.com",
   "version": "1.0.0",
-  "description": "photography site",
+  "description": "portfolio site",
   "main": "index.html",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,7 +11,7 @@
     "url": "git+https://github.com/blsnwbrdr/brandonlew.com.git"
   },
   "keywords": [
-    "photography"
+    "portfolio"
   ],
   "author": "brandon",
   "license": "ISC",
