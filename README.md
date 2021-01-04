@@ -1,6 +1,6 @@
 # Brandon Lew
 
-A personal website with custom JavaScript code that includes connecting to ETSY's API; built to gather and randomize photos from my ETSY shop.
+A portfolio website with custom JavaScript code that includes connecting to ETSY's API; built to gather and randomize photos from my ETSY shop.
 
 ## Built With
 
