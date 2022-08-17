@@ -224,6 +224,72 @@ var _etsy = {
 }
 _etsy.initiate();
 
+// STATIC IMAGES
+var _staticImages = {
+  // images
+  images: [
+    {
+      src: '2009-1792',
+      title: 'Istanbul, Turkey',
+    },
+    {
+      src: '2012-1343',
+      title: 'Hong Kong',
+    },
+    {
+      src: '2014-0127',
+      title: 'Tokyo, Japan',
+    },
+    {
+      src: '2015-0154',
+      title: 'Singapore',
+    },
+    {
+      src: '2016-0212',
+      title: 'Cape Coast, Ghana',
+    },
+    {
+      src: '2017-0597',
+      title: 'Colonia Del Sacramento, Uruguay',
+    },
+    {
+      src: '2018-1046',
+      title: 'Kyoto, Japan',
+    },
+    {
+      src: '2019-0871',
+      title: 'Copan, Honduras',
+    },
+    {
+      src: '2019-1043',
+      title: 'Panama City, Panama',
+    },
+    {
+      src: '2019-2587',
+      title: 'Geneva, Switzerland',
+    },
+    {
+      src: '2019-2801',
+      title: 'Bern, Switzerland',
+    },
+    {
+      src: '2019-3172',
+      title: 'Vaduz, Liechtenstein',
+    }
+  ],
+  initiate: function(){
+    // display static images
+    for(var x = 0;x < _staticImages.images.length;x++){
+      for(var y = 0;y < photos.length;y++){
+        if(x === y){
+          photos[y].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + y + '&#39;);"> <img src="images/banner-' + _staticImages.images[x].src + '.jpeg" alt="' + _staticImages.images[x].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + y + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + y + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="images/banner-' + _staticImages.images[x].src + '.jpeg" alt="' + _staticImages.images[x].title + '"></div><div class="portfolioModalBody"><p class="h4">' + _staticImages.images[x].title + '</p></a></div></div></div>');
+        }
+      }
+    }
+  }
+}
+_staticImages.initiate();
+
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
   // go to target element with offset and duration
