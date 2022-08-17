@@ -222,7 +222,7 @@ var _etsy = {
     });
   }
 }
-_etsy.initiate();
+// _etsy.initiate();
 
 // STATIC IMAGES
 var _staticImages = {
