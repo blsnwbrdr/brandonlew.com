@@ -4,7 +4,8 @@
   "description": "portfolio site",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "gulp --gulpfile gulp-build.js",
+    "sass-watch": "gulp --gulpfile gulp-sass-watch.js"
   },
   "repository": {
     "type": "git",
@@ -22,11 +23,11 @@
   "devDependencies": {
     "gulp": "^4.0.2",
     "gulp-cssmin": "^0.2.0",
-    "gulp-if": "^2.0.2",
-    "gulp-rename": "^1.2.2",
+    "gulp-if": "^3.0.0",
+    "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
-    "gulp-uglify": "^3.0.0",
-    "gulp-useref": "^3.1.4",
-    "sass": "^1.54.4"
+    "gulp-uglify": "^3.0.2",
+    "gulp-useref": "^5.0.0",
+    "sass": "^1.57.1"
   }
 }
