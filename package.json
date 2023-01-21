@@ -5,7 +5,7 @@
   "main": "index.html",
   "scripts": {
     "build": "gulp --gulpfile gulp-build.js",
-    "sass-watch": "gulp --gulpfile gulp-sass-watch.js",
+    "sass-watch": "gulp --gulpfile gulp-sass-watch.js"
   },
   "repository": {
     "type": "git",
