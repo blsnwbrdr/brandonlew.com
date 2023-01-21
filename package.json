@@ -4,6 +4,7 @@
   "description": "portfolio site",
   "main": "index.html",
   "scripts": {
+    "branch-clean-up": "git branch -lvv | cut -c3- | awk '/: gone]/ {print $1}' | xargs git branch -D",
     "build": "gulp --gulpfile gulp-build.js",
     "sass-watch": "gulp --gulpfile gulp-sass-watch.js"
   },
