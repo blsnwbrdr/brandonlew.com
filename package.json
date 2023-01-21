@@ -6,6 +6,7 @@
   "scripts": {
     "branch-clean-up": "git branch -lvv | cut -c3- | awk '/: gone]/ {print $1}' | xargs git branch -D",
     "build": "gulp --gulpfile gulp-build.js",
+    "currency-local": "node currency-local/index.js",
     "sass-watch": "gulp --gulpfile gulp-sass-watch.js"
   },
   "repository": {
@@ -30,5 +31,8 @@
     "gulp-uglify": "^3.0.2",
     "gulp-useref": "^5.0.0",
     "sass": "^1.57.1"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
   }
 }
