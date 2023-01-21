@@ -158,7 +158,7 @@ var _etsy = {
     }
   },
   removeActiveClass: function(){
-    // remove active class from all coninents elements
+    // remove active class from all continents elements
     for(var x = 0;x < continents.length;x++){
       continents[x].classList.remove('active');
     }
@@ -222,7 +222,8 @@ var _etsy = {
     });
   }
 }
-// _etsy.initiate();
+// use etsy images
+_etsy.initiate();
 
 // STATIC IMAGES
 var _staticImages = {
@@ -288,7 +289,8 @@ var _staticImages = {
     }
   }
 }
-_staticImages.initiate();
+// use static images
+// _staticImages.initiate();
 
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
