@@ -2,23 +2,24 @@
 // SERVER ENVIRONMENT VARIABLES
 //----------
 
-var server = 'currency-local/build';
-var port = '7010';
+const server = 'currency-local/build';
+const port = '7010';
 
 //----------
 // CREATE SERVER
 //----------
 
 // MODULES
-var express = require('express');
-var fs = require('fs');
-var bodyParser = require('body-parser');
+const express = require('express');
+const fs = require('fs');
+const bodyParser = require('body-parser');
+const open = require('open');
 
 // DEFINE EXPRESS
-var app = express();
+const app = express();
 
 // JSON FILE LOCATION
-var jsonLocation = server + '/currencyData.json';
+const jsonLocation = server + '/currencyData.json';
 
 // CREATE STATIC SERVER
 app.use(express.static(server));
@@ -27,6 +28,7 @@ app.use(express.static(server));
 app.listen(port, listening);
 function listening() {
   console.log(server + ' server listening on port ' + port);
+  open(`http://localhost:${port}`, { app: { name: 'google chrome' } });
 }
 
 //CREATE BODY PARSER
@@ -36,10 +38,10 @@ app.use(bodyParser.json());
 // ROUTE TO 'ADD' - POST NEW DATA TO JSON FILE
 app.post('/add', addData);
 function addData(request, response) {
-  var parsedBody = request.body.data;
-  var newData = JSON.stringify(parsedBody, null, 2);
-  fs.writeFile(jsonLocation, newData, function(err,result){
-    if(err){
+  const parsedBody = request.body.data;
+  const newData = JSON.stringify(parsedBody, null, 2);
+  fs.writeFile(jsonLocation, newData, function (err, result) {
+    if (err) {
       console.log(err);
     }
   });
