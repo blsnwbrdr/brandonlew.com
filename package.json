@@ -7,7 +7,8 @@
     "branch-clean-up": "git branch -lvv | cut -c3- | awk '/: gone]/ {print $1}' | xargs git branch -D",
     "build": "gulp --gulpfile gulp-build.js",
     "currency-local": "node currency-local/index.js",
-    "sass-watch": "gulp --gulpfile gulp-sass-watch.js"
+    "sass-watch": "gulp --gulpfile gulp-sass-watch.js",
+    "start": "gulp --gulpfile gulp-start.js"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,7 @@
     "gulp": "^4.0.2",
     "gulp-cssmin": "^0.2.0",
     "gulp-if": "^3.0.0",
+    "gulp-open": "^3.0.1",
     "gulp-rename": "^2.0.0",
     "gulp-sass": "^5.1.0",
     "gulp-uglify": "^3.0.2",
