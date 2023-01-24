@@ -18,6 +18,7 @@ A portfolio website with custom JavaScript code that includes connecting to ETSY
 - [Gulp](https://gulpjs.com) - A toolkit to automate & enhance your workflow
 - [Node](https://nodejs.dev/en/) - Node.js is a free, open-sourced, cross-platform JavaScript run-time environment that lets developers write command line tools and server-side scripts outside of a browser.
 - [npm](https://www.npmjs.com) - Build amazing things
+- [Express](https://expressjs.com) - Fast, unopinionated, minimalist web framework for Node.js
 
 ## Authors
 
