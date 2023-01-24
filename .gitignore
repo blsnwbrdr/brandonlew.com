@@ -1,7 +1,5 @@
 # dependencies
-/lab
 /node_modules
-/portfolio
 
 # misc
 .htaccess
