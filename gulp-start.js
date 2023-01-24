@@ -1,3 +1,4 @@
+// GULP
 const gulp = require('gulp');
 
 // MODULES
@@ -25,6 +26,7 @@ gulp.task('stg', (done) => {
   done();
 });
 
+// RUN TASKS
 gulp.task('default', gulp.series(['prod', 'stg'], (done) => {
   done();
 }));

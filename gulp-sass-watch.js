@@ -10,6 +10,10 @@ const sourceDir = 'sass/';
 // DESTINATION DIRECTORY
 const destDir = 'css';
 
+//----------
+// TASKS
+//----------
+
 // COMPILE SASS
 gulp.task('compile', () => {
   return gulp.src([`${sourceDir}*.{sass,scss}`])
@@ -17,8 +21,10 @@ gulp.task('compile', () => {
     .pipe(gulp.dest(destDir))
 });
 
+// SASS WATCH
 gulp.task('sass:watch', () => {
   gulp.watch(`${sourceDir}*.{sass,scss}`, gulp.series(['compile']), () => {});
 });
 
+// RUN TASKS
 gulp.task('default', gulp.series(['sass:watch'], () => {}));
