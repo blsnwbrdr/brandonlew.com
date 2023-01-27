@@ -6,6 +6,7 @@
   "scripts": {
     "branch-clean-up": "git branch -lvv | cut -c3- | awk '/: gone]/ {print $1}' | xargs git branch -D",
     "build": "gulp --gulpfile gulp-build.js",
+    "import-tipjar": "gulp --gulpfile gulp-import-tipjar.js",
     "sass-watch": "gulp --gulpfile gulp-sass-watch.js",
     "start": "gulp --gulpfile gulp-start.js",
     "start-currency-local": "node currency-local/index.js"
@@ -25,6 +26,7 @@
   "homepage": "https://github.com/blsnwbrdr/brandonlew.com#readme",
   "devDependencies": {
     "gulp": "^4.0.2",
+    "gulp-clean": "^0.4.0",
     "gulp-cssmin": "^0.2.0",
     "gulp-if": "^3.0.0",
     "gulp-open": "^3.0.1",
