@@ -8,8 +8,7 @@
     "build": "gulp --gulpfile gulp-build.js",
     "import-tipjar": "gulp --gulpfile gulp-import-tipjar.js",
     "sass-watch": "gulp --gulpfile gulp-sass-watch.js",
-    "start": "gulp --gulpfile gulp-start.js",
-    "start-currency-local": "node currency-local/index.js"
+    "start": "gulp --gulpfile gulp-start.js"
   },
   "repository": {
     "type": "git",
@@ -37,7 +36,6 @@
     "sass": "^1.57.1"
   },
   "dependencies": {
-    "express": "^4.18.2",
     "open": "^8.4.0"
   }
 }

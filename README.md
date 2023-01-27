@@ -6,6 +6,7 @@ A portfolio website with custom JavaScript code that includes connecting to ETSY
 
 - `branch-clean-up` - After running `git fetch -p` to clean outdated remote branches, use this script to delete those branches locally.
 - `build` - Builds `index.html` from `index-staging.html` and minifies the JS and CSS files.
+- `import-tipjar` - Import the Tip Jar React app into the portfolio directory.
 - `sass-watch` - Starts the automated Gulp script that compiles Sass changes.
 - `start` - Starts up the production and pre-prod environments locally and opens them in Chrome.
 
