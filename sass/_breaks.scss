@@ -1,24 +1,32 @@
 /* BREAKS */
-.break{
+.break {
   padding: 100px 20px;
   text-align: center;
   color: #fff;
   background: $color-aqua-1;
-  p{
+  p {
     line-height: inherit;
   }
-  .fas{
+  .fas {
     display: inline;
   }
 }
 
 // BREAK ONE
-.breakOne{
-  background: -webkit-repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+.breakOne {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    $color-blue-1,
+    $color-aqua-1
+  );
   background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
 }
 // BREAK TWO
-.breakTwo{
-  background: -webkit-repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+.breakTwo {
+  background: -webkit-repeating-linear-gradient(
+    left,
+    $color-aqua-1,
+    $color-blue-1
+  );
   background: repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
 }

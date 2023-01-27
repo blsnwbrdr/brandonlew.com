@@ -1,77 +1,76 @@
 /* ABOUT */
-.about{
-  .profileImage{
+.about {
+  .profileImage {
     width: 150px;
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
-    @include crossBrowser(border-radius,50%);
-    @include crossBrowser(filter,drop-shadow(3px 3px 3px $color-shadow-1));
+    @include crossBrowser(border-radius, 50%);
+    @include crossBrowser(filter, drop-shadow(3px 3px 3px $color-shadow-1));
   }
-  .profileText{
+  .profileText {
     padding-bottom: 40px;
   }
-  .info{
+  .info {
     color: $color-dark-text;
   }
-  .infoContainer{
+  .infoContainer {
     background-color: $color-gray-2;
     padding: 20px;
-    @include crossBrowser(border-radius,4px);
-
+    @include crossBrowser(border-radius, 4px);
   }
-  .infoContent{
-    &:after{
-      content: " ";
+  .infoContent {
+    &:after {
+      content: ' ';
       display: block;
       min-height: 0;
       clear: both;
     }
-    a{
+    a {
       color: $color-dark-text;
-      &:hover{
+      &:hover {
         color: $color-aqua-1;
       }
     }
-    ul{
+    ul {
       list-style: none;
       padding: 0;
     }
-    li{
-      font-size: .85em;
+    li {
+      font-size: 0.85em;
       letter-spacing: 0px;
       padding: 5px 0;
     }
-    .left{
+    .left {
       width: 30%;
       color: $color-aqua-1;
     }
-    .right{
+    .right {
       width: 70%;
     }
-    .fab{
+    .fab {
       padding-right: 10px;
     }
   }
-  .infoContentColumn{
+  .infoContentColumn {
     float: left;
   }
 }
-@media(min-width:768px){
-  .about{
-    .infoContent{
-      li{
+@media (min-width: 768px) {
+  .about {
+    .infoContent {
+      li {
         font-size: 1em;
       }
     }
-    .profileText{
+    .profileText {
       padding-bottom: 0;
     }
   }
 }
-@media(min-width:1024px){
-  .about{
-    .infoContainer{
+@media (min-width: 1024px) {
+  .about {
+    .infoContainer {
       padding: 50px;
     }
   }

@@ -6,18 +6,18 @@
   width: 100%;
   z-index: 9000;
   color: #fff;
-  ul{
+  ul {
     list-style: none;
   }
-  li{
+  li {
     position: absolute;
     width: 100%;
   }
-  a{
+  a {
     text-decoration: none;
     position: fixed;
     left: -999px;
-    &:focus{
+    &:focus {
       background: #000;
       color: #fff;
       left: 50px;

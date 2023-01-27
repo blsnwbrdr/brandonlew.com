@@ -1,5 +1,5 @@
 /* BANNER */
-.banner{
+.banner {
   position: relative;
   height: 100%;
   min-height: 100%;
@@ -10,24 +10,24 @@
   background-position: center;
   background-size: cover;
   background-attachment: scroll;
-  .bannerOpacity{
+  .bannerOpacity {
     height: 100%;
     width: 100%;
     background-color: $color-overlay-1;
   }
-  .bannerHeader{
+  .bannerHeader {
     position: absolute;
     top: 40%;
     left: 50%;
-    transform: translate(-50%,-40%);
+    transform: translate(-50%, -40%);
     width: 100%;
     padding: 0 20px;
     color: $color-dark-text;
     text-align: center;
   }
 }
-@media(hover:hover){
-  .banner{
+@media (hover: hover) {
+  .banner {
     background-attachment: fixed;
   }
 }

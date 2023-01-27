@@ -3,7 +3,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -31,47 +32,70 @@ a:hover {
   transition: 0.3s ease-out;
 }
 
-h1, h2, h3, h4, h5, p {
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0 0 10px;
 }
 
-h1, h2, h3, h4, h5,
-.h1, .h2, .h3, .h4, .h5 {
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   font-family: "Comfortaa", sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.25em;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 1.75em;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 1.5em;
 }
 
-p, li {
+p,
+li {
   line-height: 1.75em;
 }
 
 @media (min-width: 768px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 4em;
   }
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 2.25em;
   }
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 1.75em;
   }
-  h4, .h4, p {
+  h4,
+  .h4,
+  p {
     font-size: 1.125em;
   }
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 1em;
   }
 }
@@ -160,7 +184,7 @@ p, li {
   color: #000;
 }
 .nav .navMenuList .navMenuLink:hover {
-  color: #009EC8;
+  color: #009ec8;
 }
 .nav .navIconInput:checked ~ .navIconLabel .bar1 {
   -webkit-animation: animateLine1 0.3s linear forwards;
@@ -588,7 +612,7 @@ p, li {
   display: block;
   width: 50%;
   height: 2px;
-  background-color: #009EC8;
+  background-color: #009ec8;
   position: relative;
   bottom: -10px;
   left: 50%;
@@ -629,7 +653,7 @@ p, li {
   padding: 100px 20px;
   text-align: center;
   color: #fff;
-  background: #009EC8;
+  background: #009ec8;
 }
 .break p {
   line-height: inherit;
@@ -639,13 +663,13 @@ p, li {
 }
 
 .breakOne {
-  background: -webkit-repeating-linear-gradient(left, #4267A0, #009EC8);
-  background: repeating-linear-gradient(left, #4267A0, #009EC8);
+  background: -webkit-repeating-linear-gradient(left, #4267a0, #009ec8);
+  background: repeating-linear-gradient(left, #4267a0, #009ec8);
 }
 
 .breakTwo {
-  background: -webkit-repeating-linear-gradient(left, #009EC8, #4267A0);
-  background: repeating-linear-gradient(left, #009EC8, #4267A0);
+  background: -webkit-repeating-linear-gradient(left, #009ec8, #4267a0);
+  background: repeating-linear-gradient(left, #009ec8, #4267a0);
 }
 
 /* PORTFOLIO */
@@ -887,7 +911,7 @@ p, li {
   color: #000;
 }
 .about .infoContent a:hover {
-  color: #009EC8;
+  color: #009ec8;
 }
 .about .infoContent ul {
   list-style: none;
@@ -900,7 +924,7 @@ p, li {
 }
 .about .infoContent .left {
   width: 30%;
-  color: #009EC8;
+  color: #009ec8;
 }
 .about .infoContent .right {
   width: 70%;
@@ -933,7 +957,7 @@ p, li {
   color: #000;
 }
 .development.portfolio .portfolioModalBody a:hover {
-  color: #009EC8;
+  color: #009ec8;
 }
 .development.portfolio .portfolioModalBody img {
   width: 100px;
@@ -941,7 +965,8 @@ p, li {
 .development.portfolio .portfolioModalBody .h3 {
   color: #000;
 }
-.development.portfolio .portfolioModalBody .fab, .development.portfolio .portfolioModalBody .fas {
+.development.portfolio .portfolioModalBody .fab,
+.development.portfolio .portfolioModalBody .fas {
   font-size: 1.25em;
   padding-right: 10px;
 }
@@ -949,7 +974,7 @@ p, li {
   padding-top: 20px;
 }
 .development.portfolio .portfolioModalBody .text a {
-  color: #009EC8;
+  color: #009ec8;
 }
 .development.portfolio .portfolioModalBody .text a:hover {
   color: #000;
@@ -969,7 +994,7 @@ p, li {
 .photography .continentsList .continents {
   padding: 0 15px;
   margin-bottom: 10px;
-  color: #009EC8;
+  color: #009ec8;
   -webkit-transition: 0.3s ease-out;
   -moz-transition: 0.3s ease-out;
   -ms-transition: 0.3s ease-out;
@@ -1012,7 +1037,7 @@ p, li {
   background-color: transparent;
   font-family: "Comfortaa", sans-serif;
   font-size: 1em;
-  color: #009EC8;
+  color: #009ec8;
   border: 1px solid #777;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -1026,8 +1051,8 @@ p, li {
 .photography.portfolio .portfolioModalBody button:hover {
   cursor: pointer;
   color: #fff;
-  background-color: #009EC8;
-  border: 1px solid #009EC8;
+  background-color: #009ec8;
+  border: 1px solid #009ec8;
   -webkit-transition: 0.3s ease-out;
   -moz-transition: 0.3s ease-out;
   -ms-transition: 0.3s ease-out;
@@ -1048,7 +1073,7 @@ p, li {
   color: #eee;
 }
 .footer a:hover {
-  color: #009EC8;
+  color: #009ec8;
 }
 .footer .header {
   display: block;

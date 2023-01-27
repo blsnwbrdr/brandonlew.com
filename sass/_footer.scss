@@ -1,17 +1,17 @@
 /* FOOTER */
-.footer{
+.footer {
   background-color: $color-overlay-2;
-  a{
+  a {
     color: $color-gray-2;
-    &:hover{
+    &:hover {
       color: $color-aqua-1;
     }
   }
-  .header{
+  .header {
     display: block;
     margin-bottom: 50px;
   }
-  .fab{
+  .fab {
     font-size: 1.5em;
     padding: 0 10px;
   }

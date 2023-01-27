@@ -1,15 +1,15 @@
 /* PORTFOLIO */
-.portfolio{
+.portfolio {
   padding-bottom: 50px;
-  .portfolioSlide{
+  .portfolioSlide {
     position: relative;
     display: block;
-    img{
+    img {
       width: 100%;
       vertical-align: top;
     }
   }
-  .portfolioOverlay{
+  .portfolioOverlay {
     position: absolute;
     top: 0;
     left: 0;
@@ -18,30 +18,30 @@
     opacity: 0;
     background-color: $color-overlay-2;
     cursor: pointer;
-    @include crossBrowser(transition,0.3s ease-out);
-    &:hover{
+    @include crossBrowser(transition, 0.3s ease-out);
+    &:hover {
       opacity: 1;
-      @include crossBrowser(transition,0.3s ease-out);
+      @include crossBrowser(transition, 0.3s ease-out);
     }
   }
-  .portfolioText1{
+  .portfolioText1 {
     position: absolute;
     top: 50%;
     left: 50%;
-    @include crossBrowser(transform,translate(-50%,-50%));
+    @include crossBrowser(transform, translate(-50%, -50%));
     margin-bottom: 10px;
     color: #fff;
   }
-  .portfolioText2{
+  .portfolioText2 {
     position: absolute;
     bottom: 0;
     left: 50%;
-    @include crossBrowser(transform,translate(-50%,0%));
+    @include crossBrowser(transform, translate(-50%, 0%));
     margin-bottom: 10px;
     color: #fff;
-    font-size: .75em;
+    font-size: 0.75em;
   }
-  .portfolioModalOverlay{
+  .portfolioModalOverlay {
     display: none;
     position: fixed;
     top: 0;
@@ -52,31 +52,37 @@
     overflow: scroll;
     -webkit-overflow-scrolling: touch;
     background-color: $color-overlay-2;
-    &.open{
+    &.open {
       display: block;
-      .portfolioModal{
-        @include crossBrowser(animation,animateModal 0.5s ease-in-out forwards);
+      .portfolioModal {
+        @include crossBrowser(
+          animation,
+          animateModal 0.5s ease-in-out forwards
+        );
       }
     }
-    &.close{
+    &.close {
       display: block;
-      .portfolioModal{
-        @include crossBrowser(animation,animateModalRev 0.5s ease-in-out forwards);
+      .portfolioModal {
+        @include crossBrowser(
+          animation,
+          animateModalRev 0.5s ease-in-out forwards
+        );
       }
     }
   }
-  .portfolioModal{
+  .portfolioModal {
     position: relative;
     width: 90%;
     max-width: 768px;
     margin: 10px auto;
     background-color: #fff;
-    img{
+    img {
       width: 100%;
       vertical-align: top;
     }
   }
-  .portfolioModalClose{
+  .portfolioModalClose {
     position: absolute;
     top: 0;
     right: 0;
@@ -88,43 +94,42 @@
     text-align: center;
     background-color: $color-overlay-2;
     cursor: pointer;
-    @include crossBrowser(transition,0.3s ease-out);
-    &:hover{
+    @include crossBrowser(transition, 0.3s ease-out);
+    &:hover {
       color: $color-gray-1;
-      @include crossBrowser(transition,0.3s ease-out);
+      @include crossBrowser(transition, 0.3s ease-out);
     }
   }
-  .portfolioModalBody{
+  .portfolioModalBody {
     padding: 20px;
   }
 }
-@media(min-width:768px){
-  .portfolio{
+@media (min-width: 768px) {
+  .portfolio {
     padding-bottom: 75px;
-    .portfolioContent{
-      &:after{
-        content: " ";
+    .portfolioContent {
+      &:after {
+        content: ' ';
         display: block;
         min-height: 0;
         clear: both;
       }
     }
     .w25,
-    .w50{
+    .w50 {
       width: 50%;
     }
-    .w33{
+    .w33 {
       width: 33.33%;
     }
-    .portfolioColumn{
+    .portfolioColumn {
       float: left;
-
     }
   }
 }
-@media(min-width:1440px){
-  .portfolio{
-    .w25{
+@media (min-width: 1440px) {
+  .portfolio {
+    .w25 {
       width: 25%;
     }
   }
@@ -132,51 +137,51 @@
 
 /* MODAL ANIMATIONS */
 // MODAL OPEN
-@-webkit-keyframes animateModal{
-  0%{
+@-webkit-keyframes animateModal {
+  0% {
     top: -50px;
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  100%{
+  100% {
     top: 0px;
   }
 }
-@keyframes animateModal{
-  0%{
+@keyframes animateModal {
+  0% {
     top: -50px;
     opacity: 0;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  100%{
+  100% {
     top: 0px;
   }
 }
 // MODAL CLOSE
-@-webkit-keyframes animateModalRev{
-  0%{
+@-webkit-keyframes animateModalRev {
+  0% {
     top: 0px;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  100%{
+  100% {
     top: -50px;
     opacity: 0;
   }
 }
-@keyframes animateModalRev{
-  0%{
+@keyframes animateModalRev {
+  0% {
     top: 0px;
   }
-  50%{
+  50% {
     opacity: 1;
   }
-  100%{
+  100% {
     top: -50px;
     opacity: 0;
   }

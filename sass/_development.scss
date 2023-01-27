@@ -1,31 +1,32 @@
 /* DEVELOPMENT */
-.development{
-  .sectionContent{
+.development {
+  .sectionContent {
     text-align: center;
   }
-  &.portfolio{
-    .portfolioModalBody{
-      a{
+  &.portfolio {
+    .portfolioModalBody {
+      a {
         color: $color-dark-text;
-        &:hover{
+        &:hover {
           color: $color-aqua-1;
         }
       }
-      img{
+      img {
         width: 100px;
       }
-      .h3{
+      .h3 {
         color: $color-dark-text;
       }
-      .fab,.fas{
+      .fab,
+      .fas {
         font-size: 1.25em;
         padding-right: 10px;
       }
-      .text{
+      .text {
         padding-top: 20px;
-        a{
+        a {
           color: $color-aqua-1;
-          &:hover{
+          &:hover {
             color: $color-dark-text;
             text-decoration: underline;
           }
