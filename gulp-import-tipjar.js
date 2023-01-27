@@ -14,14 +14,12 @@ const portfolio = 'portfolio/tipjar/';
 
 // DELETE PORTFOLIO DIRECTORY
 gulp.task('delete', () => {
-	return gulp.src([portfolio], {force: true, read: false})
-		.pipe(clean());
+  return gulp.src([portfolio], { force: true, read: false }).pipe(clean());
 });
 
 // COPY BUILD FILES TO PORTFOLIO DIRECTORY
 gulp.task('move', () => {
-	return gulp.src([build])
-		.pipe(gulp.dest(portfolio));
+  return gulp.src([build]).pipe(gulp.dest(portfolio));
 });
 
-gulp.task('default', gulp.series(['delete','move']), function() {});
+gulp.task('default', gulp.series(['delete', 'move']), function () {});

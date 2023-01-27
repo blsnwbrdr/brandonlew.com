@@ -1,11 +1,12 @@
 /* GLOBALS */
-*{
+* {
   box-sizing: border-box;
 }
-html,body{
+html,
+body {
   height: 100%;
 }
-body{
+body {
   margin: 0;
   padding: 0;
   background-color: #fff;
@@ -14,54 +15,77 @@ body{
   color: $color-gray-1;
   letter-spacing: 1px;
 }
-a{
+a {
   text-decoration: none;
-  @include crossBrowser(transition,0.3s ease-out);
-  &:hover{
-    @include crossBrowser(transition,0.3s ease-out);
+  @include crossBrowser(transition, 0.3s ease-out);
+  &:hover {
+    @include crossBrowser(transition, 0.3s ease-out);
   }
 }
-h1,h2,h3,h4,h5,p{
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
   margin: 0 0 10px;
 }
-h1,h2,h3,h4,h5,
-.h1,.h2,.h3,.h4,.h5{
+h1,
+h2,
+h3,
+h4,
+h5,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5 {
   font-family: 'Comfortaa', sans-serif;
   font-weight: 300;
   letter-spacing: 2px;
 }
-h1,.h1{
+h1,
+.h1 {
   font-size: 2.25em;
 }
-h2,.h2{
+h2,
+.h2 {
   font-size: 1.75em;
 }
-h3,.h3{
+h3,
+.h3 {
   font-size: 1.5em;
 }
-p,li{
+p,
+li {
   line-height: 1.75em;
 }
-@media(min-width:768px){
-  h1,.h1{
+@media (min-width: 768px) {
+  h1,
+  .h1 {
     font-size: 4em;
   }
-  h2,.h2{
+  h2,
+  .h2 {
     font-size: 2.25em;
   }
-  h3,.h3{
+  h3,
+  .h3 {
     font-size: 1.75em;
   }
-  h4,.h4,p{
+  h4,
+  .h4,
+  p {
     font-size: 1.125em;
   }
-  h5,.h5{
+  h5,
+  .h5 {
     font-size: 1em;
   }
 }
-.staticBody{
+.staticBody {
   overflow: hidden;
 }
-.main{
+.main {
   height: 100%;
 }

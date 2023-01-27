@@ -1,17 +1,17 @@
 /* SECTIONS */
-.section{
+.section {
   margin: 0 20px;
-  .sectionContainer{
+  .sectionContainer {
     max-width: 1200px;
     margin: 0 auto;
   }
-  .sectionHeader{
+  .sectionHeader {
     text-align: center;
     margin-bottom: 50px;
-    h2{
+    h2 {
       display: inline-block;
-      &:after{
-        content: "";
+      &:after {
+        content: '';
         display: block;
         width: 50%;
         height: 2px;
@@ -19,37 +19,37 @@
         position: relative;
         bottom: -10px;
         left: 50%;
-        @include crossBrowser(transform,translate(-50%,0));
+        @include crossBrowser(transform, translate(-50%, 0));
       }
     }
   }
 }
-.sectionPadding{
+.sectionPadding {
   padding: 50px 0 50px;
 }
-@media(min-width:768px){
-  .section{
-    .sectionContent{
-      &:after{
-        content: " ";
+@media (min-width: 768px) {
+  .section {
+    .sectionContent {
+      &:after {
+        content: ' ';
         display: block;
         min-height: 0;
         clear: both;
       }
     }
-    .sectionHeader{
+    .sectionHeader {
       margin-bottom: 75px;
     }
-    .w50{
+    .w50 {
       width: 50%;
     }
-    .sectionColumn{
+    .sectionColumn {
       float: left;
       padding-left: 20px;
       padding-right: 20px;
     }
   }
-  .sectionPadding{
+  .sectionPadding {
     padding: 100px 0 75px;
   }
 }

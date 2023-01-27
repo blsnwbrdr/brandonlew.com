@@ -16,9 +16,10 @@ const destDir = 'css';
 
 // COMPILE SASS
 gulp.task('compile', () => {
-  return gulp.src([`${sourceDir}*.{sass,scss}`])
-    .pipe(sass({outputStyle:'expanded'}).on('error', sass.logError))
-    .pipe(gulp.dest(destDir))
+  return gulp
+    .src([`${sourceDir}*.{sass,scss}`])
+    .pipe(sass({ outputStyle: 'expanded' }).on('error', sass.logError))
+    .pipe(gulp.dest(destDir));
 });
 
 // SASS WATCH
@@ -27,4 +28,7 @@ gulp.task('sass:watch', () => {
 });
 
 // RUN TASKS
-gulp.task('default', gulp.series(['sass:watch'], () => {}));
+gulp.task(
+  'default',
+  gulp.series(['sass:watch'], () => {})
+);

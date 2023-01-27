@@ -1,16 +1,16 @@
 // COLORS
 $color-gray-1: #777;
 $color-gray-2: #eee;
-$color-aqua-1: #009EC8;
-$color-blue-1: #4267A0;
+$color-aqua-1: #009ec8;
+$color-blue-1: #4267a0;
 $color-dark-text: #000;
 $color-default-text: $color-gray-1;
-$color-shadow-1: rgba(0,0,0,0.1);
-$color-overlay-1: rgba(255,255,255,0.5);
-$color-overlay-2: rgba(0,0,0,0.75);
+$color-shadow-1: rgba(0, 0, 0, 0.1);
+$color-overlay-1: rgba(255, 255, 255, 0.5);
+$color-overlay-2: rgba(0, 0, 0, 0.75);
 
 // MIXINS
-@mixin crossBrowser($property,$value){
+@mixin crossBrowser($property, $value) {
   -webkit-#{$property}: $value;
   -moz-#{$property}: $value;
   -ms-#{$property}: $value;

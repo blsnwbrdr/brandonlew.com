@@ -7,59 +7,80 @@ var photos = document.querySelectorAll('.photos');
 
 // SKIP CONTENT SCROLL
 var _skipContent = {
-  scroll: function(e){
+  scroll: function (e) {
     // navigation menu links
-    if(e.target && e.target.classList.contains('skipLink')){
+    if (e.target && e.target.classList.contains('skipLink')) {
       // prevent default anchor behavior
       e.preventDefault();
       // smooth scroll to href
-      _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
+      _smoothScrolling.goTo(e.target.getAttribute('href'), 0, 500);
     }
-  }
-}
+  },
+};
 
 // RANDOMIZE BANNER IMAGE
 var _banner = {
   // images
-  images: ['2005-1129','2009-1792','2012-1036','2012-1343','2014-0127','2015-0154','2016-0212','2017-0597','2018-1046','2019-0871','2019-1043','2019-2587','2019-2801','2019-3172','2020-0091'],
+  images: [
+    '2005-1129',
+    '2009-1792',
+    '2012-1036',
+    '2012-1343',
+    '2014-0127',
+    '2015-0154',
+    '2016-0212',
+    '2017-0597',
+    '2018-1046',
+    '2019-0871',
+    '2019-1043',
+    '2019-2587',
+    '2019-2801',
+    '2019-3172',
+    '2020-0091',
+  ],
   // pick random image
-  randomize: function(){
+  randomize: function () {
     // create random number based on number of images available
     var randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
-    banner.setAttribute('style','background-image:url(images/banner-' + _banner.images[randomNum] + '.jpeg);');
-  }
-}
+    banner.setAttribute(
+      'style',
+      'background-image:url(images/banner-' +
+        _banner.images[randomNum] +
+        '.jpeg);'
+    );
+  },
+};
 _banner.randomize();
 
 // NAVIGATION MENU LINKS
 var _navigation = {
   // navigation scroll to functionality
-  scroll: function(e){
+  scroll: function (e) {
     // navigation menu links
-    if(e.target && e.target.classList.contains('navMenuLink')){
+    if (e.target && e.target.classList.contains('navMenuLink')) {
       // prevent default anchor behavior
       e.preventDefault();
       // smooth scroll to href
-      _smoothScrolling.goTo(e.target.getAttribute('href'),0,500);
+      _smoothScrolling.goTo(e.target.getAttribute('href'), 0, 500);
       // uncheck nav icon
       navIcon.checked = false;
     }
   },
   // add class if javascript enabled on browser for navigation animation
-  jsEnabled: function(e){
+  jsEnabled: function (e) {
     // if navIcon is clicked
-    if(e.target && e.target.id === 'navIcon'){
+    if (e.target && e.target.id === 'navIcon') {
       // add jsEnabled class if javascript is turn on
       nav.classList.add('jsEnabled');
     }
-  }
-}
+  },
+};
 
 // MODALS
 var _modal = {
   // display modal
-  display: function(targetModal){
+  display: function (targetModal) {
     // taret modal id
     var modal = document.getElementById(targetModal);
     // add staticBody class to body
@@ -68,7 +89,7 @@ var _modal = {
     modal.classList.add('open');
   },
   // close open modals
-  close: function(targetModal){
+  close: function (targetModal) {
     // taret modal id
     var modal = document.getElementById(targetModal);
     // remove staticBody class to body
@@ -78,63 +99,63 @@ var _modal = {
     // add close class to close target modal
     modal.classList.add('close');
     // delay removing close animation class
-    setTimeout(function(){
+    setTimeout(function () {
       modal.classList.remove('close');
-    },500);
-  }
-}
+    }, 500);
+  },
+};
 
 // ETSY API
 var continentArray = [
   {
     continent: 'africa',
-    key: '15311634'
+    key: '15311634',
   },
   {
     continent: 'asia',
-    key: '15306280'
+    key: '15306280',
   },
   {
     continent: 'europe',
-    key: '15306643'
+    key: '15306643',
   },
   {
     continent: 'northAmerica',
-    key: '15311764'
+    key: '15311764',
   },
   {
     continent: 'southAmerica',
-    key: '15322811'
+    key: '15322811',
   },
 ];
 
 var _etsy = {
-  initiate: function(){
+  initiate: function () {
     // randomize
-    continentArray.sort(function() {
+    continentArray.sort(function () {
       return 0.5 - Math.random();
     });
     _etsy.getImages(continentArray[0].key);
   },
-  selectContinent: function(e){
+  selectContinent: function (e) {
     // get images of selected continent if not already selected
-    if(e.target.classList.contains('active') === false){
-      for(var x = 0;x < continentArray.length;x++){
-        if(e.target.id === continentArray[x].continent){
+    if (e.target.classList.contains('active') === false) {
+      for (var x = 0; x < continentArray.length; x++) {
+        if (e.target.id === continentArray[x].continent) {
           _etsy.getImages(continentArray[x].key);
         }
       }
     }
   },
-  clearPhotos: function(){
+  clearPhotos: function () {
     // clear photos html
-    for(var x = 0;x < photos.length;x++){
+    for (var x = 0; x < photos.length; x++) {
       photos[x].innerHTML = '';
     }
   },
-  setActiveContinent: function(section){
+  setActiveContinent: function (section) {
     // remove active class from all continents elements and set active to selected element
-    switch(section){
+    switch (section) {
       case '15311634':
         _etsy.removeActiveClass();
         document.getElementById('africa').classList.add('active');
@@ -157,45 +178,75 @@ var _etsy = {
         break;
     }
   },
-  removeActiveClass: function(){
+  removeActiveClass: function () {
     // remove active class from all continents elements
-    for(var x = 0;x < continents.length;x++){
+    for (var x = 0; x < continents.length; x++) {
       continents[x].classList.remove('active');
     }
   },
-  removeOddSizeListings: function(data){
+  removeOddSizeListings: function (data) {
     // remove odd size listings
-    for(var x = data.results.length; x--;) {
-      if(data.results[x].listing_id === 259259197) {
-        data.results.splice(x,1);
-      } else if(data.results[x].listing_id === 210787557) {
-        data.results.splice(x,1);
-      } else if(data.results[x].listing_id === 185468274) {
-        data.results.splice(x,1);
-      } else if(data.results[x].listing_id === 185488602) {
-        data.results.splice(x,1);
-      } else if(data.results[x].listing_id === 691028887) {
-        data.results.splice(x,1);
+    for (var x = data.results.length; x--; ) {
+      if (data.results[x].listing_id === 259259197) {
+        data.results.splice(x, 1);
+      } else if (data.results[x].listing_id === 210787557) {
+        data.results.splice(x, 1);
+      } else if (data.results[x].listing_id === 185468274) {
+        data.results.splice(x, 1);
+      } else if (data.results[x].listing_id === 185488602) {
+        data.results.splice(x, 1);
+      } else if (data.results[x].listing_id === 691028887) {
+        data.results.splice(x, 1);
       }
     }
     return data;
   },
-  displayListings: function(data){
+  displayListings: function (data) {
     // display the first 12 listings
-    for(var x = 0;x < data.results.length;x++){
-      if(x < 12){
-        for(var y = 0;y < photos.length;y++){
-          if(x === y){
-            photos[y].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + y + '&#39;);"> <img src="' + data.results[x].MainImage.url_fullxfull + '" alt="' + data.results[x].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + y + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + y + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' + data.results[x].MainImage.url_fullxfull + '" alt="' + data.results[x].title + '"></div><div class="portfolioModalBody"><p class="h4">' + data.results[x].title + '</p><a href="' + data.results[x].url + '" aria-label="' + data.results[x].title + '"  target="_blank"><button type="button">purchase on etsy</button></a></div></div></div>');
+    for (var x = 0; x < data.results.length; x++) {
+      if (x < 12) {
+        for (var y = 0; y < photos.length; y++) {
+          if (x === y) {
+            photos[y].insertAdjacentHTML(
+              'afterbegin',
+              '<div class="portfolioSlide" onclick="_modal.display(&#39;modal' +
+                y +
+                '&#39;);"> <img src="' +
+                data.results[x].MainImage.url_fullxfull +
+                '" alt="' +
+                data.results[x].title +
+                '"><div class="portfolioOverlay"></div></div><div id="modal' +
+                y +
+                '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
+                y +
+                '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' +
+                data.results[x].MainImage.url_fullxfull +
+                '" alt="' +
+                data.results[x].title +
+                '"></div><div class="portfolioModalBody"><p class="h4">' +
+                data.results[x].title +
+                '</p><a href="' +
+                data.results[x].url +
+                '" aria-label="' +
+                data.results[x].title +
+                '"  target="_blank"><button type="button">purchase on etsy</button></a></div></div></div>'
+            );
           }
         }
       }
     }
   },
-  getImages: function(section){
-    var shopName = "blewphotography";
-    var apiKey = "xis6u17jgj9lpn3icytgtzxq";
-    var url = 'https://openapi.etsy.com/v2/shops/' + shopName + '/sections/' + section + '/listings/active.js?api_key=' + apiKey + '&includes=MainImage&fields=title,listing_id,url&limit=100';
+  getImages: function (section) {
+    var shopName = 'blewphotography';
+    var apiKey = 'xis6u17jgj9lpn3icytgtzxq';
+    var url =
+      'https://openapi.etsy.com/v2/shops/' +
+      shopName +
+      '/sections/' +
+      section +
+      '/listings/active.js?api_key=' +
+      apiKey +
+      '&includes=MainImage&fields=title,listing_id,url&limit=100';
 
     // clear photos html
     _etsy.clearPhotos();
@@ -206,10 +257,10 @@ var _etsy = {
     // fetch api json data
     $.ajax({
       url: url,
-      dataType: "jsonp",
-      success: function(data) {
+      dataType: 'jsonp',
+      success: function (data) {
         // randomize
-        data.results.sort(function() {
+        data.results.sort(function () {
           return 0.5 - Math.random();
         });
 
@@ -218,10 +269,10 @@ var _etsy = {
 
         // display listings
         _etsy.displayListings(data);
-      }
+      },
     });
-  }
-}
+  },
+};
 // use etsy images
 _etsy.initiate();
 
@@ -276,35 +327,54 @@ var _staticImages = {
     {
       src: '2019-3172',
       title: 'Vaduz, Liechtenstein',
-    }
+    },
   ],
-  initiate: function(){
+  initiate: function () {
     // display static images
-    for(var x = 0;x < _staticImages.images.length;x++){
-      for(var y = 0;y < photos.length;y++){
-        if(x === y){
-          photos[y].insertAdjacentHTML('afterbegin','<div class="portfolioSlide" onclick="_modal.display(&#39;modal' + y + '&#39;);"> <img src="images/banner-' + _staticImages.images[x].src + '.jpeg" alt="' + _staticImages.images[x].title + '"><div class="portfolioOverlay"></div></div><div id="modal' + y + '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' + y + '&#39;);">X</span><div class="porfolioModalHeader"> <img src="images/banner-' + _staticImages.images[x].src + '.jpeg" alt="' + _staticImages.images[x].title + '"></div><div class="portfolioModalBody"><p class="h4">' + _staticImages.images[x].title + '</p></a></div></div></div>');
+    for (var x = 0; x < _staticImages.images.length; x++) {
+      for (var y = 0; y < photos.length; y++) {
+        if (x === y) {
+          photos[y].insertAdjacentHTML(
+            'afterbegin',
+            '<div class="portfolioSlide" onclick="_modal.display(&#39;modal' +
+              y +
+              '&#39;);"> <img src="images/banner-' +
+              _staticImages.images[x].src +
+              '.jpeg" alt="' +
+              _staticImages.images[x].title +
+              '"><div class="portfolioOverlay"></div></div><div id="modal' +
+              y +
+              '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
+              y +
+              '&#39;);">X</span><div class="porfolioModalHeader"> <img src="images/banner-' +
+              _staticImages.images[x].src +
+              '.jpeg" alt="' +
+              _staticImages.images[x].title +
+              '"></div><div class="portfolioModalBody"><p class="h4">' +
+              _staticImages.images[x].title +
+              '</p></a></div></div></div>'
+          );
         }
       }
     }
-  }
-}
+  },
+};
 // use static images
 // _staticImages.initiate();
 
 // SMOOTH SCROLLING FUNCTION
 var _smoothScrolling = {
   // go to target element with offset and duration
-  goTo: function(target,offset,duration){
+  goTo: function (target, offset, duration) {
     // target element
     var targetQuery = document.querySelectorAll(target);
     // target element's position with offset
     var targetPosition = targetQuery[0].getBoundingClientRect().top + offset;
     // smooth scrolling interval
-    _smoothScrolling.interval(targetPosition,duration);
+    _smoothScrolling.interval(targetPosition, duration);
   },
   // smooth scrolling interval
-  interval: function(targetPosition,duration){
+  interval: function (targetPosition, duration) {
     // entire document height
     var documentHeight = document.body.clientHeight;
     // browser window height
@@ -314,26 +384,26 @@ var _smoothScrolling = {
     // interval scroll by height
     var scrollByHeight = Math.floor(targetPosition / numberIntervals);
     // last interval
-    var lastInterval = targetPosition - (numberIntervals * scrollByHeight);
+    var lastInterval = targetPosition - numberIntervals * scrollByHeight;
     // interval duration counter
     var durationCounter = 0;
     // scroll interval
-    var scrollInterval = setInterval(function(){
+    var scrollInterval = setInterval(function () {
       durationCounter++;
       // up to number of intervals, scroll by height
-      if(durationCounter <= numberIntervals){
-        window.scrollBy(0,scrollByHeight);
-      }else{
+      if (durationCounter <= numberIntervals) {
+        window.scrollBy(0, scrollByHeight);
+      } else {
         // clear interval once number of intervals has been reached
-        window.scrollBy(0,lastInterval);
+        window.scrollBy(0, lastInterval);
         clearInterval(scrollInterval);
       }
-    },25); // scroll by height every 25 milliseconds
-  }
-}
+    }, 25); // scroll by height every 25 milliseconds
+  },
+};
 
 // CLICK EVENT LISTENERS
-document.addEventListener('click',function(e){
+document.addEventListener('click', function (e) {
   // activate navigation js check for animation
   _navigation.jsEnabled(e);
   // activate skip content anchor scrolling

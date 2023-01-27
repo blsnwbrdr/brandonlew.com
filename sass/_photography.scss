@@ -1,48 +1,48 @@
 /* PHOTOGRAPHY */
-.photography{
-  .sectionContent{
+.photography {
+  .sectionContent {
     text-align: center;
   }
-  .continentsList{
+  .continentsList {
     list-style-type: none;
     margin: 0;
     padding: 20px 0 0 0;
     font-family: 'Comfortaa', sans-serif;
-    .continents{
+    .continents {
       padding: 0 15px;
       margin-bottom: 10px;
       color: $color-aqua-1;
-      @include crossBrowser(transition,0.3s ease-out);
-      &:hover{
+      @include crossBrowser(transition, 0.3s ease-out);
+      &:hover {
         cursor: pointer;
         color: $color-gray-1;
         text-decoration: underline;
-        @include crossBrowser(transition,0.3s ease-out);
+        @include crossBrowser(transition, 0.3s ease-out);
       }
     }
-    .active{
+    .active {
       color: $color-gray-1;
       text-decoration: underline;
-      &:hover{
+      &:hover {
         cursor: default;
       }
     }
   }
-  &.portfolio{
-    .photos{
+  &.portfolio {
+    .photos {
       padding: 5px;
     }
-    .portfolioSlide{
-      img{
-        @include crossBrowser(border-radius,4px);
+    .portfolioSlide {
+      img {
+        @include crossBrowser(border-radius, 4px);
       }
     }
-    .portfolioOverlay{
+    .portfolioOverlay {
       background-color: $color-overlay-1;
     }
-    .portfolioModalBody{
+    .portfolioModalBody {
       text-align: center;
-      button{
+      button {
         padding: 10px 20px;
         margin-bottom: 10px;
         background-color: transparent;
@@ -50,23 +50,23 @@
         font-size: 1em;
         color: $color-aqua-1;
         border: 1px solid $color-gray-1;
-        @include crossBrowser(border-radius,4px);
-        @include crossBrowser(transition,0.3s ease-out);
-        &:hover{
+        @include crossBrowser(border-radius, 4px);
+        @include crossBrowser(transition, 0.3s ease-out);
+        &:hover {
           cursor: pointer;
           color: #fff;
           background-color: $color-aqua-1;
           border: 1px solid $color-aqua-1;
-          @include crossBrowser(transition,0.3s ease-out);
+          @include crossBrowser(transition, 0.3s ease-out);
         }
       }
     }
   }
 }
-@media(min-width:768px){
-  .photography{
-    .continentsList{
-      .continents{
+@media (min-width: 768px) {
+  .photography {
+    .continentsList {
+      .continents {
         display: inline-block;
         margin-bottom: 0;
       }
