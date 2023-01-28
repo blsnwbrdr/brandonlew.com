@@ -264,10 +264,15 @@ var _etsy = {
     _etsy.setActiveContinent(section);
 
     // fetch api json data
-    $.ajax({
-      url: url,
-      dataType: 'jsonp',
-      success: function (data) {
+    fetch(url, {
+      method: 'GET',
+      redirect: 'follow',
+    })
+      .then((response) => response.text())
+      .then((result) => {
+        // remove jsonp padding and return json data
+        const match = result.match(/(\/\*\*\/\()(.*)(\)\;)/);
+        const data = JSON.parse(match[2]);
         // randomize
         data.results.sort(function () {
           return 0.5 - Math.random();
@@ -278,8 +283,7 @@ var _etsy = {
 
         // display listings
         _etsy.displayListings(data);
-      },
-    });
+      });
   },
 };
 // use etsy images
