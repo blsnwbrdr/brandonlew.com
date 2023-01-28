@@ -81,7 +81,7 @@ var _navigation = {
 var _modal = {
   // display modal
   display: function (targetModal) {
-    // taret modal id
+    // target modal id
     var modal = document.getElementById(targetModal);
     // add staticBody class to body
     document.body.classList.add('staticBody');
@@ -90,7 +90,7 @@ var _modal = {
   },
   // close open modals
   close: function (targetModal) {
-    // taret modal id
+    // target modal id
     var modal = document.getElementById(targetModal);
     // remove staticBody class to body
     document.body.classList.remove('staticBody');
@@ -228,7 +228,7 @@ var _etsy = {
                 y +
                 '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
                 y +
-                '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' +
+                '&#39;);">X</span><div class="portfolioModalHeader"> <img src="' +
                 data.results[x].MainImage.url_fullxfull +
                 '" alt="' +
                 data.results[x].title +
@@ -355,7 +355,7 @@ var _staticImages = {
               y +
               '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
               y +
-              '&#39;);">X</span><div class="porfolioModalHeader"> <img src="images/banner-' +
+              '&#39;);">X</span><div class="portfolioModalHeader"> <img src="images/banner-' +
               _staticImages.images[x].src +
               '.jpeg" alt="' +
               _staticImages.images[x].title +
