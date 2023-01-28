@@ -187,16 +187,25 @@ var _etsy = {
   removeOddSizeListings: function (data) {
     // remove odd size listings
     for (var x = data.results.length; x--; ) {
-      if (data.results[x].listing_id === 259259197) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 210787557) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 185468274) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 185488602) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 691028887) {
-        data.results.splice(x, 1);
+      switch (data.results[x].listing_id) {
+        case 259259197:
+          data.results.splice(x, 1);
+          break;
+        case 210787557:
+          data.results.splice(x, 1);
+          break;
+        case 185468274:
+          data.results.splice(x, 1);
+          break;
+        case 185488602:
+          data.results.splice(x, 1);
+          break;
+        case 691028887:
+          data.results.splice(x, 1);
+          break;
+        case 1053895460:
+          data.results.splice(x, 1);
+          break;
       }
     }
     return data;
