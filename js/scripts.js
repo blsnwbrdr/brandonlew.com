@@ -81,7 +81,7 @@ var _navigation = {
 var _modal = {
   // display modal
   display: function (targetModal) {
-    // taret modal id
+    // target modal id
     var modal = document.getElementById(targetModal);
     // add staticBody class to body
     document.body.classList.add('staticBody');
@@ -90,7 +90,7 @@ var _modal = {
   },
   // close open modals
   close: function (targetModal) {
-    // taret modal id
+    // target modal id
     var modal = document.getElementById(targetModal);
     // remove staticBody class to body
     document.body.classList.remove('staticBody');
@@ -187,16 +187,25 @@ var _etsy = {
   removeOddSizeListings: function (data) {
     // remove odd size listings
     for (var x = data.results.length; x--; ) {
-      if (data.results[x].listing_id === 259259197) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 210787557) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 185468274) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 185488602) {
-        data.results.splice(x, 1);
-      } else if (data.results[x].listing_id === 691028887) {
-        data.results.splice(x, 1);
+      switch (data.results[x].listing_id) {
+        case 259259197:
+          data.results.splice(x, 1);
+          break;
+        case 210787557:
+          data.results.splice(x, 1);
+          break;
+        case 185468274:
+          data.results.splice(x, 1);
+          break;
+        case 185488602:
+          data.results.splice(x, 1);
+          break;
+        case 691028887:
+          data.results.splice(x, 1);
+          break;
+        case 1053895460:
+          data.results.splice(x, 1);
+          break;
       }
     }
     return data;
@@ -219,7 +228,7 @@ var _etsy = {
                 y +
                 '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
                 y +
-                '&#39;);">X</span><div class="porfolioModalHeader"> <img src="' +
+                '&#39;);">X</span><div class="portfolioModalHeader"> <img src="' +
                 data.results[x].MainImage.url_fullxfull +
                 '" alt="' +
                 data.results[x].title +
@@ -346,7 +355,7 @@ var _staticImages = {
               y +
               '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
               y +
-              '&#39;);">X</span><div class="porfolioModalHeader"> <img src="images/banner-' +
+              '&#39;);">X</span><div class="portfolioModalHeader"> <img src="images/banner-' +
               _staticImages.images[x].src +
               '.jpeg" alt="' +
               _staticImages.images[x].title +
