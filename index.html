@@ -1,331 +1,516 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brandon Lew</title>
-  <link rel="stylesheet" href="css/styles.min.css">
-  <!-- SET BANNER BACKGROUND IMAGE FOR DISABLED JS -->
-  <noscript>
-    <style>
-    .banner{background-image:url(images/banner-2019-2587.jpeg);}
-    </style>
-  </noscript>
-	<link rel="shortcut icon" href="favicon.ico">
-	<link rel="apple-touch-icon" href="apple-touch-icon.png">
-</head>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brandon Lew</title>
+    <link rel="stylesheet" href="css/styles.min.css">
+    <!-- SET BANNER BACKGROUND IMAGE FOR DISABLED JS -->
+    <noscript>
+      <style>
+        .banner {
+          background-image: url(images/banner-2019-2587.jpeg);
+        }
+      </style>
+    </noscript>
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="apple-touch-icon" href="apple-touch-icon.png" />
+  </head>
 
-<body>
-
-  <!-- SKIP CONTENT -->
-  <aside class="skipContent">
-    <ul>
-      <li><a href="#about" class="skipLink" tabindex="1">Skip to Content</a></li>
-    </ul>
-  </aside>
-
-  <!-- NAVIGATION -->
-  <nav id="nav" class="nav">
-    <!-- NAV ICON -->
-    <input id="navIcon" class="navIconInput" type="checkbox" name="navIcon">
-    <label for="navIcon" class="navIconLabel" aria-label="navigation icon">
-      <span style="display:none;">navigation icon</span>
-      <span class="bar bar1"></span>
-      <span class="bar bar2"></span>
-      <span class="bar bar3"></span>
-    </label>
-    <!-- NAV MENU -->
-    <div class="navMenu">
-      <ul class="navMenuList">
-        <li><a href="#about" class="navMenuLink">about</a></li>
-        <li><a href="#development" class="navMenuLink">development</a></li>
-        <li><a href="#photography" class="navMenuLink">photography</a></li>
+  <body>
+    <!-- SKIP CONTENT -->
+    <aside class="skipContent">
+      <ul>
+        <li>
+          <a href="#about" class="skipLink" tabindex="1">Skip to Content</a>
+        </li>
       </ul>
-    </div>
-  </nav>
+    </aside>
 
-<!-- MAIN CONTENT -->
-<div role="main" class="main">
-
-  <!-- BANNER -->
-  <div id="banner" class="banner">
-    <div class="bannerOpacity">
-      <div class="bannerHeader">
-        <h1 class="">Brandon Lew</h1>
-        <p class="h3">front end engineer &amp; photographer</p>
-      </div>
-    </div>
-  </div>
-
-  <!-- ABOUT -->
-  <div id="about" class="about section sectionPadding">
-    <div class="sectionContainer">
-      <div class="sectionHeader">
-        <h2>about</h2>
-      </div>
-      <div class="sectionContent">
-        <!-- PROFILE -->
-        <div class="profile sectionColumn w50">
-          <img class="profileImage" src="images/profile.jpg" alt="profile">
-          <p class="profileText">Front end engineer and photographer based in the Washington D.C. Area. An experienced engineer working with Angular, HTML5, CSS3/SCSS, a11y, and A/B testing. Also, an avid travel photographer venturing to new destinations to capture new sights, cultures, and experiences.</p>
-        </div>
-        <!-- INFO -->
-        <div class="info sectionColumn w50">
-          <div class="infoContainer">
-            <div class="infoContent">
-              <h3>personal info</h3>
-              <div class="left infoContentColumn">
-                <ul>
-                  <li>name</li>
-                  <li>location</li>
-                  <li>e-mail</li>
-                  <li>social</li>
-                </ul>
-              </div>
-              <div class="right infoContentColumn">
-                <ul>
-                  <li>Brandon Lew</li>
-                  <li>Remote, Washington D.C. Area</li>
-                  <li><a href="mailto:brandon.t.lew@gmail.com">brandon.t.lew@gmail.com</a></li>
-                  <li>
-                    <a href="https://www.linkedin.com/in/brandon-l-16836b130/" target="_blank"><span class="fab fa-linkedin"></span></a>
-                    <a href="https://github.com/blsnwbrdr/" target="_blank"><span class="fab fa-github"></span></a>
-                    <a href="https://codepen.io/blsnwbrdr/" target="_blank"><span class="fab fa-codepen"></span></a>
-                    <a href="https://www.instagram.com/blew.photography/" target="_blank"><span class="fab fa-instagram"></span></a>
-                    <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><span class="fab fa-etsy"></span></a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BREAK ONE -->
-  <div class="break breakOne">
-    <p class="h1">need more <span class="fas fa-coffee" ></span> to write more&nbsp;<span class="fas fa-code"></span></p>
-  </div>
-
-  <!-- DEVELOPMENT -->
-  <div id="development" class="development section sectionPadding">
-    <div class="sectionContainer">
-      <div class="sectionHeader">
-        <h2>development</h2>
-      </div>
-      <div class="sectionContent">
-        <p>A portfolio of web and mobile applications.</p>
-      </div>
-    </div>
-  </div>
-  <div class="development portfolio">
-    <div class="portfolioContainer">
-      <!-- PORTFOLIO ROW 1 -->
-      <div class="portfolioContent">
-        <!-- TIP JAR -->
-        <div class="portfolioColumn w50">
-          <!-- TIP JAR SLIDE -->
-          <div class="portfolioSlide" onclick="_modal.display('modalTipJar');">
-            <img src="images/projectTipjar.jpg" alt="tipjar app">
-            <div class="portfolioOverlay">
-              <p class="portfolioText1">tip jar app</p>
-              <p class="portfolioText2">learn more</p>
-            </div>
-          </div>
-          <!-- TIP JAR MODAL -->
-          <div id="modalTipJar" class="portfolioModalOverlay">
-            <div class="portfolioModal">
-              <span class="portfolioModalClose" onclick="_modal.close('modalTipJar');">X</span>
-              <div class="portfolioModalHeader">
-                <img src="images/projectTipjar.jpg" alt="tipjar app">
-              </div>
-              <div class="portfolioModalBody">
-                <p class="h3">TIP JAR App</p>
-                <a href="http://brandonlew.com/portfolio/tipjar/" target="_blank"><span class="fas fa-link"></span></a>
-                <a href="https://github.com/blsnwbrdr/tipjar-react-app" target="_blank"><span class="fab fa-github"></span></a>
-                <a href="https://itunes.apple.com/us/app/tip-jar-guide-to-gratuity/id1321633520?ls=1&amp;mt=8" target="_blank" class="appStoreLogo" aria-label="tip jar in the app store"><img src="images/appStore.svg" alt="apple app store icon" class=""></a>
-                <p class="text">A tipping app with data from countries around the globe. It guides world travelers on the tipping etiquette from different countries and includes currency exchange vs the USD. The web app is built with React, while the iOS app is developed using React Native. The backend API is built with MongoDB, NodeJS, and Express, hosted on Heroku.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ALLSTATE -->
-        <div class="portfolioColumn w50">
-          <!-- ALLSTATE SLIDE -->
-          <div class="portfolioSlide" onclick="_modal.display('modalAllstate');">
-            <img src="images/projectAllstate.jpg" alt="quality service control">
-            <div class="portfolioOverlay">
-              <p class="portfolioText1">allstate</p>
-              <p class="portfolioText2">learn more</p>
-            </div>
-          </div>
-          <!-- ALLSTATE MODAL -->
-          <div id="modalAllstate" class="portfolioModalOverlay">
-            <div class="portfolioModal">
-              <span class="portfolioModalClose" onclick="_modal.close('modalAllstate');">X</span>
-              <div class="portfolioModalHeader">
-                <img src="images/projectAllstate.jpg" alt="allstate">
-              </div>
-              <div class="portfolioModalBody">
-                <p class="h3">Allstate</p>
-                <a href="https://purchase.allstate.com/onlineshopping/welcome" target="_blank" rel="nofollow"><span class="fas fa-link"></span></a>
-                <p class="text">The Allstate online shopping application. My work includes the development and management of reusable Angular components that are consumed by the shopping application. I work with UI, UX, content, and back end development teams to produce pixel perfect front end code.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- PORTFOLIO ROW 2 -->
-      <div class="portfolioContent">
-        <!-- TRAVEL TRACKER -->
-        <div class="portfolioColumn w33">
-          <!-- TRAVEL TRACKER SLIDE -->
-          <div class="portfolioSlide" onclick="_modal.display('modalTravelTracker');">
-            <img src="images/projectTraveltracker.jpg" alt="travel tracker app">
-            <div class="portfolioOverlay">
-              <p class="portfolioText1">travel tracker app</p>
-              <p class="portfolioText2">learn more</p>
-            </div>
-          </div>
-          <!-- TRAVEL TRACKER MODAL -->
-          <div id="modalTravelTracker" class="portfolioModalOverlay">
-            <div class="portfolioModal">
-              <span class="portfolioModalClose" onclick="_modal.close('modalTravelTracker');">X</span>
-              <div class="portfolioModalHeader">
-                <img src="images/projectTraveltracker.jpg" alt="tipjar app">
-              </div>
-              <div class="portfolioModalBody">
-                <p class="h3">Travel Tracker App</p>
-                <a href="https://github.com/blsnwbrdr/traveltracker-mobile-app" target="_blank"><span class="fab fa-github"></span></a>
-                <a href="https://itunes.apple.com/us/app/travel-tracker-where-next/id1377010134?mt=8" target="_blank" class="appStoreLogo" aria-label="travel tracker in the app store"><img src="images/appStore.svg" alt="apple app store icon" class=""></a>
-                <p class="text">An iOS mobile app written in React Native. Scroll through 200+ countries/territories and toggle visited places. Users can view a visual map and list of visited countries/territories. The app includes sharing functionality to allow others to see a user's list. The back end API is built with MongoDB, NodeJS, and Express, hosted on Heroku.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ESURANCE -->
-        <div class="portfolioColumn w33">
-          <!-- ESURANCE SLIDE -->
-          <div class="portfolioSlide" onclick="_modal.display('modalEsurance');">
-            <img src="images/projectEsurance.jpg" alt="esurance">
-            <div class="portfolioOverlay">
-              <p class="portfolioText1">esurance</p>
-              <p class="portfolioText2">learn more</p>
-            </div>
-          </div>
-          <!-- ESURANCE MODAL -->
-          <div id="modalEsurance" class="portfolioModalOverlay">
-            <div class="portfolioModal">
-              <span class="portfolioModalClose" onclick="_modal.close('modalEsurance');">X</span>
-              <div class="portfolioModalHeader">
-                <img src="images/projectEsurance.jpg" alt="esurance">
-              </div>
-              <div class="portfolioModalBody">
-                <p class="h3">Esurance</p>
-                <a href="https://www.esurance.com" target="_blank" rel="nofollow"><span class="fas fa-link"></span></a>
-                <p class="text">The Esurance website. My work includes most of the front end Javascript, including the navigation header and a small React application on the <a href="https://www.esurance.com/legal/car/terms-and-conditions" target="_blank" rel="nofollow">terms and conditions</a> page. Other work includes most A/B testing experiments throughout the site. I am also responsible for integrating and maintaining several modern technologies and tools (SASS, Gulp, Git, NPM) into the team for increased efficiency.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- ETSY -->
-        <div class="portfolioColumn w33">
-          <!-- ETSY SLIDE -->
-          <div class="portfolioSlide" onclick="_modal.display('modalEtsy');">
-            <img src="images/projectEtsy.jpg" alt="etsy app">
-            <div class="portfolioOverlay">
-              <p class="portfolioText1">etsy app</p>
-              <p class="portfolioText2">learn more</p>
-            </div>
-          </div>
-          <!-- ETSY MODAL -->
-          <div id="modalEtsy" class="portfolioModalOverlay">
-            <div class="portfolioModal">
-              <span class="portfolioModalClose" onclick="_modal.close('modalEtsy');">X</span>
-              <div class="portfolioModalHeader">
-                <img src="images/projectEtsy.jpg" alt="etsy app">
-              </div>
-              <div class="portfolioModalBody">
-                <p class="h3">Etsy App</p>
-                <!-- <a href="http://brandonlew.com/portfolio/etsy/" target="_blank"><span class="fas fa-link"></span></a> -->
-                <a href="https://github.com/blsnwbrdr/etsy" target="_blank"><span class="fab fa-github"></span></a>
-                <p class="text">This app utilizes the Etsy API and pulls data from the Etsy servers to populate the page. The gallery of images, text, and links to Etsy are all pulled from Etsy, making it easy to manage the content and great for businesses that want a customized site while minimizing the amount of work. The app uses Javascript, AJAX, and the Etsy API to create the content.</p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- BREAK TWO -->
-  <div class="break breakTwo">
-    <p class="h1">need to <span class="fas fa-plane" ></span> for more&nbsp;<span class="fas fa-camera-retro"></span></p>
-  </div>
-
-  <!-- PHOTOGRAPHY -->
-  <div id="photography" class="photography section sectionPadding">
-    <div class="sectionContainer">
-      <div class="sectionHeader">
-        <h2>photography</h2>
-      </div>
-      <div class="sectionContent">
-        <p>A sample gallery of travel images.</p>
-        <!-- TABLE OF CONTENTS -->
-        <ul class="continentsList">
-          <li id="africa" class="continents">Africa</li>
-          <li id="asia" class="continents">Asia</li>
-          <li id="europe" class="continents">Europe</li>
-          <li id="northAmerica" class="continents">North America</li>
-          <li id="southAmerica" class="continents">South America</li>
+    <!-- NAVIGATION -->
+    <nav id="nav" class="nav">
+      <!-- NAV ICON -->
+      <input id="navIcon" class="navIconInput" type="checkbox" name="navIcon" />
+      <label for="navIcon" class="navIconLabel" aria-label="navigation icon">
+        <span style="display: none">navigation icon</span>
+        <span class="bar bar1"></span>
+        <span class="bar bar2"></span>
+        <span class="bar bar3"></span>
+      </label>
+      <!-- NAV MENU -->
+      <div class="navMenu">
+        <ul class="navMenuList">
+          <li><a href="#about" class="navMenuLink">about</a></li>
+          <li><a href="#development" class="navMenuLink">development</a></li>
+          <li><a href="#photography" class="navMenuLink">photography</a></li>
         </ul>
       </div>
+    </nav>
+
+    <!-- MAIN CONTENT -->
+    <div role="main" class="main">
+      <!-- BANNER -->
+      <div id="banner" class="banner">
+        <div class="bannerOpacity">
+          <div class="bannerHeader">
+            <h1 class="">Brandon Lew</h1>
+            <p class="h3">front end engineer &amp; photographer</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- ABOUT -->
+      <div id="about" class="about section sectionPadding">
+        <div class="sectionContainer">
+          <div class="sectionHeader">
+            <h2>about</h2>
+          </div>
+          <div class="sectionContent">
+            <!-- PROFILE -->
+            <div class="profile sectionColumn w50">
+              <img
+                class="profileImage"
+                src="images/profile.jpg"
+                alt="profile"
+              />
+              <p class="profileText">
+                Front end engineer and photographer based in the Washington D.C.
+                Area. An experienced engineer working with Angular, HTML5,
+                CSS3/SCSS, a11y, and A/B testing. Also, an avid travel
+                photographer venturing to new destinations to capture new
+                sights, cultures, and experiences.
+              </p>
+            </div>
+            <!-- INFO -->
+            <div class="info sectionColumn w50">
+              <div class="infoContainer">
+                <div class="infoContent">
+                  <h3>personal info</h3>
+                  <div class="left infoContentColumn">
+                    <ul>
+                      <li>name</li>
+                      <li>location</li>
+                      <li>e-mail</li>
+                      <li>social</li>
+                    </ul>
+                  </div>
+                  <div class="right infoContentColumn">
+                    <ul>
+                      <li>Brandon Lew</li>
+                      <li>Remote, Washington D.C. Area</li>
+                      <li>
+                        <a href="mailto:brandon.t.lew@gmail.com"
+                          >brandon.t.lew@gmail.com</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="https://www.linkedin.com/in/brandon-l-16836b130/"
+                          target="_blank"
+                          ><span class="fab fa-linkedin"></span
+                        ></a>
+                        <a href="https://github.com/blsnwbrdr/" target="_blank"
+                          ><span class="fab fa-github"></span
+                        ></a>
+                        <a href="https://codepen.io/blsnwbrdr/" target="_blank"
+                          ><span class="fab fa-codepen"></span
+                        ></a>
+                        <a
+                          href="https://www.instagram.com/blew.photography/"
+                          target="_blank"
+                          ><span class="fab fa-instagram"></span
+                        ></a>
+                        <a
+                          href="https://www.etsy.com/shop/blewphotography/"
+                          target="_blank"
+                          ><span class="fab fa-etsy"></span
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BREAK ONE -->
+      <div class="break breakOne">
+        <p class="h1">
+          need more <span class="fas fa-coffee"></span> to write more&nbsp;<span
+            class="fas fa-code"
+          ></span>
+        </p>
+      </div>
+
+      <!-- DEVELOPMENT -->
+      <div id="development" class="development section sectionPadding">
+        <div class="sectionContainer">
+          <div class="sectionHeader">
+            <h2>development</h2>
+          </div>
+          <div class="sectionContent">
+            <p>A portfolio of web and mobile applications.</p>
+          </div>
+        </div>
+      </div>
+      <div class="development portfolio">
+        <div class="portfolioContainer">
+          <!-- PORTFOLIO ROW 1 -->
+          <div class="portfolioContent">
+            <!-- TIP JAR -->
+            <div class="portfolioColumn w50">
+              <!-- TIP JAR SLIDE -->
+              <div
+                class="portfolioSlide"
+                onclick="_modal.display('modalTipJar');"
+              >
+                <img src="images/projectTipjar.jpg" alt="tipjar app" />
+                <div class="portfolioOverlay">
+                  <p class="portfolioText1">tip jar app</p>
+                  <p class="portfolioText2">learn more</p>
+                </div>
+              </div>
+              <!-- TIP JAR MODAL -->
+              <div id="modalTipJar" class="portfolioModalOverlay">
+                <div class="portfolioModal">
+                  <span
+                    class="portfolioModalClose"
+                    onclick="_modal.close('modalTipJar');"
+                    >X</span
+                  >
+                  <div class="portfolioModalHeader">
+                    <img src="images/projectTipjar.jpg" alt="tipjar app" />
+                  </div>
+                  <div class="portfolioModalBody">
+                    <p class="h3">TIP JAR App</p>
+                    <a
+                      href="http://brandonlew.com/portfolio/tipjar/"
+                      target="_blank"
+                      ><span class="fas fa-link"></span
+                    ></a>
+                    <a
+                      href="https://github.com/blsnwbrdr/tipjar-react-app"
+                      target="_blank"
+                      ><span class="fab fa-github"></span
+                    ></a>
+                    <a
+                      href="https://itunes.apple.com/us/app/tip-jar-guide-to-gratuity/id1321633520?ls=1&amp;mt=8"
+                      target="_blank"
+                      class="appStoreLogo"
+                      aria-label="tip jar in the app store"
+                      ><img
+                        src="images/appStore.svg"
+                        alt="apple app store icon"
+                        class=""
+                    /></a>
+                    <p class="text">
+                      A tipping app with data from countries around the globe.
+                      It guides world travelers on the tipping etiquette from
+                      different countries and includes currency exchange vs the
+                      USD. The web app is built with React, while the iOS app is
+                      developed using React Native. The backend API is built
+                      with MongoDB, NodeJS, and Express, hosted on Heroku.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ALLSTATE -->
+            <div class="portfolioColumn w50">
+              <!-- ALLSTATE SLIDE -->
+              <div
+                class="portfolioSlide"
+                onclick="_modal.display('modalAllstate');"
+              >
+                <img
+                  src="images/projectAllstate.jpg"
+                  alt="quality service control"
+                />
+                <div class="portfolioOverlay">
+                  <p class="portfolioText1">allstate</p>
+                  <p class="portfolioText2">learn more</p>
+                </div>
+              </div>
+              <!-- ALLSTATE MODAL -->
+              <div id="modalAllstate" class="portfolioModalOverlay">
+                <div class="portfolioModal">
+                  <span
+                    class="portfolioModalClose"
+                    onclick="_modal.close('modalAllstate');"
+                    >X</span
+                  >
+                  <div class="portfolioModalHeader">
+                    <img src="images/projectAllstate.jpg" alt="allstate" />
+                  </div>
+                  <div class="portfolioModalBody">
+                    <p class="h3">Allstate</p>
+                    <a
+                      href="https://purchase.allstate.com/onlineshopping/welcome"
+                      target="_blank"
+                      rel="nofollow"
+                      ><span class="fas fa-link"></span
+                    ></a>
+                    <p class="text">
+                      The Allstate online shopping application. My work includes
+                      the development and management of reusable Angular
+                      components that are consumed by the shopping application.
+                      I work with UI, UX, content, and back end development
+                      teams to produce pixel perfect front end code.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- PORTFOLIO ROW 2 -->
+          <div class="portfolioContent">
+            <!-- TRAVEL TRACKER -->
+            <div class="portfolioColumn w33">
+              <!-- TRAVEL TRACKER SLIDE -->
+              <div
+                class="portfolioSlide"
+                onclick="_modal.display('modalTravelTracker');"
+              >
+                <img
+                  src="images/projectTraveltracker.jpg"
+                  alt="travel tracker app"
+                />
+                <div class="portfolioOverlay">
+                  <p class="portfolioText1">travel tracker app</p>
+                  <p class="portfolioText2">learn more</p>
+                </div>
+              </div>
+              <!-- TRAVEL TRACKER MODAL -->
+              <div id="modalTravelTracker" class="portfolioModalOverlay">
+                <div class="portfolioModal">
+                  <span
+                    class="portfolioModalClose"
+                    onclick="_modal.close('modalTravelTracker');"
+                    >X</span
+                  >
+                  <div class="portfolioModalHeader">
+                    <img
+                      src="images/projectTraveltracker.jpg"
+                      alt="tipjar app"
+                    />
+                  </div>
+                  <div class="portfolioModalBody">
+                    <p class="h3">Travel Tracker App</p>
+                    <a
+                      href="http://brandonlew.com/portfolio/traveltracker/"
+                      target="_blank"
+                      ><span class="fas fa-link"></span
+                    ></a>
+                    <a
+                      href="https://github.com/blsnwbrdr/traveltracker-mobile-app"
+                      target="_blank"
+                      ><span class="fab fa-github"></span
+                    ></a>
+                    <a
+                      href="https://itunes.apple.com/us/app/travel-tracker-where-next/id1377010134?mt=8"
+                      target="_blank"
+                      class="appStoreLogo"
+                      aria-label="travel tracker in the app store"
+                      ><img
+                        src="images/appStore.svg"
+                        alt="apple app store icon"
+                        class=""
+                    /></a>
+                    <p class="text">
+                      An iOS mobile app written in React Native. Scroll through
+                      200+ countries/territories and toggle visited places.
+                      Users can view a visual map and list of visited
+                      countries/territories. The app includes sharing
+                      functionality to allow others to see a user's list. The
+                      back end API is built with MongoDB, NodeJS, and Express,
+                      hosted on Heroku.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ESURANCE -->
+            <div class="portfolioColumn w33">
+              <!-- ESURANCE SLIDE -->
+              <div
+                class="portfolioSlide"
+                onclick="_modal.display('modalEsurance');"
+              >
+                <img src="images/projectEsurance.jpg" alt="esurance" />
+                <div class="portfolioOverlay">
+                  <p class="portfolioText1">esurance</p>
+                  <p class="portfolioText2">learn more</p>
+                </div>
+              </div>
+              <!-- ESURANCE MODAL -->
+              <div id="modalEsurance" class="portfolioModalOverlay">
+                <div class="portfolioModal">
+                  <span
+                    class="portfolioModalClose"
+                    onclick="_modal.close('modalEsurance');"
+                    >X</span
+                  >
+                  <div class="portfolioModalHeader">
+                    <img src="images/projectEsurance.jpg" alt="esurance" />
+                  </div>
+                  <div class="portfolioModalBody">
+                    <p class="h3">Esurance</p>
+                    <a
+                      href="https://www.esurance.com"
+                      target="_blank"
+                      rel="nofollow"
+                      ><span class="fas fa-link"></span
+                    ></a>
+                    <p class="text">
+                      The Esurance website. My work includes most of the front
+                      end Javascript, including the navigation header and a
+                      small React application on the
+                      <a
+                        href="https://www.esurance.com/legal/car/terms-and-conditions"
+                        target="_blank"
+                        rel="nofollow"
+                        >terms and conditions</a
+                      >
+                      page. Other work includes most A/B testing experiments
+                      throughout the site. I am also responsible for integrating
+                      and maintaining several modern technologies and tools
+                      (SASS, Gulp, Git, NPM) into the team for increased
+                      efficiency.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- ETSY -->
+            <div class="portfolioColumn w33">
+              <!-- ETSY SLIDE -->
+              <div
+                class="portfolioSlide"
+                onclick="_modal.display('modalEtsy');"
+              >
+                <img src="images/projectEtsy.jpg" alt="etsy app" />
+                <div class="portfolioOverlay">
+                  <p class="portfolioText1">etsy app</p>
+                  <p class="portfolioText2">learn more</p>
+                </div>
+              </div>
+              <!-- ETSY MODAL -->
+              <div id="modalEtsy" class="portfolioModalOverlay">
+                <div class="portfolioModal">
+                  <span
+                    class="portfolioModalClose"
+                    onclick="_modal.close('modalEtsy');"
+                    >X</span
+                  >
+                  <div class="portfolioModalHeader">
+                    <img src="images/projectEtsy.jpg" alt="etsy app" />
+                  </div>
+                  <div class="portfolioModalBody">
+                    <p class="h3">Etsy App</p>
+                    <!-- <a href="http://brandonlew.com/portfolio/etsy/" target="_blank"><span class="fas fa-link"></span></a> -->
+                    <a href="https://github.com/blsnwbrdr/etsy" target="_blank"
+                      ><span class="fab fa-github"></span
+                    ></a>
+                    <p class="text">
+                      This app utilizes the Etsy API and pulls data from the
+                      Etsy servers to populate the page. The gallery of images,
+                      text, and links to Etsy are all pulled from Etsy, making
+                      it easy to manage the content and great for businesses
+                      that want a customized site while minimizing the amount of
+                      work. The app uses Javascript, AJAX, and the Etsy API to
+                      create the content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- BREAK TWO -->
+      <div class="break breakTwo">
+        <p class="h1">
+          need to <span class="fas fa-plane"></span> for more&nbsp;<span
+            class="fas fa-camera-retro"
+          ></span>
+        </p>
+      </div>
+
+      <!-- PHOTOGRAPHY -->
+      <div id="photography" class="photography section sectionPadding">
+        <div class="sectionContainer">
+          <div class="sectionHeader">
+            <h2>photography</h2>
+          </div>
+          <div class="sectionContent">
+            <p>A sample gallery of travel images.</p>
+            <!-- TABLE OF CONTENTS -->
+            <ul class="continentsList">
+              <li id="africa" class="continents">Africa</li>
+              <li id="asia" class="continents">Asia</li>
+              <li id="europe" class="continents">Europe</li>
+              <li id="northAmerica" class="continents">North America</li>
+              <li id="southAmerica" class="continents">South America</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="photography portfolio">
+        <div class="portfolioContainer">
+          <!-- PORTFOLIO ROW 1 -->
+          <div class="portfolioContent">
+            <div class="portfolioColumn w33 photos"></div>
+            <div class="portfolioColumn w33 photos"></div>
+            <div class="portfolioColumn w33 photos"></div>
+          </div>
+          <!-- PORTFOLIO ROW 2 -->
+          <div class="portfolioContent">
+            <div class="portfolioColumn w50 photos"></div>
+            <div class="portfolioColumn w50 photos"></div>
+          </div>
+          <!-- PORTFOLIO ROW 3 -->
+          <div class="portfolioContent">
+            <div class="portfolioColumn w33 photos"></div>
+            <div class="portfolioColumn w33 photos"></div>
+            <div class="portfolioColumn w33 photos"></div>
+          </div>
+          <!-- PORTFOLIO ROW 4 -->
+          <div class="portfolioContent">
+            <div class="portfolioColumn w25 photos"></div>
+            <div class="portfolioColumn w25 photos"></div>
+            <div class="portfolioColumn w25 photos"></div>
+            <div class="portfolioColumn w25 photos"></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- FOOTER -->
+      <div class="break footer">
+        <a href="http://brandonlew.com" class="h4 header">brandonlew.com</a>
+        <a
+          href="https://www.linkedin.com/in/brandon-l-16836b130/"
+          target="_blank"
+          ><span class="fab fa-linkedin"></span
+        ></a>
+        <a href="https://github.com/blsnwbrdr/" target="_blank"
+          ><span class="fab fa-github"></span
+        ></a>
+        <a href="https://codepen.io/blsnwbrdr/" target="_blank"
+          ><span class="fab fa-codepen"></span
+        ></a>
+        <a href="https://www.instagram.com/blew.photography/" target="_blank"
+          ><span class="fab fa-instagram"></span
+        ></a>
+        <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"
+          ><span class="fab fa-etsy"></span
+        ></a>
+      </div>
     </div>
-  </div>
-  <div class="photography portfolio">
-    <div class="portfolioContainer">
-      <!-- PORTFOLIO ROW 1 -->
-      <div class="portfolioContent">
-        <div class="portfolioColumn w33 photos"></div>
-        <div class="portfolioColumn w33 photos"></div>
-        <div class="portfolioColumn w33 photos"></div>
-      </div>
-      <!-- PORTFOLIO ROW 2 -->
-      <div class="portfolioContent">
-        <div class="portfolioColumn w50 photos"></div>
-        <div class="portfolioColumn w50 photos"></div>
-      </div>
-      <!-- PORTFOLIO ROW 3 -->
-      <div class="portfolioContent">
-        <div class="portfolioColumn w33 photos"></div>
-        <div class="portfolioColumn w33 photos"></div>
-        <div class="portfolioColumn w33 photos"></div>
-      </div>
-      <!-- PORTFOLIO ROW 4 -->
-      <div class="portfolioContent">
-        <div class="portfolioColumn w25 photos"></div>
-        <div class="portfolioColumn w25 photos"></div>
-        <div class="portfolioColumn w25 photos"></div>
-        <div class="portfolioColumn w25 photos"></div>
-      </div>
-    </div>
-  </div>
 
-  <!-- FOOTER -->
-  <div class="break footer">
-    <a href="http://brandonlew.com" class="h4 header">brandonlew.com</a>
-    <a href="https://www.linkedin.com/in/brandon-l-16836b130/" target="_blank"><span class="fab fa-linkedin"></span></a>
-    <a href="https://github.com/blsnwbrdr/" target="_blank"><span class="fab fa-github"></span></a>
-    <a href="https://codepen.io/blsnwbrdr/" target="_blank"><span class="fab fa-codepen"></span></a>
-    <a href="https://www.instagram.com/blew.photography/" target="_blank"><span class="fab fa-instagram"></span></a>
-    <a href="https://www.etsy.com/shop/blewphotography/" target="_blank"><span class="fab fa-etsy"></span></a>
-  </div>
-
-</div>
-
-  <!-- SCRIPTS -->
-  <script src="js/scripts.min.js"></script>
-
-</body>
+    <!-- SCRIPTS -->
+    <script src="js/scripts.min.js"></script>
+  </body>
 </html>
