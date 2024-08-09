@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const clean = require('gulp-clean');
 
 // FILE LOCATIONS
-const build = '../traveltracker-ng-app/dist/traveltracker-ng-app/**/*';
+const build = '../traveltracker-ng-app/dist/traveltracker-ng-app/browser/**/*';
 const portfolio = 'portfolio/traveltracker/';
 
 //----------
