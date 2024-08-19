@@ -5,3 +5,4 @@
 # misc
 .htaccess
 .DS_Store
+package-lock.json
