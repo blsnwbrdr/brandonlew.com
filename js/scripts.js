@@ -22,28 +22,28 @@ var _skipContent = {
 var _banner = {
   // images
   images: [
-    '2005-1129',
-    '2009-1792',
-    '2012-1036',
-    '2012-1343',
-    '2014-0127',
-    '2015-0154',
-    '2016-0212',
-    '2017-0597',
-    '2018-1046',
-    '2019-0871',
-    '2019-1043',
-    '2019-2587',
-    '2019-2801',
-    '2019-3172',
-    '2020-0091',
-    '2021-1167',
-    '2021-1546',
-    '2021-2514',
-    '2022-0414',
-    '2022-0734',
-    '2022-2042',
-    '2022-2171',
+    '2005_0857',
+    '2009_1792',
+    '2012_1036',
+    '2013_0739',
+    '2014_0127',
+    '2015_0154',
+    '2016_0212',
+    '2017_0575',
+    '2018_1046',
+    '2018_1703',
+    '2019_0871',
+    '2019_2096',
+    '2019_2587',
+    '2021_0765',
+    '2021_1546',
+    '2022_0601',
+    '2022_1112',
+    '2022_2168',
+    '2023_0388',
+    '2023_0892',
+    '2023_2460',
+    '2024_0293',
   ],
   // pick random image
   randomize: function () {
@@ -52,9 +52,9 @@ var _banner = {
     // set style attribute of banner with random background image
     banner.setAttribute(
       'style',
-      'background-image:url(images/banner-' +
+      'background-image:url(images/' +
         _banner.images[randomNum] +
-        '.jpeg);'
+        '_c1_web.jpg);'
     );
   },
 };
@@ -117,77 +117,129 @@ var _staticImages = {
   // images
   images: [
     {
-      src: '2009-1792',
+      src: '2005_0857',
+      title: 'South Luangwa National Park, Zambia',
+    },
+    {
+      src: '2009_1792',
       title: 'Istanbul, Turkey',
     },
     {
-      src: '2012-1343',
-      title: 'Hong Kong',
+      src: '2012_1036',
+      title: "Xi'an, China",
     },
     {
-      src: '2014-0127',
+      src: '2013_0739',
+      title: 'Bratislava, Slovakia',
+    },
+    {
+      src: '2014_0127',
       title: 'Tokyo, Japan',
     },
     {
-      src: '2015-0154',
+      src: '2015_0154',
       title: 'Singapore',
     },
     {
-      src: '2016-0212',
+      src: '2016_0212',
       title: 'Cape Coast, Ghana',
     },
     {
-      src: '2017-0597',
-      title: 'Colonia Del Sacramento, Uruguay',
+      src: '2017_0575',
+      title: 'Montevideo, Uruguay',
     },
     {
-      src: '2018-1046',
+      src: '2018_1046',
       title: 'Kyoto, Japan',
     },
     {
-      src: '2019-0871',
+      src: '2018_1703',
+      title: 'Riga, Latvia',
+    },
+    {
+      src: '2019_0871',
       title: 'Copan, Honduras',
     },
     {
-      src: '2019-1043',
-      title: 'Panama City, Panama',
+      src: '2019_2096',
+      title: 'Cotopaxi, Ecuador',
     },
     {
-      src: '2019-2587',
+      src: '2019_2587',
       title: 'Geneva, Switzerland',
     },
     {
-      src: '2019-2801',
-      title: 'Bern, Switzerland',
+      src: '2021_0765',
+      title: 'Laekjavik, Iceland',
     },
     {
-      src: '2019-3172',
-      title: 'Vaduz, Liechtenstein',
+      src: '2021_1546',
+      title: 'Gdansk, Poland',
+    },
+    {
+      src: '2022_0601',
+      title: 'Bayahibe, Dominican Republic',
+    },
+    {
+      src: '2022_1112',
+      title: 'Lisbon, Portugal',
+    },
+    {
+      src: '2022_2168',
+      title: 'Samarkand, Uzbekistan',
+    },
+    {
+      src: '2023_0388',
+      title: 'Glenorchy, New Zealand',
+    },
+    {
+      src: '2023_0892',
+      title: 'Copenhagen, Denmark',
+    },
+    {
+      src: '2023_2460',
+      title: 'Abu Dhabi, United Arab Emirates',
+    },
+    {
+      src: '2024_0293',
+      title: 'Casablanca, Morocco',
     },
   ],
+  randomize: function (array) {
+    // randomize function
+    for (let i = array.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const temp = array[i];
+      array[i] = array[j];
+      array[j] = temp;
+    }
+    return array;
+  },
   initiate: function () {
+    // randomize images
+    var randomizedImages = _staticImages.randomize(_staticImages.images);
     // display static images
-    for (var x = 0; x < _staticImages.images.length; x++) {
+    for (var x = 0; x < randomizedImages.length; x++) {
       for (var y = 0; y < photos.length; y++) {
         if (x === y) {
           photos[y].insertAdjacentHTML(
             'afterbegin',
             '<div class="portfolioSlide" onclick="_modal.display(&#39;modal' +
               y +
-              '&#39;);"> <img src="images/banner-' +
-              _staticImages.images[x].src +
-              '.jpeg" alt="' +
-              _staticImages.images[x].title +
+              '&#39;);"> <img src="images/' +
+              randomizedImages[x].src +
+              '_c1_web.jpg" alt="' +
+              randomizedImages[x].title +
               '"><div class="portfolioOverlay"></div></div><div id="modal' +
               y +
               '" class="portfolioModalOverlay"><div class="portfolioModal"> <span class="portfolioModalClose" onclick="_modal.close(&#39;modal' +
               y +
-              '&#39;);">X</span><div class="portfolioModalHeader"> <img src="images/banner-' +
-              _staticImages.images[x].src +
-              '.jpeg" alt="' +
-              _staticImages.images[x].title +
+              '&#39;);">X</span><div class="portfolioModalHeader"> <img src="images/' +
+              randomizedImages[x].src +
+              '_c1_web.jpg" alt="' +
+              randomizedImages[x].title +
               '"></div><div class="portfolioModalBody"><p class="h4">' +
-              _staticImages.images[x].title +
+              randomizedImages[x].title +
               '</p></a></div></div></div>'
           );
         }
