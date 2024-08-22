@@ -1,6 +1,6 @@
 # Brandon Lew
 
-A portfolio website with custom JavaScript code that randomizes the display of personal photography.
+A portfolio website with custom built CSS and JavaScript, including code that randomizes the display of personal photography.
 
 ## Scripts
 
