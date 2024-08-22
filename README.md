@@ -1,6 +1,6 @@
 # Brandon Lew
 
-A portfolio website with custom JavaScript code that includes connecting to ETSY's API; built to gather and randomize photos from my ETSY shop.
+A portfolio website with custom JavaScript code that randomizes the display of personal photography.
 
 ## Scripts
 
@@ -12,10 +12,9 @@ A portfolio website with custom JavaScript code that includes connecting to ETSY
 
 ## Built With
 
-- [Etsy API](https://www.etsy.com/developers/documentation/) - Etsy is the world's most vibrant handmade marketplace
-- [Gulp](https://gulpjs.com) - A toolkit to automate & enhance your workflow
-- [jQuery](http://jquery.com/) - A fast, small, and feature-rich JavaScript library
 - [Sass](https://sass-lang.com) - Sass is the most mature, stable, and powerful professional grade CSS extension language in the world.
+- [Font Awesome](https://fontawesome.com) - Font Awesome is the Internet's icon library and toolkit, used by millions of designers, developers, and content creators.
+- [Gulp](https://gulpjs.com) - A toolkit to automate & enhance your workflow
 
 ## Authors
 
