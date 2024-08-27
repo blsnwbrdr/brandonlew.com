@@ -6,6 +6,7 @@
   "scripts": {
     "branch-clean-up": "git branch -lvv | cut -c3- | awk '/: gone]/ {print $1}' | xargs git branch -D",
     "build": "gulp --gulpfile gulp-build.js",
+    "import-geowiz": "gulp --gulpfile gulp-import-geowiz.js",
     "import-tipjar": "gulp --gulpfile gulp-import-tipjar.js",
     "import-traveltracker": "gulp --gulpfile gulp-import-traveltracker.js",
     "sass-watch": "gulp --gulpfile gulp-sass-watch.js",
