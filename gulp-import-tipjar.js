@@ -5,7 +5,7 @@ const gulp = require('gulp');
 const clean = require('gulp-clean');
 
 // FILE LOCATIONS
-const build = '../tipjar-react-app/build/**/*';
+const build = '../tipjar-web/build/**/*';
 const portfolio = 'portfolio/tipjar/';
 
 //----------
