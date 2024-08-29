@@ -19,7 +19,7 @@ gulp.task('delete', () => {
 
 // COPY BUILD FILES TO PORTFOLIO DIRECTORY
 gulp.task('move', () => {
-  return gulp.src([build]).pipe(gulp.dest(portfolio));
+  return gulp.src([build], { encoding: false }).pipe(gulp.dest(portfolio));
 });
 
 gulp.task('default', gulp.series(['delete', 'move']), function () {});
