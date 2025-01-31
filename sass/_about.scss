@@ -1,3 +1,6 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* ABOUT */
 .about {
   .profileImage {
@@ -5,19 +8,22 @@
     display: block;
     margin: 0 auto;
     margin-bottom: 25px;
-    @include crossBrowser(border-radius, 50%);
-    @include crossBrowser(filter, drop-shadow(3px 3px 3px $color-shadow-1));
+    @include presets.crossBrowser(border-radius, 50%);
+    @include presets.crossBrowser(
+      filter,
+      drop-shadow(3px 3px 3px presets.$color-shadow-1)
+    );
   }
   .profileText {
     padding-bottom: 40px;
   }
   .info {
-    color: $color-dark-text;
+    color: presets.$color-dark-text;
   }
   .infoContainer {
-    background-color: $color-gray-2;
+    background-color: presets.$color-gray-2;
     padding: 20px;
-    @include crossBrowser(border-radius, 4px);
+    @include presets.crossBrowser(border-radius, 4px);
   }
   .infoContent {
     &:after {
@@ -27,9 +33,9 @@
       clear: both;
     }
     a {
-      color: $color-dark-text;
+      color: presets.$color-dark-text;
       &:hover {
-        color: $color-aqua-1;
+        color: presets.$color-aqua-1;
       }
     }
     ul {
@@ -43,7 +49,7 @@
     }
     .left {
       width: 30%;
-      color: $color-aqua-1;
+      color: presets.$color-aqua-1;
     }
     .right {
       width: 70%;

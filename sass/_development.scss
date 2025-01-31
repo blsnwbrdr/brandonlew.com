@@ -1,3 +1,6 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* DEVELOPMENT */
 .development {
   .sectionContent {
@@ -6,16 +9,16 @@
   &.portfolio {
     .portfolioModalBody {
       a {
-        color: $color-dark-text;
+        color: presets.$color-dark-text;
         &:hover {
-          color: $color-aqua-1;
+          color: presets.$color-aqua-1;
         }
       }
       img {
         width: 100px;
       }
       .h3 {
-        color: $color-dark-text;
+        color: presets.$color-dark-text;
       }
       .fab,
       .fas {
@@ -25,9 +28,9 @@
       .text {
         padding-top: 20px;
         a {
-          color: $color-aqua-1;
+          color: presets.$color-aqua-1;
           &:hover {
-            color: $color-dark-text;
+            color: presets.$color-dark-text;
             text-decoration: underline;
           }
         }

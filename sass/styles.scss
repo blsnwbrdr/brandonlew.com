@@ -1,44 +1,42 @@
-@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');
-
-// PRESET VARIABLES AND MIXINS
-@import 'presets';
-
 // GLOBALS
-@import 'globals';
+@use 'globals';
 
 // SKIP CONTENT
-@import 'skipContent';
+@use 'skipContent';
 
 // NAVIGATION
-@import 'navigation';
+@use 'navigation';
 
 // BANNER
-@import 'banner';
+@use 'banner';
 
 // SECTIONS
-@import 'sections';
+@use 'sections';
 
 // PAGE BREAKS
-@import 'breaks';
+@use 'breaks';
 
 // PORTFOLIO
-@import 'portfolio';
+@use 'portfolio';
 
 // ABOUT
-@import 'about';
+@use 'about';
 
 // DEVELOPMENT
-@import 'development';
+@use 'development';
 
 // PHOTOGRAPHY
-@import 'photography';
+@use 'photography';
 
 // FOOTER
-@import 'footer';
+@use 'footer';
 
 // FONT AWESOME
-@import 'fontawesome/fontawesome.scss';
-@import 'fontawesome/brands.scss';
-@import 'fontawesome/solid.scss';
-@import 'fontawesome/regular.scss';
-@import 'fontawesome/v4-shims.scss';
+@use 'fontawesome/fontawesome.scss';
+@use 'fontawesome/brands.scss';
+@use 'fontawesome/solid.scss';
+@use 'fontawesome/regular.scss';
+@use 'fontawesome/v4-shims.scss';
+
+// GOOGLE FONTS
+@import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300');

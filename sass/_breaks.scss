@@ -1,9 +1,12 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* BREAKS */
 .break {
   padding: 100px 20px;
   text-align: center;
   color: #fff;
-  background: $color-aqua-1;
+  background: presets.$color-aqua-1;
   p {
     line-height: inherit;
   }
@@ -16,17 +19,25 @@
 .breakOne {
   background: -webkit-repeating-linear-gradient(
     left,
-    $color-blue-1,
-    $color-aqua-1
+    presets.$color-blue-1,
+    presets.$color-aqua-1
   );
-  background: repeating-linear-gradient(left, $color-blue-1, $color-aqua-1);
+  background: repeating-linear-gradient(
+    left,
+    presets.$color-blue-1,
+    presets.$color-aqua-1
+  );
 }
 // BREAK TWO
 .breakTwo {
   background: -webkit-repeating-linear-gradient(
     left,
-    $color-aqua-1,
-    $color-blue-1
+    presets.$color-aqua-1,
+    presets.$color-blue-1
   );
-  background: repeating-linear-gradient(left, $color-aqua-1, $color-blue-1);
+  background: repeating-linear-gradient(
+    left,
+    presets.$color-aqua-1,
+    presets.$color-blue-1
+  );
 }

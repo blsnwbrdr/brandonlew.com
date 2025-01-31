@@ -1,3 +1,6 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* SECTIONS */
 .section {
   margin: 0 20px;
@@ -15,11 +18,11 @@
         display: block;
         width: 50%;
         height: 2px;
-        background-color: $color-aqua-1;
+        background-color: presets.$color-aqua-1;
         position: relative;
         bottom: -10px;
         left: 50%;
-        @include crossBrowser(transform, translate(-50%, 0));
+        @include presets.crossBrowser(transform, translate(-50%, 0));
       }
     }
   }
