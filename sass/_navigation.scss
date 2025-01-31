@@ -1,3 +1,6 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* NAVIGATION */
 .nav {
   position: fixed;
@@ -11,8 +14,14 @@
     max-height: 0;
     overflow: hidden;
     background-color: #fff;
-    @include crossBrowser(animation, animateMenuRev 0.3s linear forwards);
-    @include crossBrowser(box-shadow, 3px 3px 3px $color-shadow-1);
+    @include presets.crossBrowser(
+      animation,
+      animateMenuRev 0.3s linear forwards
+    );
+    @include presets.crossBrowser(
+      box-shadow,
+      3px 3px 3px presets.$color-shadow-1
+    );
   }
   .navIconLabel {
     display: inline-block;
@@ -36,34 +45,46 @@
       padding: 10px 0;
     }
     .navMenuLink {
-      color: $color-dark-text;
+      color: presets.$color-dark-text;
       &:hover {
-        color: $color-aqua-1;
+        color: presets.$color-aqua-1;
       }
     }
   }
   .navIconInput:checked ~ .navIconLabel .bar1 {
-    @include crossBrowser(animation, animateLine1 0.3s linear forwards);
+    @include presets.crossBrowser(animation, animateLine1 0.3s linear forwards);
   }
   .navIconInput:checked ~ .navIconLabel .bar2 {
-    @include crossBrowser(animation, animateLine2 0.3s linear forwards);
+    @include presets.crossBrowser(animation, animateLine2 0.3s linear forwards);
   }
   .navIconInput:checked ~ .navIconLabel .bar3 {
-    @include crossBrowser(animation, animateLine3 0.3s linear forwards);
+    @include presets.crossBrowser(animation, animateLine3 0.3s linear forwards);
   }
   .navIconInput:checked ~ .navMenu {
     max-height: 1000px;
-    @include crossBrowser(animation, animateMenuMobile 0.3s ease-out forwards);
+    @include presets.crossBrowser(
+      animation,
+      animateMenuMobile 0.3s ease-out forwards
+    );
   }
   &.jsEnabled {
     .navIconLabel .bar1 {
-      @include crossBrowser(animation, animateLine1Rev 0.3s linear forwards);
+      @include presets.crossBrowser(
+        animation,
+        animateLine1Rev 0.3s linear forwards
+      );
     }
     .navIconLabel .bar2 {
-      @include crossBrowser(animation, animateLine2Rev 0.3s linear forwards);
+      @include presets.crossBrowser(
+        animation,
+        animateLine2Rev 0.3s linear forwards
+      );
     }
     .navIconLabel .bar3 {
-      @include crossBrowser(animation, animateLine3Rev 0.3s linear forwards);
+      @include presets.crossBrowser(
+        animation,
+        animateLine3Rev 0.3s linear forwards
+      );
     }
   }
 }
@@ -81,7 +102,7 @@
       }
     }
     .navIconInput:checked ~ .navMenu {
-      @include crossBrowser(
+      @include presets.crossBrowser(
         animation,
         animateMenuDesktop 0.3s ease-out forwards
       );
@@ -93,147 +114,195 @@
 // NAV ANIMATION OPEN
 @-webkit-keyframes animateLine1 {
   0% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(45deg)
+    );
   }
 }
 @keyframes animateLine1 {
   0% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(45deg)
+    );
   }
 }
 @-webkit-keyframes animateLine2 {
   0% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
   50% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
   100% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
 }
 @keyframes animateLine2 {
   0% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
   50% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
   100% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
 }
 @-webkit-keyframes animateLine3 {
   0% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(-45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(-45deg)
+    );
   }
 }
 @keyframes animateLine3 {
   0% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(-45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(-45deg)
+    );
   }
 }
 // NAV ANIMATION CLOSE
 @-webkit-keyframes animateLine1Rev {
   0% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(45deg)
+    );
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
 }
 @keyframes animateLine1Rev {
   0% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(45deg)
+    );
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, 8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, 8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
 }
 @-webkit-keyframes animateLine2Rev {
   0% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
   50% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
   100% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
 }
 @keyframes animateLine2Rev {
   0% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
   50% {
-    @include crossBrowser(transform, scale(0));
+    @include presets.crossBrowser(transform, scale(0));
     opacity: 0;
   }
   100% {
-    @include crossBrowser(transform, scale(1));
+    @include presets.crossBrowser(transform, scale(1));
     opacity: 1;
   }
 }
 @-webkit-keyframes animateLine3Rev {
   0% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(-45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(-45deg)
+    );
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
 }
 @keyframes animateLine3Rev {
   0% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(-45deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(-45deg)
+    );
   }
   50% {
-    @include crossBrowser(transform, translate3d(0, -8px, 0) rotate(0deg));
+    @include presets.crossBrowser(
+      transform,
+      translate3d(0, -8px, 0) rotate(0deg)
+    );
   }
   100% {
-    @include crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
+    @include presets.crossBrowser(transform, translate3d(0, 0, 0) rotate(0deg));
   }
 }
 // NAV MENU OPEN

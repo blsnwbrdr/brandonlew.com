@@ -1,3 +1,6 @@
+// PRESET VARIABLES AND MIXINS
+@use 'presets';
+
 /* GLOBALS */
 * {
   box-sizing: border-box;
@@ -12,14 +15,14 @@ body {
   background-color: #fff;
   font-family: 'Quicksand', sans-serif;
   font-weight: 300;
-  color: $color-gray-1;
+  color: presets.$color-gray-1;
   letter-spacing: 1px;
 }
 a {
   text-decoration: none;
-  @include crossBrowser(transition, 0.3s ease-out);
+  @include presets.crossBrowser(transition, 0.3s ease-out);
   &:hover {
-    @include crossBrowser(transition, 0.3s ease-out);
+    @include presets.crossBrowser(transition, 0.3s ease-out);
   }
 }
 h1,
