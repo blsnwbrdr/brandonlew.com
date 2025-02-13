@@ -1,8 +1,8 @@
 // GULP
-const gulp = require('gulp');
+import gulp from 'gulp';
 
 // MODULES
-const open = require('gulp-open');
+import open from 'open';
 
 //----------
 // TASKS
@@ -10,21 +10,15 @@ const open = require('gulp-open');
 
 // START PRODUCTION
 gulp.task('prod', (done) => {
-  gulp.src('./index.html').pipe(
-    open({
-      app: 'google chrome',
-    })
-  );
+  open(`./index.html`, { app: { name: 'google chrome' } });
+
   done();
 });
 
 // START STAGING
 gulp.task('stg', (done) => {
-  gulp.src('./index-staging.html').pipe(
-    open({
-      app: 'google chrome',
-    })
-  );
+  open(`./index-staging.html`, { app: { name: 'google chrome' } });
+
   done();
 });
 
