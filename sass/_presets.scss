@@ -8,6 +8,7 @@ $color-default-text: $color-gray-1;
 $color-shadow-1: rgba(0, 0, 0, 0.1);
 $color-overlay-1: rgba(255, 255, 255, 0.5);
 $color-overlay-2: rgba(0, 0, 0, 0.75);
+$color-overlay-3: rgba(0, 0, 0, 0.9);
 
 // MIXINS
 @mixin crossBrowser($property, $value) {
