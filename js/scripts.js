@@ -46,6 +46,7 @@ var _banner = {
     '2024_0293',
     '2024_0720',
     '2024_1483',
+    '2025_0223',
   ],
   // pick random image
   randomize: function () {
@@ -213,6 +214,10 @@ var _staticImages = {
     {
       src: '2024_1483',
       title: 'Fukuoka, Japan',
+    },
+    {
+      src: '2025_0223',
+      title: 'Simpson Bay, Sint Maarten',
     },
   ],
   randomize: function (array) {
