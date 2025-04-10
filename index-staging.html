@@ -5,19 +5,215 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Brandon Lew" />
     <title>Brandon Lew</title>
+
+    <!-- PRECONNECT -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <!-- build:css css/styles.min.css -->
-    <link rel="stylesheet" href="css/styles.css" />
-    <!-- endbuild -->
-    <!-- SET BANNER BACKGROUND IMAGE FOR DISABLED JS -->
+
+    <!-- INLINE CRITICAL CSS -->
+    <style>
+      @import url('https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:400');
+      /* GLOBALS */
+      * {
+        box-sizing: border-box;
+      }
+
+      html,
+      body {
+        height: 100%;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        font-family: 'Quicksand', sans-serif;
+        font-weight: 400;
+        letter-spacing: 1px;
+      }
+
+      a {
+        text-decoration: none;
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -ms-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+      }
+      a:hover {
+        -webkit-transition: 0.3s ease-out;
+        -moz-transition: 0.3s ease-out;
+        -ms-transition: 0.3s ease-out;
+        transition: 0.3s ease-out;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      p {
+        margin: 0 0 10px;
+      }
+
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      .h1,
+      .h2,
+      .h3,
+      .h4,
+      .h5 {
+        font-family: 'Comfortaa', sans-serif;
+        font-weight: 300;
+        letter-spacing: 2px;
+      }
+
+      h1,
+      .h1 {
+        font-size: 2.25em;
+      }
+
+      h2,
+      .h2 {
+        font-size: 1.75em;
+      }
+
+      h3,
+      .h3 {
+        font-size: 1.5em;
+      }
+
+      p,
+      li {
+        line-height: 1.75em;
+      }
+
+      @media (min-width: 768px) {
+        h1,
+        .h1 {
+          font-size: 4em;
+        }
+        h2,
+        .h2 {
+          font-size: 2.25em;
+        }
+        h3,
+        .h3 {
+          font-size: 1.75em;
+        }
+        h4,
+        .h4,
+        p {
+          font-size: 1.125em;
+        }
+        h5,
+        .h5 {
+          font-size: 1em;
+        }
+      }
+      .staticBody {
+        overflow: hidden;
+      }
+
+      .main {
+        height: 100%;
+      }
+
+      /* SKIP CONTENT */
+      .skipContent {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 9000;
+        color: #fff;
+      }
+      .skipContent ul {
+        list-style: none;
+      }
+      .skipContent li {
+        position: absolute;
+        width: 100%;
+      }
+      .skipContent a {
+        text-decoration: none;
+        position: fixed;
+        left: -999px;
+      }
+      .skipContent a:focus {
+        background: #000;
+        color: #fff;
+        left: 50px;
+        padding: 3px 10px;
+      }
+
+      /* NAVIGATION */
+      .nav {
+        display: none;
+      }
+
+      /* BANNER */
+      .banner {
+        position: relative;
+        height: 100%;
+        min-height: 100%;
+        margin: 0;
+        padding: 0;
+        background-color: #fff;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: scroll;
+      }
+      .banner .bannerOpacity {
+        height: 100%;
+        width: 100%;
+        background-color: rgba(255, 255, 255, 0.5);
+      }
+      .banner .bannerHeader {
+        position: absolute;
+        top: 40%;
+        left: 50%;
+        transform: translate(-50%, -40%);
+        width: 100%;
+        padding: 0 20px;
+        text-align: center;
+      }
+      .banner .bannerHeader h1,
+      .banner .bannerHeader p {
+        color: #000;
+      }
+
+      @media (hover: hover) {
+        .banner {
+          background-attachment: fixed;
+        }
+      }
+    </style>
+
+    <!-- STYLESHEET LOADING -->
+    <link
+      rel="preload"
+      href="css/styles.min.css"
+      as="style"
+      onload="this.onload=null;this.rel='stylesheet'"
+    />
+
+    <!-- DISABLED JS - LOAD STYLESHEET AND SET BACKGROUND IMAGE -->
     <noscript>
+      <!-- build:css css/styles.min.css -->
+      <link rel="stylesheet" href="css/styles.css" />
+      <!-- endbuild -->
       <style>
         .banner {
-          background-image: url(images/banner-2019-2587.jpeg);
+          background-image: url(images/2024_1483_c1_web.webp);
         }
       </style>
     </noscript>
+
+    <!-- ICONS -->
     <link rel="shortcut icon" href="favicon.ico" />
     <link rel="apple-touch-icon" href="apple-touch-icon.png" />
   </head>
