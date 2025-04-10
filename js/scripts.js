@@ -57,7 +57,7 @@ var _banner = {
       'style',
       'background-image:url(images/' +
         _banner.images[randomNum] +
-        '_c1_web.jpg);'
+        '_c1_web.webp);'
     );
   },
 };
@@ -243,7 +243,7 @@ var _staticImages = {
               y +
               '&#39;);"> <img src="images/' +
               randomizedImages[x].src +
-              '_c1_web.jpg" alt="' +
+              '_c1_web.webp" alt="' +
               randomizedImages[x].title +
               '"><div class="portfolioOverlay"></div></div><div id="modal' +
               y +
@@ -251,7 +251,7 @@ var _staticImages = {
               y +
               '&#39;);">X</span><div class="portfolioModalHeader"> <img src="images/' +
               randomizedImages[x].src +
-              '_c1_web.jpg" alt="' +
+              '_c1_web.webp" alt="' +
               randomizedImages[x].title +
               '"></div><div class="portfolioModalBody"><p class="h4">' +
               randomizedImages[x].title +
