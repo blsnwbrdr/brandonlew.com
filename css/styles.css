@@ -15,7 +15,6 @@ body {
   background-color: #fff;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
-  color: #777;
   letter-spacing: 1px;
 }
 
@@ -584,8 +583,11 @@ li {
   transform: translate(-50%, -40%);
   width: 100%;
   padding: 0 20px;
-  color: #000;
   text-align: center;
+}
+.banner .bannerHeader h1,
+.banner .bannerHeader p {
+  color: #000;
 }
 
 @media (hover: hover) {
@@ -891,9 +893,6 @@ li {
 .about .profileText {
   padding-bottom: 40px;
 }
-.about .info {
-  color: #000;
-}
 .about .infoContainer {
   background-color: #eee;
   padding: 20px;
@@ -962,9 +961,6 @@ li {
 }
 .development.portfolio .portfolioModalBody img {
   width: 100px;
-}
-.development.portfolio .portfolioModalBody .h3 {
-  color: #000;
 }
 .development.portfolio .portfolioModalBody .fab,
 .development.portfolio .portfolioModalBody .fas {
