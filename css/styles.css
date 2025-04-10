@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:300");
+@import url("https://fonts.googleapis.com/css?family=Comfortaa:300|Quicksand:400");
 /* GLOBALS */
 * {
   box-sizing: border-box;
@@ -14,7 +14,7 @@ body {
   padding: 0;
   background-color: #fff;
   font-family: "Quicksand", sans-serif;
-  font-weight: 300;
+  font-weight: 400;
   color: #777;
   letter-spacing: 1px;
 }
