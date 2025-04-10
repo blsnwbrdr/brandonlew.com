@@ -18,8 +18,7 @@
     padding-bottom: 40px;
   }
   .infoContainer {
-    background-color: presets.$color-overlay-2;
-    color: presets.$color-gray-2;
+    background-color: presets.$color-gray-2;
     padding: 20px;
     @include presets.crossBrowser(border-radius, 4px);
   }
@@ -31,7 +30,7 @@
       clear: both;
     }
     a {
-      color: presets.$color-gray-2;
+      color: presets.$color-dark-text;
       &:hover {
         color: presets.$color-aqua-1;
       }
@@ -47,7 +46,7 @@
     }
     .left {
       width: 30%;
-      color: presets.$color-aqua-1;
+      color: presets.$color-blue-1;
     }
     .right {
       width: 70%;

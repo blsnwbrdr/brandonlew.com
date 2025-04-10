@@ -894,8 +894,7 @@ li {
   padding-bottom: 40px;
 }
 .about .infoContainer {
-  background-color: rgba(0, 0, 0, 0.75);
-  color: #eee;
+  background-color: #eee;
   padding: 20px;
   -webkit-border-radius: 4px;
   -moz-border-radius: 4px;
@@ -909,7 +908,7 @@ li {
   clear: both;
 }
 .about .infoContent a {
-  color: #eee;
+  color: #000;
 }
 .about .infoContent a:hover {
   color: #009ec8;
@@ -925,7 +924,7 @@ li {
 }
 .about .infoContent .left {
   width: 30%;
-  color: #009ec8;
+  color: #4267a0;
 }
 .about .infoContent .right {
   width: 70%;
