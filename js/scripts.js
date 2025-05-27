@@ -7,7 +7,7 @@ const photos = document.querySelectorAll('.photos');
 
 // SKIP CONTENT SCROLL
 const _skipContent = {
-  scroll: function (e) {
+  scroll: (e) => {
     // navigation menu links
     if (e.target && e.target.classList.contains('skipLink')) {
       // prevent default anchor behavior
@@ -49,7 +49,7 @@ const _banner = {
     '2025_0223',
   ],
   // pick random image
-  randomize: function () {
+  randomize: () => {
     // create random number based on number of images available
     const randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
@@ -66,7 +66,7 @@ _banner.randomize();
 // NAVIGATION MENU LINKS
 const _navigation = {
   // navigation scroll to functionality
-  scroll: function (e) {
+  scroll: (e) => {
     // navigation menu links
     if (e.target && e.target.classList.contains('navMenuLink')) {
       // prevent default anchor behavior
@@ -78,7 +78,7 @@ const _navigation = {
     }
   },
   // add class if javascript enabled on browser for navigation animation
-  jsEnabled: function (e) {
+  jsEnabled: (e) => {
     // if navIcon is clicked
     if (e.target && e.target.id === 'navIcon') {
       // add jsEnabled class if javascript is turn on
@@ -90,7 +90,7 @@ const _navigation = {
 // MODALS
 const _modal = {
   // display modal
-  display: function (targetModal) {
+  display: (targetModal) => {
     // target modal id
     const modal = document.getElementById(targetModal);
     // add staticBody class to body
@@ -99,7 +99,7 @@ const _modal = {
     modal.classList.add('open');
   },
   // close open modals
-  close: function (targetModal) {
+  close: (targetModal) => {
     // target modal id
     const modal = document.getElementById(targetModal);
     // remove staticBody class to body
@@ -109,7 +109,7 @@ const _modal = {
     // add close class to close target modal
     modal.classList.add('close');
     // delay removing close animation class
-    setTimeout(function () {
+    setTimeout(() => {
       modal.classList.remove('close');
     }, 500);
   },
@@ -220,7 +220,7 @@ const _staticImages = {
       title: 'Simpson Bay, Sint Maarten',
     },
   ],
-  randomize: function (array) {
+  randomize: (array) => {
     // randomize function
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -230,7 +230,7 @@ const _staticImages = {
     }
     return array;
   },
-  initiate: function () {
+  initiate: () => {
     // randomize images
     const randomizedImages = _staticImages.randomize(_staticImages.images);
     // display static images
@@ -268,7 +268,7 @@ _staticImages.initiate();
 // SMOOTH SCROLLING FUNCTION
 const _smoothScrolling = {
   // go to target element with offset and duration
-  goTo: function (target, offset, duration) {
+  goTo: (target, offset, duration) => {
     // target element
     const targetQuery = document.querySelectorAll(target);
     // target element's position with offset
@@ -277,7 +277,7 @@ const _smoothScrolling = {
     _smoothScrolling.interval(targetPosition, duration);
   },
   // smooth scrolling interval
-  interval: function (targetPosition, duration) {
+  interval: (targetPosition, duration) => {
     // entire document height
     const documentHeight = document.body.clientHeight;
     // browser window height
@@ -291,7 +291,7 @@ const _smoothScrolling = {
     // interval duration counter
     let durationCounter = 0;
     // scroll interval
-    const scrollInterval = setInterval(function () {
+    const scrollInterval = setInterval(() => {
       durationCounter++;
       // up to number of intervals, scroll by height
       if (durationCounter <= numberIntervals) {
@@ -306,7 +306,7 @@ const _smoothScrolling = {
 };
 
 // CLICK EVENT LISTENERS
-document.addEventListener('click', function (e) {
+document.addEventListener('click', (e) => {
   // activate navigation js check for animation
   _navigation.jsEnabled(e);
   // activate skip content anchor scrolling
