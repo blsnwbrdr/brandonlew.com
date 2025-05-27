@@ -1,13 +1,13 @@
 // PAGE ELEMENTS
-var nav = document.getElementById('nav');
-var navIcon = document.getElementById('navIcon');
-var banner = document.getElementById('banner');
-var continents = document.querySelectorAll('.continents');
-var photos = document.querySelectorAll('.photos');
+const nav = document.getElementById('nav');
+const navIcon = document.getElementById('navIcon');
+const banner = document.getElementById('banner');
+const continents = document.querySelectorAll('.continents');
+const photos = document.querySelectorAll('.photos');
 
 // SKIP CONTENT SCROLL
-var _skipContent = {
-  scroll: function (e) {
+const _skipContent = {
+  scroll: (e) => {
     // navigation menu links
     if (e.target && e.target.classList.contains('skipLink')) {
       // prevent default anchor behavior
@@ -19,7 +19,7 @@ var _skipContent = {
 };
 
 // RANDOMIZE BANNER IMAGE
-var _banner = {
+const _banner = {
   // images
   images: [
     '2005_0857',
@@ -49,9 +49,9 @@ var _banner = {
     '2025_0223',
   ],
   // pick random image
-  randomize: function () {
+  randomize: () => {
     // create random number based on number of images available
-    var randomNum = Math.floor(Math.random() * _banner.images.length);
+    const randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
     banner.setAttribute(
       'style',
@@ -64,9 +64,9 @@ var _banner = {
 _banner.randomize();
 
 // NAVIGATION MENU LINKS
-var _navigation = {
+const _navigation = {
   // navigation scroll to functionality
-  scroll: function (e) {
+  scroll: (e) => {
     // navigation menu links
     if (e.target && e.target.classList.contains('navMenuLink')) {
       // prevent default anchor behavior
@@ -78,7 +78,7 @@ var _navigation = {
     }
   },
   // add class if javascript enabled on browser for navigation animation
-  jsEnabled: function (e) {
+  jsEnabled: (e) => {
     // if navIcon is clicked
     if (e.target && e.target.id === 'navIcon') {
       // add jsEnabled class if javascript is turn on
@@ -88,20 +88,20 @@ var _navigation = {
 };
 
 // MODALS
-var _modal = {
+const _modal = {
   // display modal
-  display: function (targetModal) {
+  display: (targetModal) => {
     // target modal id
-    var modal = document.getElementById(targetModal);
+    const modal = document.getElementById(targetModal);
     // add staticBody class to body
     document.body.classList.add('staticBody');
     // add open class to display target modal
     modal.classList.add('open');
   },
   // close open modals
-  close: function (targetModal) {
+  close: (targetModal) => {
     // target modal id
-    var modal = document.getElementById(targetModal);
+    const modal = document.getElementById(targetModal);
     // remove staticBody class to body
     document.body.classList.remove('staticBody');
     // remove open class of target modal
@@ -109,14 +109,14 @@ var _modal = {
     // add close class to close target modal
     modal.classList.add('close');
     // delay removing close animation class
-    setTimeout(function () {
+    setTimeout(() => {
       modal.classList.remove('close');
     }, 500);
   },
 };
 
 // STATIC IMAGES
-var _staticImages = {
+const _staticImages = {
   // images
   images: [
     {
@@ -220,7 +220,7 @@ var _staticImages = {
       title: 'Simpson Bay, Sint Maarten',
     },
   ],
-  randomize: function (array) {
+  randomize: (array) => {
     // randomize function
     for (let i = array.length - 1; i > 0; i--) {
       const j = Math.floor(Math.random() * (i + 1));
@@ -230,12 +230,12 @@ var _staticImages = {
     }
     return array;
   },
-  initiate: function () {
+  initiate: () => {
     // randomize images
-    var randomizedImages = _staticImages.randomize(_staticImages.images);
+    const randomizedImages = _staticImages.randomize(_staticImages.images);
     // display static images
-    for (var x = 0; x < randomizedImages.length; x++) {
-      for (var y = 0; y < photos.length; y++) {
+    for (let x = 0; x < randomizedImages.length; x++) {
+      for (let y = 0; y < photos.length; y++) {
         if (x === y) {
           photos[y].insertAdjacentHTML(
             'afterbegin',
@@ -266,32 +266,32 @@ var _staticImages = {
 _staticImages.initiate();
 
 // SMOOTH SCROLLING FUNCTION
-var _smoothScrolling = {
+const _smoothScrolling = {
   // go to target element with offset and duration
-  goTo: function (target, offset, duration) {
+  goTo: (target, offset, duration) => {
     // target element
-    var targetQuery = document.querySelectorAll(target);
+    const targetQuery = document.querySelectorAll(target);
     // target element's position with offset
-    var targetPosition = targetQuery[0].getBoundingClientRect().top + offset;
+    const targetPosition = targetQuery[0].getBoundingClientRect().top + offset;
     // smooth scrolling interval
     _smoothScrolling.interval(targetPosition, duration);
   },
   // smooth scrolling interval
-  interval: function (targetPosition, duration) {
+  interval: (targetPosition, duration) => {
     // entire document height
-    var documentHeight = document.body.clientHeight;
+    const documentHeight = document.body.clientHeight;
     // browser window height
-    var windowHeight = window.innerHeight;
+    const windowHeight = window.innerHeight;
     // number of intervals based on duration
-    var numberIntervals = Math.ceil(duration / 25);
+    const numberIntervals = Math.ceil(duration / 25);
     // interval scroll by height
-    var scrollByHeight = Math.floor(targetPosition / numberIntervals);
+    const scrollByHeight = Math.floor(targetPosition / numberIntervals);
     // last interval
-    var lastInterval = targetPosition - numberIntervals * scrollByHeight;
+    const lastInterval = targetPosition - numberIntervals * scrollByHeight;
     // interval duration counter
-    var durationCounter = 0;
+    let durationCounter = 0;
     // scroll interval
-    var scrollInterval = setInterval(function () {
+    const scrollInterval = setInterval(() => {
       durationCounter++;
       // up to number of intervals, scroll by height
       if (durationCounter <= numberIntervals) {
@@ -306,7 +306,7 @@ var _smoothScrolling = {
 };
 
 // CLICK EVENT LISTENERS
-document.addEventListener('click', function (e) {
+document.addEventListener('click', (e) => {
   // activate navigation js check for animation
   _navigation.jsEnabled(e);
   // activate skip content anchor scrolling
