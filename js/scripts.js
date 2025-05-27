@@ -1,12 +1,12 @@
 // PAGE ELEMENTS
-var nav = document.getElementById('nav');
-var navIcon = document.getElementById('navIcon');
-var banner = document.getElementById('banner');
-var continents = document.querySelectorAll('.continents');
-var photos = document.querySelectorAll('.photos');
+const nav = document.getElementById('nav');
+const navIcon = document.getElementById('navIcon');
+const banner = document.getElementById('banner');
+const continents = document.querySelectorAll('.continents');
+const photos = document.querySelectorAll('.photos');
 
 // SKIP CONTENT SCROLL
-var _skipContent = {
+const _skipContent = {
   scroll: function (e) {
     // navigation menu links
     if (e.target && e.target.classList.contains('skipLink')) {
@@ -19,7 +19,7 @@ var _skipContent = {
 };
 
 // RANDOMIZE BANNER IMAGE
-var _banner = {
+const _banner = {
   // images
   images: [
     '2005_0857',
@@ -51,7 +51,7 @@ var _banner = {
   // pick random image
   randomize: function () {
     // create random number based on number of images available
-    var randomNum = Math.floor(Math.random() * _banner.images.length);
+    const randomNum = Math.floor(Math.random() * _banner.images.length);
     // set style attribute of banner with random background image
     banner.setAttribute(
       'style',
@@ -64,7 +64,7 @@ var _banner = {
 _banner.randomize();
 
 // NAVIGATION MENU LINKS
-var _navigation = {
+const _navigation = {
   // navigation scroll to functionality
   scroll: function (e) {
     // navigation menu links
@@ -88,11 +88,11 @@ var _navigation = {
 };
 
 // MODALS
-var _modal = {
+const _modal = {
   // display modal
   display: function (targetModal) {
     // target modal id
-    var modal = document.getElementById(targetModal);
+    const modal = document.getElementById(targetModal);
     // add staticBody class to body
     document.body.classList.add('staticBody');
     // add open class to display target modal
@@ -101,7 +101,7 @@ var _modal = {
   // close open modals
   close: function (targetModal) {
     // target modal id
-    var modal = document.getElementById(targetModal);
+    const modal = document.getElementById(targetModal);
     // remove staticBody class to body
     document.body.classList.remove('staticBody');
     // remove open class of target modal
@@ -116,7 +116,7 @@ var _modal = {
 };
 
 // STATIC IMAGES
-var _staticImages = {
+const _staticImages = {
   // images
   images: [
     {
@@ -232,10 +232,10 @@ var _staticImages = {
   },
   initiate: function () {
     // randomize images
-    var randomizedImages = _staticImages.randomize(_staticImages.images);
+    const randomizedImages = _staticImages.randomize(_staticImages.images);
     // display static images
-    for (var x = 0; x < randomizedImages.length; x++) {
-      for (var y = 0; y < photos.length; y++) {
+    for (let x = 0; x < randomizedImages.length; x++) {
+      for (let y = 0; y < photos.length; y++) {
         if (x === y) {
           photos[y].insertAdjacentHTML(
             'afterbegin',
@@ -266,32 +266,32 @@ var _staticImages = {
 _staticImages.initiate();
 
 // SMOOTH SCROLLING FUNCTION
-var _smoothScrolling = {
+const _smoothScrolling = {
   // go to target element with offset and duration
   goTo: function (target, offset, duration) {
     // target element
-    var targetQuery = document.querySelectorAll(target);
+    const targetQuery = document.querySelectorAll(target);
     // target element's position with offset
-    var targetPosition = targetQuery[0].getBoundingClientRect().top + offset;
+    const targetPosition = targetQuery[0].getBoundingClientRect().top + offset;
     // smooth scrolling interval
     _smoothScrolling.interval(targetPosition, duration);
   },
   // smooth scrolling interval
   interval: function (targetPosition, duration) {
     // entire document height
-    var documentHeight = document.body.clientHeight;
+    const documentHeight = document.body.clientHeight;
     // browser window height
-    var windowHeight = window.innerHeight;
+    const windowHeight = window.innerHeight;
     // number of intervals based on duration
-    var numberIntervals = Math.ceil(duration / 25);
+    const numberIntervals = Math.ceil(duration / 25);
     // interval scroll by height
-    var scrollByHeight = Math.floor(targetPosition / numberIntervals);
+    const scrollByHeight = Math.floor(targetPosition / numberIntervals);
     // last interval
-    var lastInterval = targetPosition - numberIntervals * scrollByHeight;
+    const lastInterval = targetPosition - numberIntervals * scrollByHeight;
     // interval duration counter
-    var durationCounter = 0;
+    let durationCounter = 0;
     // scroll interval
-    var scrollInterval = setInterval(function () {
+    const scrollInterval = setInterval(function () {
       durationCounter++;
       // up to number of intervals, scroll by height
       if (durationCounter <= numberIntervals) {
